@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cart/cart",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "被税宝",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "color": "#616164",
+    "selectedColor": "#4b8ff6",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/tab/home_icon_thumb1.png",
+        "selectedIconPath": "/images/tab/home_icon_thumb2.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购买",
+        "iconPath": "/images/tab/home_icon_cart1.png",
+        "selectedIconPath": "/images/tab/home_icon_cart2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/tab/home_icon_user1.png",
+        "selectedIconPath": "/images/tab/home_icon_user2.png"
+      }
+    ]
+  }
+}
