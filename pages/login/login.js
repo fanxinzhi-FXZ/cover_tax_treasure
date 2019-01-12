@@ -1,13 +1,11 @@
-// pages/mine/mine.js
-const Img_URL = 'http://www.beishuibao.com/web_pic/program/';
+// pages/login/login.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    user_photo: Img_URL + 'icon_sample.png',
-    user_name:'王小小'
+
   },
 
   /**

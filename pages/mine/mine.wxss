@@ -1,1 +1,112 @@
 /* pages/mine/mine.wxss */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.mine{
+  
+}
+/* header */
+.mine-header{
+  text-align:center;
+  background: #fff;
+  padding:34px 0 30px 0;
+  border-bottom:1px solid #eaeaea;
+  position: relative;
+}
+.mine-header-down{
+  height:11.5px;
+  width:7px;
+  position:absolute;
+  top:66px;
+  right:14px;
+}
+.mine-header-photo{
+  height:54px;
+  width:54px;
+  margin:0 0 14.5px 0;
+}
+.mine-header-name{
+  font-family: PingFang-SC-Medium;
+	font-size: 18px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #000000;
+  margin:0 0 30px 0;
+}
+/* nav */
+.mine-nav{
+  text-align:center;
+  background: #fff;
+  border-bottom:1px solid #eaeaea;
+}
+.mine-nav-item{
+  padding:28px 0 34px 0;
+  width:calc(100% / 3);
+  float:left;
+  position:relative;
+}
+.mine-nav-item-left{
+  height:28.5px;
+  width:1px;
+  background:#eaeaea;
+  position:absolute;
+  top:44.5px;
+  left:0;
+}
+.mine-nav-item-right{
+  height:28.5px;
+  width:1px;
+  background:#eaeaea;
+  position:absolute;
+  top:44.5px;
+  right:0;
+}
+.mine-nav-item-photo{
+  height:33px;
+  width:33px;
+  margin:0 0 11px 0;
+}
+.mine-nav-item-name{
+	font-family: PingFang-SC-Regular;
+	font-size: 15px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #333333;
+}
+/* footer */
+.mine-footer{
+
+}
+.mine-footer-item{
+  background: #fff;
+  height:60px;
+  line-height:60px;
+  border-bottom:1px solid #eaeaea;
+}
+.mine-footer-item-photo{
+  width:15px;
+  height:15px;
+  float:left;
+  margin:22px 14px 0 25px ;
+}
+.mine-footer-item-text{
+  font-family: PingFang-SC-Regular;
+	font-size: 15px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #333333;
+  float:left;
+}
+.mine-footer-item-down{
+  height:11px;
+  width:6.5px;
+  float:right;
+  margin:25px 25px 0 0;
+}
