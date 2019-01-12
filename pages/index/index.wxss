@@ -19,7 +19,7 @@
 }
 .index .case .content{
   width: 100vw;
-  height: 52.5vw;
+  height: 53.5vw;
   display: block;
   white-space:nowrap;
   overflow-x: auto;
@@ -125,26 +125,26 @@
 }
 .index .product .content .seed .sige {
   display: block;
-  height: 26px;
-  font-size: 12px;
+  height: 30px;
+  font-size: 14px;
   color: #333333;
 }
 .index .product .content .seed .sige .sigeleft{
   float: left;
-  height: 26px;
-  line-height: 26px;
+  height: 30px;
+  line-height: 30px;
   padding-left: 4px;
 }
 .index .product .content .seed .sige .sigeright{
   float: right;
-  height: 26px;
-  line-height: 26px;
+  height: 30px;
+  line-height: 30px;
   padding-right: 8px; 
 }
 .index .product .content .seed .son {
   display: block;
-  height: 26px;
-  font-size: 10px;
+  height: 30px;
+  font-size: 12px;
   color: #333333;
 }
 .index .product .content .seed .son:nth-of-type(odd){
@@ -152,13 +152,91 @@
 }
 .index .product .content .seed .son .sonleft{
   float: left;
-  height: 26px;
-  line-height: 26px;
+  height: 30px;
+  line-height: 30px;
   padding-left: 4px;
 }
 .index .product .content .seed .son .sonright{
   float: right;
-  height: 26px;
-  line-height: 26px;
+  height: 30px;
+  line-height: 30px;
   padding-right: 8px; 
+}
+
+/* 流程介绍 */
+.index .flow{
+   
+}
+.index .flow .title{
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  font-size: 15px;
+  color: #333333;
+  padding: 0px 20px;
+  background: url("http://www.beishuibao.com/web_pic/program/icon_line.png") left 15px center no-repeat;
+  background-size: 2px 11px;
+}
+.index .flow .content{
+  width: 100vw;
+  height: 53.5vw;
+  display: block;
+  white-space:nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling:touch;
+}
+.index .flow .content .item{
+  display: inline-block;
+  width: 89.06vw;
+  height: 51.2vw;
+  margin-left: 10px;
+  white-space:normal;
+  box-shadow: 1.5px 0px 14.5px 0px 
+		rgba(229, 229, 229, 0.63);
+	border-radius: 6px;
+  background: #ffffff;
+}
+.index .flow .content .item:last-child{
+  margin-right: 10px;
+}
+.index .flow .content .item .buy {
+  display: block;
+}
+.index .flow .content .item .head {
+  display: block;
+  height: 38px;
+  padding: 14px 0px 0px 16px;
+}
+.index .flow .content .item .head .headimg {
+  width: 86px;
+  height: 38px; 
+}
+.index .flow .content .item .buy .con {
+  overflow: hidden;
+  padding: 0px 1.33vw;
+}
+.index .flow .content .item .buy .con .seed{
+  display: block;
+  float: left;
+  width: 17.86vw;
+  padding-right: 4.8vw;
+  padding-top: 6.66vw;
+  background: url("http://www.beishuibao.com/web_pic/program/icom_dot3.png") right 0.8vw center no-repeat;
+  background-size: 13px 9px;
+}
+.index .flow .content .item .buy .con .seed .seedimg{
+  width: 17.86vw;
+  height:  17.86vw;
+}
+.index .flow .content .item .buy .con .seed .text{
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  color: #5578de;
+  padding-top: 3.33vw;
+}
+.index .flow .content .item .buy .con .seed:last-child {
+  padding-right: 0px;
+  background: #ffffff;
+
 }

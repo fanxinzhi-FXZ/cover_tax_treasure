@@ -35,7 +35,7 @@
       <var class="right">详情了解</var>
     </span>
     <view class="content">
-      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{productCircular}}" indicator-active-color="{{productActiveColor}}" style='height: 310px'>
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{productCircular}}" indicator-active-color="{{productActiveColor}}" style='height: 342px'>
       <block wx:for="{{productItems}}" wx:key="item">
         <swiper-item>
           <view class="seed">
@@ -58,5 +58,81 @@
     </view>
   </view>
 
-  
+  <!-- 流程介绍 -->
+  <view class="flow">
+    <span class="title">流程介绍</span>
+    <view class="content">
+      <view class="item">
+        <view class="buy">
+          <span class="head"><image class="headimg" src='http://www.beishuibao.com/web_pic/program/img_01-.png'></image></span>
+          <view class="con">
+            <span class="seed">
+              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img1.png'></image>
+              <var class="text">选择产品</var>
+            </span>
+            <span class="seed">
+              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img2.png'></image>
+              <var class="text">填写信息</var>
+            </span>
+            <span class="seed">
+              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img3.png'></image>
+              <var class="text">在线付款</var>
+            </span>
+            <span class="seed">
+              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img4.png'></image>
+              <var class="text">合约查询</var>
+            </span>
+          </view>
+        </view>
+      </view>
+       <view class="item">
+        <view class="buy">
+          <span class="head"><image class="headimg" src='http://www.beishuibao.com/web_pic/program/img_01-.png'></image></span>
+          <view class="con">
+            <span class="seed">
+              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img1.png'></image>
+              <var class="text">选择产品</var>
+            </span>
+            <span class="seed">
+              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img2.png'></image>
+              <var class="text">填写信息</var>
+            </span>
+            <span class="seed">
+              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img3.png'></image>
+              <var class="text">在线付款</var>
+            </span>
+            <span class="seed">
+              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img4.png'></image>
+              <var class="text">合约查询</var>
+            </span>
+          </view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="buy">
+          <span class="head"><image class="headimg" src='http://www.beishuibao.com/web_pic/program/img_01-.png'></image></span>
+          <view class="con">
+            <span class="seed">
+              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img1.png'></image>
+              <var class="text">选择产品</var>
+            </span>
+            <span class="seed">
+              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img2.png'></image>
+              <var class="text">填写信息</var>
+            </span>
+            <span class="seed">
+              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img3.png'></image>
+              <var class="text">在线付款</var>
+            </span>
+            <span class="seed">
+              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img4.png'></image>
+              <var class="text">合约查询</var>
+            </span>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
 </view>
