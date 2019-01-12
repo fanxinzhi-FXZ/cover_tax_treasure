@@ -5,7 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    cartItems: [
+      {
+        "icon": "http://www.beishuibao.com/web_pic/program/list1_icon_gold.png",
+        "title": "黄金计划",
+        "price": "￥50元"
+      },
+      {
+        "icon": "http://www.beishuibao.com/web_pic/program/list1_icon_diamond.png",
+        "title": "钻石计划",
+        "price": "￥150元"
+      },
+      {
+        "icon": "http://www.beishuibao.com/web_pic/program/list1_icon_crown.png",
+        "title": "大富翁计划",
+        "price": "￥300元"
+      }
+    ]
   },
 
   /**
