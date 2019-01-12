@@ -1,11 +1,62 @@
 <!--index.wxml-->
 <view class="index">
   <!-- 轮播图 -->
-  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-active-color="{{indicatorActiveColor}}" style="height:{{swiperHeight}}px;">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{swiperautoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-active-color="{{indicatorActiveColor}}" style="height:{{swiperHeight}}px;">
     <block wx:for="{{bannerImgItems}}" wx:key="item">
       <swiper-item>
         <image src="{{item.bannerImg}}" style="height:{{swiperHeight}}px;width:{{swiperWidth}}px"/>
       </swiper-item>
     </block>
   </swiper>
+
+  <!-- 案例介绍 -->
+  <view class="case">
+    <span class="title">案例介绍</span>
+    <view class="content">
+      <view class="item">
+        <span class="subtitle">案例一</span>
+        <view class="box">
+          <span class="text">李女士一家节假日期间去欧洲旅行，在游玩期间购买了许多商品，也为亲朋好友带去了许多礼品，可购买的物品总价值早已超过中国海关限定的5000元额度，下飞机时被海关抽查要求补缴税款，幸亏李女士先前购买了“被税宝”产品，李女士及时申请理赔，最终得到了补偿款。       </span>
+        </view>
+      </view>
+      <view class="item">
+        <span class="subtitle">案例二</span>
+        <view class="box">
+          <span class="text">李女士一家节假日期间去欧洲旅行，在游玩期间购买了许多商品，也为亲朋好友带去了许多礼品，可购买的物品总价值早已超过中国海关限定的5000元额度，下飞机时被海关抽查要求补缴税款，幸亏李女士先前购买了“被税宝”产品，李女士及时申请理赔，最终得到了补偿款。       </span>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 产品介绍 -->
+  <view class='product'>
+    <span class="title">
+      <var class="left">产品介绍</var>
+      <var class="right">详情了解</var>
+    </span>
+    <view class="content">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{productCircular}}" indicator-active-color="{{productActiveColor}}" style='height: 310px'>
+      <block wx:for="{{productItems}}" wx:key="item">
+        <swiper-item>
+          <view class="seed">
+            <span class="head">
+              <image class="icon" src='{{item.icon}}'></image>
+              <var class="name">{{item.title}}</var>
+            </span>
+            <span class="sige">
+              <var class="sigeleft">保障项目</var>
+              <var class="sigeright">保障金额</var>
+            </span>
+            <span class="son"  wx:for="{{item.data}}" wx:key="seed" wx:for-item="seed">
+              <var class="sonleft">{{seed.title}}</var>
+              <var class="sonright">{{seed.text}}</var>
+            </span>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    </view>
+  </view>
+
+  
 </view>

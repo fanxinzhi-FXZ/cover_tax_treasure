@@ -1,137 +1,164 @@
 /**index.wxss**/
+.index {
 
-page {
-  background: #f6f6f6;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
 }
 
-.userinfo, .uploader, .tunnel {
-  margin-top: 40rpx;
-  height: 140rpx;
-  width: 100%;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-left: none;
-  border-right: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  transition: all 300ms ease;
+ /* 案例介绍 */
+.index .case{
+   
 }
-
-.userinfo-avatar {
-  width: 100rpx;
-  height: 100rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-  background-size: cover;
-  background-color: white;
+.index .case .title{
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  font-size: 15px;
+  color: #333333;
+  padding: 0px 20px;
+  background: url("http://www.beishuibao.com/web_pic/program/icon_line.png") left 15px center no-repeat;
+  background-size: 2px 11px;
 }
-
-.userinfo-avatar:after {
-  border: none;
+.index .case .content{
+  width: 100vw;
+  height: 52.5vw;
+  display: block;
+  white-space:nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling:touch;
 }
-
-.userinfo-nickname {
-  font-size: 32rpx;
-  color: #007aff;
-  background-color: white;
-  background-size: cover;
+.index .case .content .item{
+  display: inline-block;
+  width: 89.06vw;
+  height: 51.2vw;
+  background-image: url("http://www.beishuibao.com/web_pic/program/img_bg1.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  white-space:normal;
+  position: relative; 
 }
-
-.userinfo-nickname::after {
-  border: none;
-}
-
-.uploader, .tunnel {
-  height: auto;
-  padding: 0 0 0 40rpx;
-  flex-direction: column;
-  align-items: flex-start;
-  box-sizing: border-box;
-}
-
-.uploader-text, .tunnel-text {
-  width: 100%;
-  line-height: 52px;
-  font-size: 34rpx;
-  color: #007aff;
-}
-
-.uploader-container {
-  width: 100%;
-  height: 400rpx;
-  padding: 20rpx 20rpx 20rpx 0;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.uploader-image {
-  width: 100%;
-  height: 360rpx;
-}
-
-.tunnel {
-  padding: 0 0 0 40rpx;
-}
-
-.tunnel-text {
-  position: relative;
-  color: #222;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.tunnel-text:first-child {
-  border-top: none;
-}
-
-.tunnel-switch {
+.index .case .content .item .subtitle{
   position: absolute;
-  right: 20rpx;
-  top: -2rpx;
+  bottom: 78px;
+  left: 20px;
+  display: block;
+  width: 66px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #ffffff;
+  background: url("http://www.beishuibao.com/web_pic/program/icon_label1.png") center center no-repeat;
+  background-size: 100% 100%;
 }
-
-.disable {
-  color: #888;
-}
-
-.service {
-  position: fixed;
-  right: 40rpx;
-  bottom: 40rpx;
-  width: 140rpx;
-  height: 140rpx;
-  border-radius: 50%;
-  background: linear-gradient(#007aff, #0063ce);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  transition: all 300ms ease;
-}
-
-.service-button {
+.index .case .content .item .box {
   position: absolute;
-  top: 40rpx;
+  bottom: 0px;
+  margin: 0px 15px 12px 15px;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  white-space:normal;
+}
+.index .case .content .item .box .text{
+  display: block;
+  font-size: 9px;
+	line-height: 12px;
+	color: #fbfbfb;
+  white-space:normal;
 }
 
-.service:active {
-  box-shadow: none;
+
+/* 产品介绍 */
+.index .product {
+
+}
+.index .product .title{
+  display: block;
+  height: 50px;
+  font-size: 15px;
+  color: #333333;
+}
+.index .product .title .left{
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 20px;
+  background: url("http://www.beishuibao.com/web_pic/program/icon_line.png") left 15px center no-repeat;
+  background-size: 2px 11px;
+}
+.index .product .title .right{
+  float: right;
+  height: 50px;
+  line-height: 50px;
+  padding-right: 26px;
+  background: url("http://www.beishuibao.com/web_pic/program/icon_down1.png") right 15px center no-repeat;
+  background-size: 6px 11px;
 }
 
-.request-text {
-  padding: 20rpx 0;
-  font-size: 24rpx;
-  line-height: 36rpx;
-  word-break: break-all;
+.index .product .content {
+  margin: 0px 10px;
+  background: #ffffff;
+  box-shadow: 3px 0px 29px 0px 
+		rgba(229, 229, 229, 0.63);
+	border-radius: 6px;
+}
+.index .product .content .seed{
+  padding: 0px 14px;
+}
+.index .product .content .seed .head{
+  display: block;
+  height: 47px;
+}
+.index .product .content .seed .head .icon {
+  float: left;
+  width: 38px;
+  height: 38px;
+  margin: 4px 5px 0px 0px;
+}
+.index .product .content .seed .head .name {
+  float: left;
+  height: 47px;
+  line-height: 47px;
+  text-align: left;
+  font-size: 14px;
+  color: #494949;
+}
+.index .product .content .seed .sige {
+  display: block;
+  height: 26px;
+  font-size: 12px;
+  color: #333333;
+}
+.index .product .content .seed .sige .sigeleft{
+  float: left;
+  height: 26px;
+  line-height: 26px;
+  padding-left: 4px;
+}
+.index .product .content .seed .sige .sigeright{
+  float: right;
+  height: 26px;
+  line-height: 26px;
+  padding-right: 8px; 
+}
+.index .product .content .seed .son {
+  display: block;
+  height: 26px;
+  font-size: 10px;
+  color: #333333;
+}
+.index .product .content .seed .son:nth-of-type(odd){
+  background: #fafafa;
+}
+.index .product .content .seed .son .sonleft{
+  float: left;
+  height: 26px;
+  line-height: 26px;
+  padding-left: 4px;
+}
+.index .product .content .seed .son .sonright{
+  float: right;
+  height: 26px;
+  line-height: 26px;
+  padding-right: 8px; 
 }
