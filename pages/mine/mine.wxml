@@ -1,7 +1,7 @@
 <!--pages/mine/mine.wxml-->
 <view class="mine">
   <!-- 头像，用户名 -->
-  <view class="mine-header">
+  <view class="mine-header" bindtap="link_logout">
    <image src="{{user_photo}}" class="mine-header-photo"></image>
    <view class="mine-header-name">
       <text>{{user_name}}</text>
@@ -10,7 +10,7 @@
   </view>
   <!-- center-信息订单。。。 -->
   <view class="mine-nav clearfix">
-   <view class="mine-nav-item">
+   <view class="mine-nav-item" bindtap="modifyInfo">
     <image src="http://www.beishuibao.com/web_pic/program/me_icon_user.png" class="mine-nav-item-photo"></image>
     <view class="mine-nav-item-name">
         <text>信息修改</text>

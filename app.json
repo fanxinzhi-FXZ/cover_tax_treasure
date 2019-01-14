@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/cart/cart",
     "pages/mine/mine",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/logout/logout",
+    "pages/modifyInfo/modifyInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
