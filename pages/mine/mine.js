@@ -1,5 +1,5 @@
 // pages/mine/mine.js
-const Img_URL = 'http://www.beishuibao.com/web_pic/program/';
+const Img_URL = 'https://www.beishuibao.com/web_pic/program/';
 const app = getApp();
 Page({
 
@@ -20,6 +20,11 @@ Page({
   modifyInfo: function () {
     wx.navigateTo({
       url: '/pages/modifyInfo/modifyInfo'
+    })
+  },
+  link_password:function () {
+    wx.navigateTo({
+      url: '/pages/changePassword/changePassword'
     })
   }
 })

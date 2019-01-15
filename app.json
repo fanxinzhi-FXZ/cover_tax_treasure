@@ -5,7 +5,8 @@
     "pages/mine/mine",
     "pages/login/login",
     "pages/logout/logout",
-    "pages/modifyInfo/modifyInfo"
+    "pages/modifyInfo/modifyInfo",
+    "pages/changePassword/changePassword"
   ],
   "window": {
     "backgroundTextStyle": "light",
