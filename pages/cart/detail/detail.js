@@ -31,10 +31,7 @@ Page({
     duration: 500,
     circular: true,
     productCircular: false,
-    indicatorActiveColor: "#4d6ce3",
-
-    swiperHeight: 0,
-    swiperWidth: 0,
+    indicatorActiveColor: "#4d6ce3"
   },
 
   /**
@@ -42,15 +39,7 @@ Page({
    */
   onLoad: function (options) {
     var vm = this;
-    // 获取屏幕宽度，设置banner的宽高
-    wx.getSystemInfo({
-      success: function (res) {
-        vm.setData({
-          swiperHeight: res.screenWidth / 2.4193,
-          swiperWidth: res.screenWidth
-        })
-      }
-    })
+
   },
 
   /**

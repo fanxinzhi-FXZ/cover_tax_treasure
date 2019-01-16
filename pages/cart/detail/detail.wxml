@@ -1,7 +1,21 @@
+<span class="detail-title">套餐选择</span>
+<swiper class="detail-swiper" bindchange="swiperChange" indicator-dots="{{indicatorDots}}" previous-margin="100px" next-margin="100px" circular autoplay="{{false}}" indicator-active-color="{{indicatorActiveColor}}">
+  <block wx:for="{{bannerImgItems}}" wx:key="item"  wx:for-index="index">
+    <swiper-item class="detail-swiperitem">
+      <view class="detail-itemImg {{swiperCurrent == index ? 'detail-active' : '' }}">
+        <text>{{item.name}}</text>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
 <view class="detail">
-  <span class="title">套餐选择</span>
-  <view class="box">
-    <swiper class="swiper" indicator-dots="{{indicatorDots}}" current='{{swiperCurrent}}'  previous-margin="60px" next-margin="60px" display-multiple-items="1" autoplay="{{swiperautoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-active-color="{{indicatorActiveColor}}" bindchange="swiperChange">
+  
+  <!-- <view class="box"> -->
+  
+
+
+
+    <!-- <swiper class="swiper" indicator-dots="{{indicatorDots}}" current='{{swiperCurrent}}'  previous-margin="60px" next-margin="60px" display-multiple-items="1" autoplay="{{swiperautoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-active-color="{{indicatorActiveColor}}" bindchange="swiperChange">
       <block wx:for="{{bannerImgItems}}" wx:key="item"  wx:for-index="index">
         <swiper-item>
           <view class="seed {{swiperCurrent == index ? 'active' : '' }}">
@@ -9,10 +23,17 @@
           </view>
         </swiper-item>
       </block>
-    </swiper>
-  </view>
-  <view class="bottom">
+    </swiper> -->
+  <!-- </view> -->
+
+  <!--  -->
+  <!-- <view class="content">
+
+  </view> -->
+
+  <!-- 底部按钮 -->
+  <!-- <view class="bottom">
     <text class="buy">立即购买</text>
     <text class="money">￥50</text>
-  </view>
+  </view> -->
 </view>
