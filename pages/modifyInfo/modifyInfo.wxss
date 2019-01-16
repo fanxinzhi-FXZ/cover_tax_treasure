@@ -1,0 +1,143 @@
+/* pages/modifyInfo/modifyInfo.wxss */
+page{
+  background: #fff;
+}
+.modifyInfo{
+
+}
+/* 标题 */
+.modifyInfo-title{
+  height:42px;
+  line-height:42px;
+}
+.modifyInfo-title-left{
+  width: 2.5px;
+	height: 11px;
+	background-color: #2e59d4;
+	border-radius: 1.3px;
+	opacity: 0.67;
+  float:left;
+  margin:15.5px 11.5px 0 21px;
+}
+.modifyInfo-title-right{
+  font-family: PingFang-SC-Medium;
+	font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #a8a8a8;
+  float:left;
+}
+.modifyInfo-name,.modifyInfo-sex{
+  height:60px;
+  line-height:60px;
+  border-bottom:1px solid #eaeaea;
+}
+.modifyInfo-name-left,.modifyInfo-sex-left{
+  font-family: PingFang-SC-Medium;
+	font-size: 15px;
+	font-weight: normal;
+  width:116px;
+  
+	color: #333333;
+  text-indent:27px;
+  float:left;
+}
+
+.modifyInfo-name-right{
+  font-family: PingFang-SC-Medium;
+	font-size: 15px;
+  height:60px;
+  line-height:60px;
+  width:calc(100% - 116px);
+	font-weight: normal;
+	color: #989898;
+  float:left;
+}
+
+.modifyInfo-sex-right{
+
+}
+.modifyInfo-sex-right-one{
+  float:left;
+  margin:0 72.5px 0 0;
+}
+.modifyInfo-sex-right-two{
+  float:left;
+}
+.modifyInfo-sex-right-one-img,.modifyInfo-sex-right-two-img{
+  width:13px;
+  height:13px;
+  margin:23.5px 13.5px 0 0;
+}
+
+
+.modifyInfo-mobile{
+  position:relative;
+  border-bottom:1px solid #eaeaea;
+}
+.modifyInfo-mobile-left{
+  font-family: PingFang-SC-Medium;
+	font-size: 15px;
+  height:60px;
+  line-height:60px;
+	font-weight: normal;
+  width:116px;
+	color: #333333;
+  text-indent:27px;
+  float:left;
+}
+
+.modifyInfo-mobile-right{
+  font-family: PingFang-SC-Medium;
+	font-size: 15px;
+  height:60px;
+  line-height:60px;
+  color: #989898;
+  width:calc(100% - 152px);
+	font-weight: normal;
+  float:left;
+}
+.modifyInfo-mobile-confirm{
+  position:absolute;
+  top:7px;
+  left:116px;
+  font-family: PingFang-SC-Regular;
+	font-size: 9px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #fb6363;
+}
+ .modifyInfo-mobile-right-img{
+  width:14px;
+  height:14px;
+  margin:23px 0 0 0;
+}
+
+.modifyInfo-sub{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+}
+.modifyInfo-sub-btn{
+  width:100%;
+  line-height:48px;
+  height: 48px;
+	background-color: #4d6ce3;
+  font-family: PingFang-SC-Bold;
+	font-size: 17px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0.5px;
+	color: #ffffff;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+

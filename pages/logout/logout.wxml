@@ -1,0 +1,6 @@
+<!--pages/logout/logout.wxml-->
+<view>
+  <view class="logout">
+    退出登录
+  </view>
+</view>

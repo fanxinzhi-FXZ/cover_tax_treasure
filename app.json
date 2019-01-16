@@ -4,7 +4,10 @@
     "pages/cart/cart",
     "pages/cart/detail/detail",
     "pages/mine/mine",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/logout/logout",
+    "pages/modifyInfo/modifyInfo",
+    "pages/changePassword/changePassword"
   ],
   "window": {
     "backgroundTextStyle": "light",

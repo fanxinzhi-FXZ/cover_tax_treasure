@@ -1,17 +1,17 @@
 <!--pages/mine/mine.wxml-->
 <view class="mine">
   <!-- 头像，用户名 -->
-  <view class="mine-header">
+  <view class="mine-header" bindtap="link_logout">
    <image src="{{user_photo}}" class="mine-header-photo"></image>
    <view class="mine-header-name">
       <text>{{user_name}}</text>
    </view>
-   <image src="http://www.beishuibao.com/web_pic/program/icon_down1.png" class="mine-header-down"></image>
+   <image src="https://www.beishuibao.com/web_pic/program/icon_down1.png" class="mine-header-down"></image>
   </view>
   <!-- center-信息订单。。。 -->
   <view class="mine-nav clearfix">
-   <view class="mine-nav-item">
-    <image src="http://www.beishuibao.com/web_pic/program/me_icon_user.png" class="mine-nav-item-photo"></image>
+   <view class="mine-nav-item" bindtap="modifyInfo">
+    <image src="https://www.beishuibao.com/web_pic/program/me_icon_user.png" class="mine-nav-item-photo"></image>
     <view class="mine-nav-item-name">
         <text>信息修改</text>
     </view>
@@ -20,14 +20,14 @@
   <view class="mine-nav-item">
     <view class="mine-nav-item-left"></view>
     <view class="mine-nav-item-right"></view>
-    <image src="http://www.beishuibao.com/web_pic/program/me_icon_document.png" class="mine-nav-item-photo"></image>
+    <image src="https://www.beishuibao.com/web_pic/program/me_icon_document.png" class="mine-nav-item-photo"></image>
     <view class="mine-nav-item-name">
         <text>我的订单</text>
     </view>
   </view>
 
     <view class="mine-nav-item">
-    <image src="http://www.beishuibao.com/web_pic/program/me_icon_buy.png" class="mine-nav-item-photo"></image>
+    <image src="https://www.beishuibao.com/web_pic/program/me_icon_buy.png" class="mine-nav-item-photo"></image>
     <view class="mine-nav-item-name">
         <text>我要代理</text>
     </view>
@@ -36,22 +36,22 @@
 
   <!-- footer -->
   <view class="mine-footer">
-    <view class="mine-footer-item">
-      <image src="http://www.beishuibao.com/web_pic/program/me_icon_phone.png" class="mine-footer-item-photo"></image>
+    <view class="mine-footer-item" bindtap="link_password">
+      <image src="https://www.beishuibao.com/web_pic/program/me_icon_phone.png" class="mine-footer-item-photo"></image>
       <view class="mine-footer-item-text">修改密码</view>
-      <image src="http://www.beishuibao.com/web_pic/program/icon_down1.png" class="mine-footer-item-down"></image>
+      <image src="https://www.beishuibao.com/web_pic/program/icon_down1.png" class="mine-footer-item-down"></image>
     </view>
 
     <view class="mine-footer-item">
-      <image src="http://www.beishuibao.com/web_pic/program/me_icon_money.png" class="mine-footer-item-photo"></image>
+      <image src="https://www.beishuibao.com/web_pic/program/me_icon_money.png" class="mine-footer-item-photo"></image>
       <view class="mine-footer-item-text">我的理赔</view>
-      <image src="http://www.beishuibao.com/web_pic/program/icon_down1.png" class="mine-footer-item-down"></image>
+      <image src="https://www.beishuibao.com/web_pic/program/icon_down1.png" class="mine-footer-item-down"></image>
     </view>
 
     <view class="mine-footer-item">
-      <image src="http://www.beishuibao.com/web_pic/program/me_icon_we.png" class="mine-footer-item-photo"></image>
+      <image src="https://www.beishuibao.com/web_pic/program/me_icon_we.png" class="mine-footer-item-photo"></image>
       <view class="mine-footer-item-text">关于我们</view>
-      <image src="http://www.beishuibao.com/web_pic/program/icon_down1.png" class="mine-footer-item-down"></image>
+      <image src="https://www.beishuibao.com/web_pic/program/icon_down1.png" class="mine-footer-item-down"></image>
     </view>
   </view>
 </view>
