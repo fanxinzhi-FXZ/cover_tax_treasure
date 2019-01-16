@@ -1,0 +1,10 @@
+<!--pages/mineSettlement/mineSettlement.wxml-->
+<view>
+  <swiper class="imageContainer" bindchange="handleChange" previous-margin="150rpx" next-margin="150rpx" circular autoplay>
+    <block wx:for="{{3}}" wx:key="{{index}}">
+      <swiper-item class="item">
+        <image class="itemImg {{currentIndex == index ? 'active': ''}}" src="https://avatar.csdn.net/6/7/F/1_laishaojiang.jpg?1536044509"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
