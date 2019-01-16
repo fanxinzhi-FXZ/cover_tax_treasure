@@ -26,5 +26,11 @@ Page({
     wx.navigateTo({
       url: '/pages/changePassword/changePassword'
     })
+  },
+  mineSettlement:function () {
+    wx.navigateTo({
+      url: "/pages/mineSettlement/mineSettlement"
+    })
+    
   }
 })

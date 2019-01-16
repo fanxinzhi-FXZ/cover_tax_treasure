@@ -42,7 +42,7 @@
       <image src="https://www.beishuibao.com/web_pic/program/icon_down1.png" class="mine-footer-item-down"></image>
     </view>
 
-    <view class="mine-footer-item">
+    <view class="mine-footer-item" bindtap="mineSettlement">
       <image src="https://www.beishuibao.com/web_pic/program/me_icon_money.png" class="mine-footer-item-photo"></image>
       <view class="mine-footer-item-text">我的理赔</view>
       <image src="https://www.beishuibao.com/web_pic/program/icon_down1.png" class="mine-footer-item-down"></image>
