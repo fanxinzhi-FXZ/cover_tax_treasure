@@ -6,7 +6,8 @@
     "pages/login/login",
     "pages/logout/logout",
     "pages/modifyInfo/modifyInfo",
-    "pages/changePassword/changePassword"
+    "pages/changePassword/changePassword",
+    "pages/mineSettlement/mineSettlement"
   ],
   "window": {
     "backgroundTextStyle": "light",
