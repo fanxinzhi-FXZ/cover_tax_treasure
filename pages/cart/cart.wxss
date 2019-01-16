@@ -50,6 +50,6 @@
   font-size: 12px;
   color: #999999;
   margin-top: 5px;
-  background: url("http://www.beishuibao.com/web_pic/program/icon_down1.png") right 20px center no-repeat;
+  background: url("https://www.beishuibao.com/web_pic/program/icon_down1.png") right 20px center no-repeat;
   background-size: 8px 9px;
 }

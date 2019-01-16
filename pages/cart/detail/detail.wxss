@@ -1,0 +1,60 @@
+.detail {
+
+} 
+.detail .title{
+  display: block;
+  font-size: 15px;
+  color: #333333;
+  text-align: left;
+  padding: 20px 0px 0px 15px;
+  background: #ffffff;
+} 
+.detail .box {
+  display: block;
+  background: #ffffff;
+}
+.detail .box .swiper {
+  width: 750rpx;
+  height: 206rpx;
+}
+.detail .box .swiper .seed {
+  width: 203rpx;
+  height: 120rpx;
+  background: pink;
+  margin: 16rpx auto;
+}
+.detail .box .swiper .seed.active{
+  width: 245rpx;
+  height: 150rpx;
+  margin: 0rpx auto;
+  background: #fed030;
+}
+
+.detail .bottom {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 48px;
+  background: #ffffff;
+}
+.detail .bottom .money {
+  display: block;
+  margin-right: 155px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 17px;
+  text-align: center;
+  color: #4d6ce3;
+}
+.detail .bottom .buy {
+  display: block;
+  float: right;
+  width: 154px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 17px;
+  background: #4d6ce3;
+}
