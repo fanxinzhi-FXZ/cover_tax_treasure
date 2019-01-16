@@ -1,0 +1,18 @@
+<view class="detail">
+  <span class="title">套餐选择</span>
+  <view class="box">
+    <swiper class="swiper" indicator-dots="{{indicatorDots}}" current='{{swiperCurrent}}'  previous-margin="60px" next-margin="60px" display-multiple-items="1" autoplay="{{swiperautoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-active-color="{{indicatorActiveColor}}" bindchange="swiperChange">
+      <block wx:for="{{bannerImgItems}}" wx:key="item"  wx:for-index="index">
+        <swiper-item>
+          <view class="seed {{swiperCurrent == index ? 'active' : '' }}">
+            <text>{{item.name}}</text>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="bottom">
+    <text class="buy">立即购买</text>
+    <text class="money">￥50</text>
+  </view>
+</view>

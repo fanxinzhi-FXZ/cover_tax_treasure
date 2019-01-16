@@ -32,7 +32,7 @@
   <view class='product'>
     <span class="title">
       <var class="left">产品介绍</var>
-      <var class="right">详情了解</var>
+      <var class="right" bindtap="goDetail">详情了解</var>
     </span>
     <view class="content">
       <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{productCircular}}" indicator-active-color="{{productActiveColor}}" style='height: 342px'>
@@ -64,69 +64,61 @@
     <view class="content">
       <view class="item">
         <view class="buy">
-          <span class="head"><image class="headimg" src='http://www.beishuibao.com/web_pic/program/img_01-.png'></image></span>
+          <span class="head"><image class="headimg" src='https://www.beishuibao.com/web_pic/program/img_01-.png'></image></span>
           <view class="con">
             <span class="seed">
-              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img1.png'></image>
+              <image class="seedimg" src='https://www.beishuibao.com/web_pic/program/process1_img1.png'></image>
               <var class="text">选择产品</var>
             </span>
             <span class="seed">
-              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img2.png'></image>
+              <image class="seedimg" src='https://www.beishuibao.com/web_pic/program/process1_img2.png'></image>
               <var class="text">填写信息</var>
             </span>
             <span class="seed">
-              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img3.png'></image>
+              <image class="seedimg" src='https://www.beishuibao.com/web_pic/program/process1_img3.png'></image>
               <var class="text">在线付款</var>
             </span>
             <span class="seed">
-              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img4.png'></image>
+              <image class="seedimg" src='https://www.beishuibao.com/web_pic/program/process1_img4.png'></image>
               <var class="text">合约查询</var>
             </span>
           </view>
         </view>
       </view>
        <view class="item">
-        <view class="buy">
-          <span class="head"><image class="headimg" src='http://www.beishuibao.com/web_pic/program/img_01-.png'></image></span>
+        <view class="claim">
+          <span class="head"><image class="headimg" src='https://www.beishuibao.com/web_pic/program/process2_02.png'></image></span>
           <view class="con">
             <span class="seed">
-              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img1.png'></image>
-              <var class="text">选择产品</var>
+              <image class="seedimg" src='https://www.beishuibao.com/web_pic/program/process2_img1.png'></image>
+              <var class="text">电话/邮件理赔</var>
             </span>
             <span class="seed">
-              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img2.png'></image>
-              <var class="text">填写信息</var>
+              <image class="seedimg" src='https://www.beishuibao.com/web_pic/program/process2_img2.png'></image>
+              <var class="text">提交资料</var>
             </span>
             <span class="seed">
-              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img3.png'></image>
-              <var class="text">在线付款</var>
-            </span>
-            <span class="seed">
-              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img4.png'></image>
-              <var class="text">合约查询</var>
+              <image class="seedimg" src='https://www.beishuibao.com/web_pic/program/process2_img3.png'></image>
+              <var class="text">等待赔付</var>
             </span>
           </view>
         </view>
       </view>
       <view class="item">
-        <view class="buy">
-          <span class="head"><image class="headimg" src='http://www.beishuibao.com/web_pic/program/img_01-.png'></image></span>
+        <view class="claim">
+          <span class="cancelhead"><image class="headimg" src='https://www.beishuibao.com/web_pic/program/process_03.png'></image></span>
           <view class="con">
             <span class="seed">
-              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img1.png'></image>
-              <var class="text">选择产品</var>
+              <image class="seedimg" src='https://www.beishuibao.com/web_pic/program/process3_img1.png'></image>
+              <var class="text">致电客服 400806306</var>
             </span>
             <span class="seed">
-              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img2.png'></image>
-              <var class="text">填写信息</var>
+              <image class="seedimg" src='https://www.beishuibao.com/web_pic/program/process3_img2.png'></image>
+              <var class="text">根据邮件填写信息</var>
             </span>
             <span class="seed">
-              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img3.png'></image>
-              <var class="text">在线付款</var>
-            </span>
-            <span class="seed">
-              <image class="seedimg" src='http://www.beishuibao.com/web_pic/program/process1_img4.png'></image>
-              <var class="text">合约查询</var>
+              <image class="seedimg" src='https://www.beishuibao.com/web_pic/program/process3_img3.png'></image>
+              <var class="text">客服撤单</var>
             </span>
           </view>
         </view>
@@ -134,5 +126,14 @@
     </view>
   </view>
 
-
+  <!-- 常见问题 -->
+  <view class="common">
+    <span class="title">常见问题</span>
+    <view class="content">
+      <span class="item" wx:for="{{commonItems}}" wx:key="item">
+        <span class="subtitle"><var class="num">{{item.number}}</var>{{item.title}}</span>
+        <span class="text">{{item.text}}</span>
+      </span>
+    </view>
+  </view>
 </view>

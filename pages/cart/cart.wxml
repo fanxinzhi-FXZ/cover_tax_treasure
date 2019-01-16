@@ -1,9 +1,9 @@
 <!--pages/order/ordre.wxml-->
 <view class="cart">
-  <image class="header" src="http://www.beishuibao.com/web_pic/program/banner.png"></image>
+  <image class="header" src="https://www.beishuibao.com/web_pic/program/banner.png"></image>
 
   <view class="content">
-    <view class="item" wx:for="{{cartItems}}" wx:key="item">
+    <view class="item" wx:for="{{cartItems}}" bindtap="goDetail" wx:key="item">
       <image class="icon" src="{{item.icon}}"></image>
       <span class="title">{{item.title}}</span>
       <view class="rigth">

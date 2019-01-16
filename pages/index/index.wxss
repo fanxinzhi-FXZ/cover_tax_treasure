@@ -14,7 +14,7 @@
   font-size: 15px;
   color: #333333;
   padding: 0px 20px;
-  background: url("http://www.beishuibao.com/web_pic/program/icon_line.png") left 15px center no-repeat;
+  background: url("https://www.beishuibao.com/web_pic/program/icon_line.png") left 15px center no-repeat;
   background-size: 2px 11px;
 }
 .index .case .content{
@@ -29,7 +29,7 @@
   display: inline-block;
   width: 89.06vw;
   height: 51.2vw;
-  background-image: url("http://www.beishuibao.com/web_pic/program/img_bg1.png");
+  background-image: url("https://www.beishuibao.com/web_pic/program/img_bg1.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -47,8 +47,11 @@
   text-align: center;
   font-size: 13px;
   color: #ffffff;
-  background: url("http://www.beishuibao.com/web_pic/program/icon_label1.png") center center no-repeat;
+  background: url("https://www.beishuibao.com/web_pic/program/icon_label1.png") center center no-repeat;
   background-size: 100% 100%;
+}
+.index .case .content .item:nth-child(2){
+   background-image: url("https://www.beishuibao.com/web_pic/program/img_bg2.png");
 }
 .index .case .content .item .box {
   position: absolute;
@@ -83,7 +86,7 @@
   height: 50px;
   line-height: 50px;
   padding-left: 20px;
-  background: url("http://www.beishuibao.com/web_pic/program/icon_line.png") left 15px center no-repeat;
+  background: url("https://www.beishuibao.com/web_pic/program/icon_line.png") left 15px center no-repeat;
   background-size: 2px 11px;
 }
 .index .product .title .right{
@@ -91,7 +94,7 @@
   height: 50px;
   line-height: 50px;
   padding-right: 26px;
-  background: url("http://www.beishuibao.com/web_pic/program/icon_down1.png") right 15px center no-repeat;
+  background: url("https://www.beishuibao.com/web_pic/program/icon_down1.png") right 15px center no-repeat;
   background-size: 6px 11px;
 }
 
@@ -174,12 +177,12 @@
   font-size: 15px;
   color: #333333;
   padding: 0px 20px;
-  background: url("http://www.beishuibao.com/web_pic/program/icon_line.png") left 15px center no-repeat;
+  background: url("https://www.beishuibao.com/web_pic/program/icon_line.png") left 15px center no-repeat;
   background-size: 2px 11px;
 }
 .index .flow .content{
   width: 100vw;
-  height: 53.5vw;
+  height: 56.53vw;
   display: block;
   white-space:nowrap;
   overflow-x: auto;
@@ -188,7 +191,7 @@
 .index .flow .content .item{
   display: inline-block;
   width: 89.06vw;
-  height: 51.2vw;
+  height: 54.2vw;
   margin-left: 10px;
   white-space:normal;
   box-shadow: 1.5px 0px 14.5px 0px 
@@ -207,6 +210,15 @@
   height: 38px;
   padding: 14px 0px 0px 16px;
 }
+.index .flow .content .item .cancelhead {
+  display: block;
+  height: 38px;
+  padding: 14px 0px 0px 16px;
+}
+.index .flow .content .item .cancelhead .headimg {
+  width: 134px;
+  height: 38px;
+}
 .index .flow .content .item .head .headimg {
   width: 86px;
   height: 38px; 
@@ -220,8 +232,8 @@
   float: left;
   width: 17.86vw;
   padding-right: 4.8vw;
-  padding-top: 6.66vw;
-  background: url("http://www.beishuibao.com/web_pic/program/icom_dot3.png") right 0.8vw center no-repeat;
+  padding-top: 5.66vw;
+  background: url("https://www.beishuibao.com/web_pic/program/icom_dot3.png") right 0.8vw center no-repeat;
   background-size: 13px 9px;
 }
 .index .flow .content .item .buy .con .seed .seedimg{
@@ -233,10 +245,88 @@
   text-align: center;
   font-size: 10px;
   color: #5578de;
-  padding-top: 3.33vw;
+  padding-top: 2.33vw;
 }
 .index .flow .content .item .buy .con .seed:last-child {
   padding-right: 0px;
   background: #ffffff;
 
+}
+/* 流程介绍 -- 理赔流程 */
+.index .flow .content .item .claim .con {
+  overflow: hidden;
+  padding: 0px 7vw;
+}
+.index .flow .content .item .claim .con .seed{
+  display: block;
+  float: left;
+  width: 17.86vw;
+  padding-right: 10.6vw;
+  padding-top: 5.66vw;
+  background: url("https://www.beishuibao.com/web_pic/program/icom_dot3.png") right 4vw center no-repeat;
+  background-size: 13px 9px;
+}
+.index .flow .content .item .claim .con .seed .seedimg{
+  width: 17.86vw;
+  height:  17.86vw;
+}
+.index .flow .content .item .claim .con .seed .text{
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  color: #5578de;
+  padding-top: 2.33vw;
+}
+.index .flow .content .item .claim .con .seed:last-child {
+  padding-right: 0px;
+  background: #ffffff;
+
+}
+
+/* 常见问题 */
+.index .common {
+
+}
+.index .common .title{
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  font-size: 15px;
+  color: #333333;
+  padding: 0px 20px;
+  background: url("https://www.beishuibao.com/web_pic/program/icon_line.png") left 15px center no-repeat;
+  background-size: 2px 11px;
+}
+.index .common .content{
+  display: block;
+	background-color: #ffffff;
+	box-shadow: 1.5px 0px 14.5px 0px 
+		rgba(229, 229, 229, 0.63);
+	border-radius: 6px;
+  margin: 0px 10px;
+  padding: 6px 20px 20px 15px;
+}
+.index .common .content .item {
+  display: block;
+  padding-top: 18px;
+}
+.index .common .content .item .subtitle{
+  display: block;
+  padding-left: 15px;
+  font-size: 14px;
+  color: #494949;
+  background: url("https://www.beishuibao.com/web_pic/program/icom_dot3.png") left center no-repeat;
+  background-size: 10px 10px;
+}
+.index .common .content .item .subtitle .num {
+  font-size: 14px;
+  display: inline;
+  color:#3756b4;
+}
+.index .common .content .item .text {
+  display: block;
+  padding-left: 15px;
+  line-height: 18px;
+  font-size: 12px;
+  color: #494949;
 }

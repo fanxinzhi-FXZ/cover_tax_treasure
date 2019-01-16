@@ -13,23 +13,23 @@ Page({
   // 退出登录
   link_logout: function () {
     wx.navigateTo({
-      url: '/pages/logout/logout'
+      url: '/pages/mine/logout/logout'
     })
   },
   // 信息修改
   modifyInfo: function () {
     wx.navigateTo({
-      url: '/pages/modifyInfo/modifyInfo'
+      url: '/pages/mine/modifyInfo/modifyInfo'
     })
   },
   link_password:function () {
     wx.navigateTo({
-      url: '/pages/changePassword/changePassword'
+      url: '/pages/mine/changePassword/changePassword'
     })
   },
   mineSettlement:function () {
     wx.navigateTo({
-      url: "/pages/mineSettlement/mineSettlement"
+      url: "/pages/mine/mineSettlement/mineSettlement"
     })
     
   }

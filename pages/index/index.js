@@ -16,6 +16,8 @@ Page({
     swiperHeight: 0,
     swiperWidth: 0,
 
+    commonItems: store.index.commonItems,
+
     productItems:[
       {
         "icon": "http://www.beishuibao.com/web_pic/program/list1_icon_gold.png",
@@ -144,6 +146,13 @@ Page({
           swiperWidth: res.screenWidth
         })
       }
+    })
+  },
+
+  // 了解详情
+  goDetail: function(){
+    wx.navigateTo({
+      url: '/pages/cart/detail/detail'
     })
   }
 })
