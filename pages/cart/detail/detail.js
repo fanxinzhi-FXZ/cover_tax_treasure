@@ -11,17 +11,20 @@ Page({
       {
       "name": "黄金计划",
       "goodSId": 1,
-      "price": "50元" 
+      "price": "50元",
+        "background": "linear-gradient(90deg, #ff971c, #fdc429 50%, #ff971c,);"
       },
       {
         "name": "钻石计划",
         "goodSId": 2,
-        "price": "150元"
+        "price": "150元",
+        "background": "linear-gradient(90deg, #4e82f5, #4eb0f5 50%, #4e82f5);"
       },
       {
         "name": "大富翁计划",
         "goodSId": 3,
-        "price": "300元"
+        "price": "300元",
+        "background": "linear-gradient(90deg, #ff6c1c, #fa7063 50%,#ff6c1c );"
       }
     ],
     swiperCurrent: 0,
@@ -31,7 +34,28 @@ Page({
     duration: 500,
     circular: true,
     productCircular: false,
-    indicatorActiveColor: "#4d6ce3"
+    indicatorActiveColor: "#4d6ce3",
+
+    contentItems: [
+      {
+        "title": "理赔额度",
+        "number": "￥500"
+      },
+      {
+        "title": "理赔额度",
+        "number": "￥500"
+      },
+      {
+        "title": "理赔额度",
+        "number": "￥500"
+      },
+      {
+        "title": "理赔额度",
+        "number": "￥500"
+      }
+    ],
+    buyNoticeItem: store.cart.buyNoticeItem
+
   },
 
   /**

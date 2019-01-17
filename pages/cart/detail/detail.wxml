@@ -2,38 +2,44 @@
 <swiper class="detail-swiper" bindchange="swiperChange" indicator-dots="{{indicatorDots}}" previous-margin="100px" next-margin="100px" circular autoplay="{{false}}" indicator-active-color="{{indicatorActiveColor}}">
   <block wx:for="{{bannerImgItems}}" wx:key="item"  wx:for-index="index">
     <swiper-item class="detail-swiperitem">
-      <view class="detail-itemImg {{swiperCurrent == index ? 'detail-active' : '' }}">
-        <text>{{item.name}}</text>
+      <view class="detail-itemImg {{swiperCurrent == index ? 'detail-active' : '' }}" style='background-image: {{item.background}}'>
+        <text class="detail-name {{swiperCurrent == index ? 'detail-active-name' : ''}}">{{item.name}}</text>
+        <text class="detail-money {{swiperCurrent == index ? 'detail-active-money' : ''}}">{{item.price}}</text>
       </view>
     </swiper-item>
   </block>
 </swiper>
 <view class="detail">
-  
-  <!-- <view class="box"> -->
-  
+  <view class="content">
+    <view class="seed" wx:for="{{contentItems}}" wx:key="item">
+      <text class="title">{{item.title}}</text>
+      <var class="number">{{item.number}}</var>
+    </view>
+    <view class="look">更多详情可查看阅读<var class="lookDetail">《被税宝合约详情》</var></view>
+  </view>
 
-
-
-    <!-- <swiper class="swiper" indicator-dots="{{indicatorDots}}" current='{{swiperCurrent}}'  previous-margin="60px" next-margin="60px" display-multiple-items="1" autoplay="{{swiperautoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-active-color="{{indicatorActiveColor}}" bindchange="swiperChange">
-      <block wx:for="{{bannerImgItems}}" wx:key="item"  wx:for-index="index">
-        <swiper-item>
-          <view class="seed {{swiperCurrent == index ? 'active' : '' }}">
-            <text>{{item.name}}</text>
-          </view>
-        </swiper-item>
-      </block>
-    </swiper> -->
-  <!-- </view> -->
-
-  <!--  -->
-  <!-- <view class="content">
-
-  </view> -->
+  <!-- 购买须知 -->
+  <view class="notice">
+    <text class="buyNotice">购买须知</text>
+    <view class="box">
+      <span class="title">一、甲乙双方的权利及义务</span>
+      <view class="item" wx:for="{{buyNoticeItem}}" wx:key="item" wx:for-item="item">
+        <span class="subtitle">{{item.title}}</span>
+        <text class="text" wx:for="{{item.list}}" wx:for-item="seed">{{seed}}</text>
+      </view>
+    </view>
+  </view>
 
   <!-- 底部按钮 -->
-  <!-- <view class="bottom">
+  <view class="bottom">
     <text class="buy">立即购买</text>
     <text class="money">￥50</text>
-  </view> -->
+  </view>
+
+  <!-- 合约详情 -->
+  <view class="contract-detail">
+    <view class="content">
+
+    </view>
+  </view>
 </view>

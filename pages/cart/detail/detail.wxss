@@ -11,7 +11,7 @@
   background: #ffffff;
 } 
 
-
+/* 轮播图样式 */
 .detail-swiper{
   width: 100%;
   height: 320rpx;
@@ -25,8 +25,9 @@
   width: 90%;
   margin:0 5%;
   height: 150rpx;
-  background: #fed030;
-  border-radius: 15rpx;
+  background-image: linear-gradient(-58deg,#ff971c 0%, #fdc429 100%);
+	box-shadow: 0px 3px 18px 0px	rgba(176, 176, 176, 0.23);
+  border-radius: 6rpx;
   z-index: 5;
   opacity: 0.7;
   top: 80rpx;
@@ -38,32 +39,124 @@
   top: 56rpx;
   transition:all .2s ease-in 0s;
 }
+.detail-name {
+  display: block;
+  text-align: center;
+  font-size: 28rpx;
+  color: #ffffff;
+  padding-top: 30rpx;
+}
+.detail-money {
+  display: block;
+  text-align: center;
+  font-size: 20rpx;
+  color: #ffffff;
+  padding-top: 30rpx;
+}
+.detail-active-name {
+  font-size: 40rpx;
+}
+.detail-active-money {
+  font-size: 30rpx;
+}
 
+.detail .content {
+  overflow: hidden;
+  padding: 50rpx 33rpx;
+  background: #ffffff;
+}
+.detail .content .seed {
+  float: left;
+  width: 317rpx;
+  height: 98rpx;
+  margin: 12rpx;
+  color: #333333;
+  background-color: #ffffff;
+	box-shadow: 0px 1rpx 7rpx 0rpx 
+		rgba(226, 226, 226, 0.92);
+	border-radius: 6rpx;
+}
+.detail .content .seed .title{
+  display: block;
+  font-size: 24rpx;
+  padding: 20rpx 0px 10rpx 30rpx; 
+}
+.detail .content .seed .number{
+  display: block;
+  font-size: 22rpx;
+  padding-left: 30rpx;
+}
+.detail .content .look {
+  display: block;
+  font-size: 20rpx;
+  color: rgba(128, 128, 128, 0.64);
+  padding: 12rpx 0rpx 0rpx 20rpx; 
+}
+.detail .content .look .lookDetail{
+  color: rgba(78,130,245,0.64);
+}
+
+
+/* 购买须知 */
+.detail .notice {
+  margin-top: 20rpx;
+  background: #ffffff;
+}
+.detail .notice .buyNotice{
+  display: block;
+  font-size: 30rpx;
+  color: #333333;
+  padding: 43rpx 0px 40rpx 33rpx;
+}
+.detail .notice .box{
+  display: block;
+  font-size: 24rpx;
+  color: #666666;
+  padding: 0rpx 45rpx 116rpx 45rpx;
+}
+.detail .notice .box .title{
+  display: block;
+}
+.detail .notice .box .item{
+  display: block;
+}
+.detail .notice .box .item .subtitle{
+  display: block;
+}
+.detail .notice .box .item .text{
+  display: block;
+}
+
+/* 底部按钮  立即购买 */
 .detail .bottom {
   position: fixed;
   bottom: 0px;
   left: 0px;
   right: 0px;
-  height: 48px;
+  height: 96rpx;
   background: #ffffff;
 }
 .detail .bottom .money {
   display: block;
-  margin-right: 155px;
-  height: 48px;
-  line-height: 48px;
-  font-size: 17px;
+  margin-right: 306rpx;
+  height:96rpx;
+  line-height: 96rpx;
+  font-size: 34rpx;
   text-align: center;
   color: #4d6ce3;
 }
 .detail .bottom .buy {
   display: block;
   float: right;
-  width: 154px;
-  height: 48px;
-  line-height: 48px;
+  width: 306rpx;
+  height: 96rpx;
+  line-height: 96rpx;
   text-align: center;
   color: #ffffff;
-  font-size: 17px;
+  font-size: 34rpx;
   background: #4d6ce3;
 }
+
+
+/* 合约详情浮层 */
+
