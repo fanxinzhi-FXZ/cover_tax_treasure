@@ -25,14 +25,14 @@
       <span class="title">一、甲乙双方的权利及义务</span>
       <view class="item" wx:for="{{buyNoticeItem}}" wx:key="item" wx:for-item="item">
         <span class="subtitle">{{item.title}}</span>
-        <text class="text" wx:for="{{item.list}}" wx:for-item="seed">{{seed}}</text>
+        <text class="text" wx:for="{{item.list}}" wx:key="seed" wx:for-item="seed">{{seed}}</text>
       </view>
     </view>
   </view>
 
   <!-- 底部按钮 -->
   <view class="bottom">
-    <text class="buy">立即购买</text>
+    <text class="buy" bindtap='goInfoFill'>立即购买</text>
     <text class="money">￥50</text>
   </view>
 

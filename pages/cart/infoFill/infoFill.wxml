@@ -1,0 +1,66 @@
+<!--pages/cart/infoFill.wxml-->
+<view class="infoFill">
+
+  <!-- 行程信息 -->
+  <view class="trip">
+    <text class="title">行程信息</text>
+    <span class="item">
+      <var class="subtitle">回国航班号</var>
+      <span class="son"><input class="input" type="text" placeholder="请输入航班号"></input></span>
+    </span>
+    <span class="item">
+      <var class="subtitle">国内到达机场</var>
+      <span class="son"><input class="input" type="text" placeholder="请输入机场名称"></input></span>
+    </span>
+    <span class="item">
+      <var class="subtitle">回国到达日期</var>
+      <span class="son"><input class="input" type="text" placeholder="请输到达日期"></input></span>
+    </span>
+  </view>
+
+  <!-- 旅客信息 -->
+  <view class="traveller">
+    <text class="title">旅客信息</text>
+    <span class="item">
+      <var class="subtitle">添加旅客姓名</var>
+      <span class="son"><input class="input" type="text" placeholder="请输入您的真实姓名"></input></span>
+    </span>
+    <span class="item">
+      <var class="subtitle">证件号码</var>
+      <span class="son"><input class="input" type="idcard" placeholder="身份证/护照号码"></input></span>
+    </span>
+    <span class="item">
+      <var class="subtitle">手机号码</var>
+      <span class="son"><input class="input" type="number" maxlength="11" placeholder="请输入手机号码"></input></span>
+    </span>
+    <span class="item">
+      <var class="subtitle">邮箱地址</var>
+      <span class="son"><input class="input" type="text" placeholder="请输入正确邮箱地址"></input></span>
+    </span>
+  </view>
+
+  <!-- 电子合约 -->
+  <view class="contract">
+    <text class="title">电子合约</text>
+    
+  </view>
+
+  <!-- 合约声明 -->
+  <view class="statement">
+    <text class="title">合约声明</text>
+    
+  </view>
+
+  <!-- 代理人手机号码 -->
+  <view class="agent">
+    <text class="title">代理人手机号码</text>
+    <span class="agentphone"><input class="input" type="number" maxlength="11" placeholder="请输入代理人手机号码"></input></span>
+  </view>
+
+  <!-- 底部按钮及金额 -->
+  <view class="bottom">
+    <span class="money">￥50</span>
+    <var class="text">（1人1计划）</var>
+    <span class="button" bindtap="goInfoCkeck">下一步</span>
+  </view>
+</view>
