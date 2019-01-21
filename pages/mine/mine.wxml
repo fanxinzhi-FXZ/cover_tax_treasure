@@ -26,7 +26,7 @@
     </view>
   </view>
 
-    <view class="mine-nav-item">
+    <view class="mine-nav-item" bindtap="agency">
     <image src="https://www.beishuibao.com/web_pic/program/me_icon_buy.png" class="mine-nav-item-photo"></image>
     <view class="mine-nav-item-name">
         <text>我要代理</text>
@@ -48,7 +48,7 @@
       <image src="https://www.beishuibao.com/web_pic/program/icon_down1.png" class="mine-footer-item-down"></image>
     </view>
 
-    <view class="mine-footer-item">
+    <view class="mine-footer-item" bindtap="aboutUS">
       <image src="https://www.beishuibao.com/web_pic/program/me_icon_we.png" class="mine-footer-item-photo"></image>
       <view class="mine-footer-item-text">关于我们</view>
       <image src="https://www.beishuibao.com/web_pic/program/icon_down1.png" class="mine-footer-item-down"></image>

@@ -22,19 +22,34 @@ Page({
       url: '/pages/mine/modifyInfo/modifyInfo'
     })
   },
+  // 修改密码
   link_password:function () {
     wx.navigateTo({
       url: '/pages/mine/changePassword/changePassword'
     })
   },
+  // 我的理赔
   mineSettlement:function () {
     wx.navigateTo({
       url: "/pages/mine/mineSettlement/mineSettlement"
     })
   },
+  // 我的订单
   order(){
     wx.navigateTo({
       url: "/pages/mine/mineOrder/mineOrder"
+    })
+  },
+  // 我要代理
+  agency(){
+    wx.navigateTo({
+      url: "/pages/mine/agency/agency"
+    })
+  },
+  // 关于我们
+  aboutUS(){
+    wx.navigateTo({
+      url: "/pages/mine/aboutUS/aboutUS"
     })
   }
 })

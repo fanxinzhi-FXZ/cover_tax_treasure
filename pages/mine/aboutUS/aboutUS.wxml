@@ -1,0 +1,26 @@
+<view>
+  <view class="aboutus-top">
+    <image src="{{aboutusImg}}" class="top-img"></image>
+  </view>
+  <view class="aboutus-text aboutus-text1">
+  客服中心
+  </view>
+  <view class="aboutus-text aboutus-text2">
+  400-080-6306
+  </view>
+  <view class="aboutus-text aboutus-text3">
+  公司地址
+  </view>
+  <view class="aboutus-text aboutus-text4">
+  北京市海淀区海淀大街27号1-4层部分4-090
+  </view>
+  <view class="aboutus-text aboutus-text5">
+  合作代理
+  </view>
+  <view class="aboutus-text aboutus-text6">
+  E-mail： 1234567@123.com
+  </view>
+  <view class="aboutus-text aboutus-text7">
+  *如需代理请发送合作意向到以上邮箱
+  </view>
+</view>

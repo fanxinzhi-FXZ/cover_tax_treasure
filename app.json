@@ -13,7 +13,9 @@
     "pages/mine/mineSettlement/settleInfo/settleinfo",
     "pages/mine/mineOrder/mineOrder",
     "pages/mine/mineOrder/findOrder/findOrder",
-    "pages/mine/mineOrder/orderInfo/orderInfo"
+    "pages/mine/mineOrder/orderInfo/orderInfo",
+    "pages/mine/agency/agency",
+    "pages/mine/aboutUS/aboutUS"
   ],
   "window": {
     "backgroundTextStyle": "light",
