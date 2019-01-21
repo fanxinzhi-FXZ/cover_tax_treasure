@@ -1,0 +1,63 @@
+<view>
+  <view class="orderInfo-status clearfix" wx:if="{{order_status == 1}}">
+    <view class="status-memo">
+      待支付
+    </view>
+    <view class="status-time">
+    请在00:15:37 内完成订单支付
+    </view>
+  </view>
+  <view class="orderInfo-statusSuc clearfix"  wx:if="{{order_status == 2}}">
+    <image src="{{sucImg}}" class="status-img"></image>
+    <text class="status-pay">已支付</text>
+  </view>
+
+  <view class="orderInfo-buyInfo">
+    <view class="buyInfo-title">
+      <view class="title-img"></view>
+      <view class="title-text">购买人信息</view>
+    </view>
+    
+    <view class="buyInfo-item clearfix" wx:for="{{2}}" wx:key="{{index}}">
+      <view class="item-name">李华</view>
+      <view class="item-info" wx:for="{{4}}" wx:key="{{index}}">
+        <view class="info-left">购买计划</view>
+        <view class="info-right">黄金计划</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="orderInfo-pirce clearfix">
+    <view class="pirce-title">
+      <view class="title-img"></view>
+      <view class="title-text">订单详情</view>
+    </view>
+    <view class="pirce-item" wx:for="{{2}}" wx:key = "{{index}}">
+      <view class="item-left">
+        黄金计划 <text class="left-text">（已支付）</text>  
+      </view>
+      <view class="item-right">
+        <view class="right-top">￥150</view>
+        <view class="right-bottom">x1</view>
+      </view>
+    </view>
+
+    <view class="pirce-amt">
+      <view class="amt-left">订单金额</view>
+      <view class="amt-right">￥450</view>
+    </view>
+  </view>
+
+  <view class="pirce-memo">
+    <view class="memo-orderno">
+    订单编号：1286908090877680765
+    </view>
+    <view class="memo-time">
+    下单时间：2018.12.25 23:34:45
+    </view>
+  </view>
+
+  <view class="orderInfo-btn">
+    <view class="btn">立即支付</view>
+  </view>
+</view>

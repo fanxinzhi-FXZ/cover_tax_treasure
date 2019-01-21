@@ -1,0 +1,211 @@
+/* pages/mine/mineOrder/mineOrder.wxss */
+page{
+  background:#f9f9f9;
+}
+.blue{
+  color:#0075eb;
+}
+.gray{
+  color:#666;
+}
+.mineOrder-tab{
+  background: #fff;
+}
+
+.mineOrder-tab .tab-item{
+  height:110rpx;
+  line-height:110rpx;
+  width:calc(100% / 3);
+  float:left;
+  text-align:center;
+  font-family: PingFang-SC-Bold;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+  position:relative;
+}
+.mineOrder-tab .tab-item .item-left{
+  position:absolute;
+  background-color: #e4e4e4;
+	border-radius: 1rpx;
+  width: 2rpx;
+	height: 32rpx;
+  top: 40rpx;
+  left:0;
+}
+
+.mineOrder-tab .tab-item .item-right{
+  background-color: #e4e4e4;
+	border-radius: 1rpx;
+  width: 2rpx;
+	height: 32rpx;
+  position:absolute;
+  top: 40rpx;
+  right:0;
+}
+
+
+.mineOrder-list{
+  background: #fff;
+  margin:18rpx 0 0 0;
+}
+.mineOrder-list .list-item{
+  padding:0 30rpx;
+  border-bottom:20rpx solid #f9f9f9;
+}
+.mineOrder-list .list-item .item-top{
+  height:90rpx;
+  border-bottom:1px solid #ebebeb;
+}
+.mineOrder-list .list-item .item-top .top-left{
+  float:left;
+}
+.mineOrder-list .list-item .item-top .top-left .left-orderno{
+  height: 19rpx;
+	font-family: PingFang-SC-Regular;
+	font-size: 20rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #989898;
+  margin:24rpx 0 11rpx 0;
+}
+.mineOrder-list .list-item .item-top .top-left .left-time{
+  height: 19rpx;
+	font-family: PingFang-SC-Regular;
+	font-size: 20rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #989898;
+  margin:0 0 18rpx 0;
+}
+.mineOrder-list .list-item .item-top  .top-right{
+  float:right;
+  font-family: PingFang-SC-Medium;
+	font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #fe8e4a;
+  line-height:90rpx;
+}
+
+
+.mineOrder-list .list-item  .item-center{
+  padding:50rpx 0 0 0;  
+  border-bottom:1px solid #ebebeb;
+}
+.mineOrder-list .list-item  .item-center .center-item{
+  height:40rpx;
+  margin:0 0 27rpx 0;
+}
+.mineOrder-list .list-item  .item-center .center-item .item-left{
+  float:left;
+  height:40rpx;
+  line-height:40rpx;
+  font-family: PingFang-SC-Medium;
+	font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #333333;
+}
+.mineOrder-list .list-item  .item-center .center-item .item-right{
+  float:right;
+  text-align: right;
+}
+.mineOrder-list .list-item  .item-center .center-item .item-right .right-amt{
+  height:20rpx;
+  line-height:20rpx;
+  font-family: PingFang-SC-Regular;
+	font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #333333;
+}
+.mineOrder-list .list-item  .item-center .center-item .item-right .right-cnt{
+  height:20rpx;
+  line-height:20rpx;
+  font-family: PingFang-SC-Regular;
+	font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #808080;
+} 
+.mineOrder-list .list-item  .item-center .center-all{
+  height: 24rpx;
+  line-height:24rpx;
+	font-family: PingFang-SC-Medium;
+	font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #333333;
+  margin:0 0 32rpx 0;
+  text-align:right;
+}
+
+
+.mineOrder-list .list-item .item-btn{
+  height:100rpx;
+}
+.mineOrder-list .list-item .item-btn .btn{
+	width: 152rpx;
+	height: 55rpx;
+  line-height:55rpx;
+	border-radius: 27.5rpx;
+	border: solid 1px #aaaaaa;
+	font-family: PingFang-SC-Light;
+	font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #333333;
+  text-align:center;
+  float:right;
+  margin:21rpx 0 0 18rpx;
+}
+
+.mineOrder-find{
+  background: #fff;
+  height:87rpx;
+  line-height:87rpx;
+  text-align:center;
+  font-family: PingFang-SC-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #999999;
+}
+
+.mineOrder-noData{
+margin:131rpx 0 0 0;
+text-align:center;
+}
+.mineOrder-noData .noData-img{
+  width:315rpx;
+  height:315rpx;
+}
+.mineOrder-noData .noData-memo{
+  height: 29rpx;
+	font-family: PingFang-SC-Medium;
+	font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #666666;
+  margin:65rpx 0 20rpx 0;
+}
+.mineOrder-noData  .noData-find{
+	height: 23rpx;
+	font-family: PingFang-SC-Regular;
+	font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #999999;
+}

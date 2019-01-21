@@ -1,0 +1,26 @@
+<view>
+  <view class="settleInfo-header">
+    <view class="header">
+      <view class="header-line1"> 
+      </view>
+      <image src="{{one}}" class="header-img1"></image>
+      <view class="header-line2"></view>
+      <image src="{{two}}" class="header-img2"></image>
+      <view class="header-line3"></view>
+    </view>
+  </view>
+
+  <view class="settleInfo-nav clearfix">
+    <view class="nav-left">申请理赔</view>
+    <view class="nav-right">理赔成功</view>
+  </view>
+  
+  <view class="settleInfo-banner">
+    <image src="{{bannerImg}}" class="banner-img"></image>
+  </view>
+
+  <view class="settleInfo-memo">
+    <view class="memo">收到请求，</view>
+    <view class=" memo memo-two">正在加急处理您的资料哦！</view>
+  </view>
+</view>

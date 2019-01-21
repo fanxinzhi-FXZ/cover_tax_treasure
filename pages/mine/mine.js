@@ -31,6 +31,10 @@ Page({
     wx.navigateTo({
       url: "/pages/mine/mineSettlement/mineSettlement"
     })
-    
+  },
+  order(){
+    wx.navigateTo({
+      url: "/pages/mine/mineOrder/mineOrder"
+    })
   }
 })

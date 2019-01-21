@@ -1,13 +1,20 @@
 // index.js
-
+const Img_URL = 'https://www.beishuibao.com/web_pic/program/';
 Page({
   data: {
-    currentIndex: 0
+    has:true,
+    now: Img_URL + 'shenghe1.png',
+    end: Img_URL + 'shenghe2.png',
   },
-  /* 这里实现控制中间凸显图片的样式 */
-  handleChange: function (e) {
-    this.setData({
-      currentIndex: e.detail.current
+  applyfor(){
+    wx.navigateTo({
+      url: "/pages/mine/mineSettlement/applyfor/applyfor"
+    })
+  },
+  goHasInfo(){
+    wx.navigateTo({
+      url: "/pages/mine/mineSettlement/settleInfo/settleinfo"
     })
   }
+ 
 })

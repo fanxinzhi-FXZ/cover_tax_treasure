@@ -17,7 +17,7 @@
     </view>
    </view>
 
-  <view class="mine-nav-item">
+  <view class="mine-nav-item" bindtap="order">
     <view class="mine-nav-item-left"></view>
     <view class="mine-nav-item-right"></view>
     <image src="https://www.beishuibao.com/web_pic/program/me_icon_document.png" class="mine-nav-item-photo"></image>
