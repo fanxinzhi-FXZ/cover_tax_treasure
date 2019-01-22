@@ -1,1 +1,80 @@
 /* pages/cart/infoCheck/infoCheck.wxss */
+.infoCheck {
+  padding-bottom: 116rpx;
+}
+.infoCheck .title{
+  display: block;
+  height: 98rpx;
+  line-height: 98rpx;
+  text-align: left;
+  font-size: 30rpx;
+  color: #333333;
+  padding-left: 54rpx;
+  background: url("https://www.beishuibao.com/web_pic/program/icon_line.png") left 40rpx center no-repeat;
+  background-size: 5rpx 22rpx;
+}
+.infoCheck .content{
+  margin-top: 20rpx;
+  background: #ffffff;
+  padding-bottom: 24rpx;
+}
+.infoCheck .content:first-child {
+  margin-top: 0rpx;
+}
+.infoCheck .content .item{
+  display: block;
+  height: 71rpx;
+  font-size: 24rpx;
+  color: #4d4d4d;
+  padding: 0rpx 34rpx 14rpx 40rpx;
+}
+.infoCheck .content .item .subtitle{
+  float: left;
+  width: 205rpx;
+  height: 71rpx;
+  line-height: 71rpx;
+  text-align: left;
+}
+.infoCheck .content .item .son{
+  float: left;
+  width: 465rpx;
+  height: 71rpx;
+  line-height: 71rpx;
+  border-radius: 6rpx;
+}
+
+/* 底部按钮及金额 */
+.infoCheck .bottom {
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  right: 0rpx;
+  height: 96rpx;
+  background: #ffffff;
+  z-index: 10;
+}
+.infoCheck .bottom .money{
+  float: left;
+  height: 96rpx;
+  line-height: 96rpx;
+  padding-left: 48rpx;
+  font-size: 36rpx;
+  color: #4d6ce3;
+}
+.infoCheck .bottom .text{
+  float: left;
+  height: 96rpx;
+  line-height: 96rpx;
+  font-size: 26rpx;
+  color: #a6a6a6;
+}
+.infoCheck .bottom .button{
+  float: right;
+  width: 308rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: center;
+  color: #ffffff;
+  font-size: 34rpx;
+  background: #4d6ce3;
+}

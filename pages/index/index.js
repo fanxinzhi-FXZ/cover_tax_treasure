@@ -146,7 +146,12 @@ Page({
           swiperWidth: res.screenWidth
         })
       }
-    })
+    });
+    
+    // 安排测试
+    // wx.navigateTo({
+    //   url: '/pages/cart/payment/payment'
+    // })
   },
 
   // 了解详情

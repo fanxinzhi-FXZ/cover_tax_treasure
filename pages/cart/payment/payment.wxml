@@ -1,2 +1,48 @@
 <!--pages/cart/payment/payment.wxml-->
-<text>pages/cart/payment/payment.wxml</text>
+<view class="payment">
+  <view class="info">
+    <span class="title">订单信息</span>
+    <span class="code">订单号：9988087879909079</span>
+    <view  class="content">
+      <span class="item">
+        <span class="left">
+          <text class="name">韩梅梅</text>
+          <text class="plan">黄金计划</text>
+        </span>
+        <span class="right">
+          <text class="money">￥150</text>
+          <text class="number">x1</text>
+        </span>
+      </span>
+      <span class="item">
+        <span class="left">
+          <text class="name">韩梅梅</text>
+          <text class="plan">黄金计划</text>
+        </span>
+        <span class="right">
+          <text class="money">￥150</text>
+          <text class="number">x1</text>
+        </span>
+      </span>
+    </view>
+  </view>
+
+  <!-- 支付方式 -->
+  <view class="mode">
+    <span class="title">支付方式</span>
+    <span class="box">
+      <var class="left">微信支付</var>
+      <var class="right"></var>
+    </span>
+  </view>
+
+  <!-- 支付 -->
+  <view class="button">确认支付</view>
+
+  <!-- 支付状态浮层 -->
+  <view class="state" wx:if="{{false}}">
+    <view class="con">
+
+    </view>
+  </view>
+</view>

@@ -1,2 +1,59 @@
 <!--pages/cart/infoCheck/infoCheck.wxml-->
-<view class="infoCheck"></view>
+<view class="infoCheck">
+  <!-- 行程信息 -->
+  <view class="content">
+    <text class="title">行程信息</text>
+    <span class="item">
+      <var class="subtitle">回国航班号</var>
+      <span class="son">YUTG478796</span>
+    </span>
+    <span class="item">
+      <var class="subtitle">国内到达机场</var>
+      <span class="son">北京首都机场</span>
+    </span>
+    <span class="item">
+      <var class="subtitle">回国到达日期</var>
+      <span class="son">2018-12-15</span>
+    </span>
+  </view>
+
+  <!-- 旅客信息 -->
+  <view class="content">
+    <text class="title">行程信息</text>
+    <span class="item">
+      <var class="subtitle">购买计划</var>
+      <span class="son">黄金计划</span>
+    </span>
+    <span class="item">
+      <var class="subtitle">添加旅客姓名</var>
+      <span class="son">韩梅梅</span>
+    </span>
+    <span class="item">
+      <var class="subtitle">证件号码</var>
+      <span class="son">1876870009897878990</span>
+    </span>
+    <span class="item">
+      <var class="subtitle">手机号码</var>
+      <span class="son">18628726498</span>
+    </span>
+    <span class="item">
+      <var class="subtitle">邮箱地址</var>
+      <span class="son">tuoj8980@123.com</span>
+    </span>
+  </view>
+
+  <!-- 代理人手机号 -->
+  <view class="content">
+    <text class="title">代理人手机号码</text>
+    <span class="item">
+      <span class="son">18628726498</span>
+    </span>
+  </view>
+
+   <!-- 底部按钮及金额 -->
+  <view class="bottom">
+    <span class="money">￥50</span>
+    <var class="text">（1人1计划）</var>
+    <span class="button" bindtap="goPayment">支付</span>
+  </view>
+</view>

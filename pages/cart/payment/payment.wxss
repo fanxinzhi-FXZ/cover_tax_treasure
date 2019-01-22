@@ -1,1 +1,133 @@
 /* pages/cart/payment/payment.wxss */
+.payment{
+
+}
+.payment .title{
+  display: block;
+  height: 89rpx;
+  line-height: 89rpx;
+  text-align: left;
+  padding-left: 55rpx;
+  background: url("https://www.beishuibao.com/web_pic/program/icon_line.png") left 40rpx center no-repeat;
+  background-size: 5rpx 22rpx;
+}
+
+/* 订单信息 */
+.payment .info{
+
+}
+.payment .info .code{
+  display: block;
+  height: 91rpx;
+  line-height: 91rpx;
+  font-size: 24rpx;
+  color: #999999;
+  padding-left: 40rpx;
+  background: #ffffff;
+}
+.payment .info .content{
+  background: #ffffff;
+}
+.payment .info .content .item{
+  display: block;
+  height: 110rpx;
+  margin: 0px 30rpx;
+  border-bottom: 1px solid #e6e6e6;
+}
+.payment .info .content .item:last-child {
+  border: 0rpx;
+}
+.payment .info .content .item .left{
+  float: left;
+  color: #333333;
+  padding-left: 12rpx;
+}
+.payment .info .content .item .left .name{
+  display: block;
+  font-size: 24rpx;
+  padding-top: 15rpx;
+}
+.payment .info .content .item .left .plan{
+  display: block;
+  font-size: 26rpx;
+  padding-top: 10rpx;
+}
+.payment .info .content .item .right {
+  float: right;
+  padding-right: 10rpx;
+  font-size: 26rpx;
+}
+.payment .info .content .item .right .money{
+  display: block;
+  text-align: right;
+  padding-top: 15rpx;
+}
+.payment .info .content .item .right .number{
+  display: block;
+  text-align: right;
+  padding-top: 10rpx;
+}
+
+/* 支付方式 */
+.payment .mode{
+
+}
+.payment .mode .box{
+  display: block;
+  height: 108rpx;
+  background: #ffffff;
+  padding: 0px 35rpx 0px 40rpx;
+}
+.payment .mode .box .left{
+  float: left;
+  height: 108rpx;
+  line-height: 108rpx;
+  text-align: left;
+  font-size: 30rpx;
+  color: #666666;
+  padding-left: 56rpx;
+  background: url("https://www.beishuibao.com/web_pic/program/icon_pay_wx.png") left center no-repeat;
+  background-size: 32rpx 32rpx;
+}
+.payment .mode .box .right{
+  float: right;
+  width: 100rpx;
+  height: 108rpx;
+  background: url("https://www.beishuibao.com/web_pic/program/icon_clocse4.png") right center no-repeat;
+  background-size: 34rpx 34rpx;
+}
+
+.payment .button{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: center;
+  color: #ffffff;
+  font-size: 34rpx;
+  background: #4d6ce3;
+
+}
+
+
+/* 支付状态浮层 */
+.payment .state {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.4);
+}
+.payment .state .con {
+  position: absolute;
+  top: 50%;
+  width: 618rpx;
+  height: 404rpx;
+  margin: -302rpx 66rpx 0px 66rpx; 
+  border-radius: 14rpx;
+  background: #ffffff;
+}

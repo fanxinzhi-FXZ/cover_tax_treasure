@@ -14,13 +14,23 @@
     </span>
     <span class="item">
       <var class="subtitle">回国到达日期</var>
-      <span class="son"><input class="input" type="text" placeholder="请输到达日期"></input></span>
+      <picker mode="date" value="{{arrivalDate}}" start="{{startDate}}" end="{{endDate}}" bindchange="arrivalDateChange" >
+        <span class="son"><input class="input datebg" value='{{arrivalDate}}' type="text" placeholder="请输入机场名称"></input></span>
+      </picker>
     </span>
   </view>
 
   <!-- 旅客信息 -->
   <view class="traveller">
     <text class="title">旅客信息</text>
+    <span class="plan">
+      <var class="subtitle">购买计划</var>
+      <span class="son">
+        <span class="seed {{buyBlanId == 0 ? 'select' : ''}}" bindtap="checkBuyBlab" data-id="0">黄金计划</span>
+        <span class="seed {{buyBlanId == 1 ? 'select' : ''}}" bindtap="checkBuyBlab" data-id="1">钻石计划</span>
+        <span class="seed {{buyBlanId == 2 ? 'select' : ''}}" bindtap="checkBuyBlab" data-id="2">大富翁计划</span>
+      </span>
+    </span>
     <span class="item">
       <var class="subtitle">添加旅客姓名</var>
       <span class="son"><input class="input" type="text" placeholder="请输入您的真实姓名"></input></span>
@@ -42,13 +52,35 @@
   <!-- 电子合约 -->
   <view class="contract">
     <text class="title">电子合约</text>
-    
+    <text class="con">《被税宝电子合约》</text>
+    <text class="text">支持环保，只需电子合约（电子合约具有相同法律效力，理赔时只需提供单号和身份证件)。支付成功后，您可直接下载电子保单或通过邮箱查询。</text>
   </view>
 
   <!-- 合约声明 -->
   <view class="statement">
     <text class="title">合约声明</text>
-    
+    <span class="list">
+      <span class="seed">查看投保声明详情</span>
+      <span class="seed">免责说明</span>
+      <span class="seed">退单说明</span>
+      <span class="seed" bindtap="contractExplainShow">合约说明</span>
+    </span>
+    <span class="illustrate"> 以上未尽事宜以您收到的合约及条款为准 </span>
+    <span class="uncheck {{statementCheck ? 'check' : ''}}" bindtap="statementCheck">我已认真阅读以上内容并同意</span>
+  </view>
+  <!-- 合约说明 -->
+  <view class="contract-explain" wx:if="{{contractExplainStatus}}">
+    <view class="box">
+      <text class="sontitle">合约说明</text>
+      <view class="content">
+        <span class="name">一、甲乙双方的权利及义务</span>
+        <view class="items" wx:for="{{buyNoticeItem}}" wx:key="item" wx:for-item="item">
+          <span class="subtitle">{{item.title}}</span>
+          <text class="text" wx:for="{{item.list}}" wx:key="seed" wx:for-item="seed">{{seed}}</text>
+        </view>
+      </view>
+      <span class="hide" bindtap="contractExplainHide"></span>
+    </view>
   </view>
 
   <!-- 代理人手机号码 -->
@@ -63,4 +95,5 @@
     <var class="text">（1人1计划）</var>
     <span class="button" bindtap="goInfoCkeck">下一步</span>
   </view>
+
 </view>
