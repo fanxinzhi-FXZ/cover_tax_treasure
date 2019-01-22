@@ -1,10 +1,62 @@
-<!--pages/mineSettlement/mineSettlement.wxml-->
 <view>
-  <swiper class="imageContainer" bindchange="handleChange" previous-margin="150rpx" next-margin="150rpx" circular autoplay>
-    <block wx:for="{{3}}" wx:key="{{index}}">
-      <swiper-item class="item">
-        <image class="itemImg {{currentIndex == index ? 'active': ''}}" src="https://avatar.csdn.net/6/7/F/1_laishaojiang.jpg?1536044509"></image>
-      </swiper-item>
-    </block>
-  </swiper>
+  <block wx:if="{{has}}">
+    <view class="settleHas">
+      <view class="settleHas-now clearfix" bindtap='goHasInfo'>
+        <view class="nowTitle">
+          <image src="{{now}}" class="nowTitleImg"></image>
+          黄金计划
+        </view>
+        <view class="nowBorder"></view>
+        <view class="nowP1 nowP">
+        订单编号：1286908090877680765
+        </view>
+        <view class="nowP2 nowP">
+        下单时间：2018.12.25 23:34:45
+        </view>
+      </view>
+      <view class="settleHas-title">
+        <view class="titleLeft"></view>
+        <view class="titleCenter">历史记录</view>
+        <view class="centerRight"></view>
+      </view>
+
+      <view class="settleHas-history clearfix">
+        <view class="historyTitle">
+        <image src="{{end}}" class="historyTitleImg"></image>
+          钻石计划
+        </view>
+        <view class="historyBorder"></view>
+        <view class="historyP1 historyP">
+        订单编号：1286908090877680765
+        </view>
+        <view class="historyP2 historyP">
+        下单时间：2018.12.25 23:34:45
+        </view>
+      </view>
+
+      <view class="settleHas-history clearfix">
+        <view class="historyTitle">
+        <image src="{{end}}" class="historyTitleImg"></image>
+          钻石计划
+        </view>
+        <view class="historyBorder"></view>
+        <view class="historyP1 historyP">
+        订单编号：1286908090877680765
+        </view>
+        <view class="historyP2 historyP">
+        下单时间：2018.12.25 23:34:45
+        </view>
+      </view>
+
+    </view>
+  </block>
+
+
+  <block wx:if="{{!has}}">
+    <view class="settleNohas">
+      <image src="https://www.beishuibao.com/web_pic/program/img_empty.png" class="nohasImage"></image>
+      <view class="nohastext">当前暂无理赔哦</view>
+      <view class="nohaobtn" bindtap="applyfor">申请理赔</view>
+    </view>
+  </block>
 </view>

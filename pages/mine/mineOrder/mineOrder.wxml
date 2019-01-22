@@ -1,0 +1,76 @@
+<view>
+  <view class="mineOrder-tab clearfix">
+    <view data-num="1" class="tab-item {{_num==1?'blue':'gray'}}"  bindtap="menuClick">
+    全部订单
+    </view>
+    <view bindtap="menuClick" class="tab-item {{_num==2?'blue':'gray'}}">
+      <view data-num="2" class="item-left"></view>
+      <view data-num="2">已完成</view>
+      <view data-num="2" class="item-right"></view>
+    </view>
+    <view data-num="3" class="tab-item  {{_num==3?'blue':'gray'}}"  bindtap="menuClick">
+    未完成
+    </view>
+  </view>
+  <view class="mineOrder-list" wx:if="{{hasData}}">
+    <view class="list-item"  wx:for="{{2}}" wx:key="{{index}}">
+      <view class="item-top">
+        <view class="top-left">
+          <view class="left-orderno">
+            订单编号：1286908090877680765
+          </view>
+          <view class="left-time">
+            下单时间：2018.12.25 23:34:45
+          </view>
+        </view>
+        <view class="top-right">
+          待支付
+        </view>
+      </view>
+
+      <view class="item-center clearfix">
+        <view class="center-item">
+          <view class="item-left">
+            黄金计划
+          </view>
+          <view class="item-right">
+            <view class="right-amt">
+              ￥150
+            </view>
+            <view class="right-cnt">
+              x1
+            </view>
+          </view>
+        </view>
+        <view class="center-item">
+          <view class="item-left">
+            黄金计划
+          </view>
+          <view class="item-right">
+            <view class="right-amt">
+              ￥150
+            </view>
+            <view class="right-cnt">
+              x1
+            </view>
+          </view>
+        </view>
+        <view class="center-all">
+        实付：￥450
+        </view>
+      </view>
+      <view class="item-btn">
+        <view class="btn">查看详情</view>
+        <view class="btn">删除订单</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="mineOrder-find clearfix" wx:if="{{hasData}}" bindtap="findOrder">找回订单</view>
+
+  <view wx:if="{{!hasData}}" class="mineOrder-noData">
+    <image src="{{noData}}" class="noData-img"></image>
+    <view class="noData-memo">当前暂无订单哦</view>
+    <view class="noData-find" bindtap="findOrder">找回订单></view>
+  </view>
+</view>

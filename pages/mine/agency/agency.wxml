@@ -1,0 +1,23 @@
+<view>
+  <view class="agency-top">
+    <image src="{{imgurl}}" class="top-img"></image>
+  </view>
+  <view class="agency-text agency-text1">
+  我要代理赚上万零花钱
+  </view>
+  <view class="agency-text agency-text2">
+    申请成为被税宝代理人，每月零花钱得有
+  </view>
+  <view class="agency-text agency-text3">
+  上万了吧~
+  </view>
+  <view class="agency-text agency-text4">
+  如何申请代理
+  </view>
+  <view class="agency-text agency-text5">
+  请发送邮件至
+  </view>
+  <view class="agency-text agency-text6">
+  12345@gg.com 标题注明“代理”哦~
+  </view>
+</view>

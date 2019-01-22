@@ -1,0 +1,35 @@
+<view>
+  <view class="applyfor">
+    <image src="{{bg}}" class="‘applyfor-bg"></image>
+  </view>
+  <view class="apply_memo">
+    <view class="memotop">请于到达国内机场72小时内完成申请</view>
+    <view class="memotop">逾期视为合约失效</view>
+  </view>
+
+  <view class="applyfor-nav">
+    <view class="nav-item">
+      <image src="{{tel}}" class="nav-image"></image>
+      <view class="nav-right">
+        <view class="right-top">
+          电话理赔申请
+        </view>
+        <view class="right-bottom">
+          4000806306
+        </view>
+      </view>
+    </view>
+
+     <view class="nav-item navMargin">
+      <image src="{{tel}}" class="nav-image"></image>
+      <view class="nav-right">
+        <view class="right-top">
+          邮件理赔申请
+        </view>
+        <view class="right-bottom">
+          123456@222.com
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

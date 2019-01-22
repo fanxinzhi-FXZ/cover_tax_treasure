@@ -11,7 +11,14 @@
     "pages/mine/logout/logout",
     "pages/mine/modifyInfo/modifyInfo",
     "pages/mine/changePassword/changePassword",
-    "pages/mine/mineSettlement/mineSettlement"
+    "pages/mine/mineSettlement/mineSettlement",
+    "pages/mine/mineSettlement/applyfor/applyfor",
+    "pages/mine/mineSettlement/settleInfo/settleinfo",
+    "pages/mine/mineOrder/mineOrder",
+    "pages/mine/mineOrder/findOrder/findOrder",
+    "pages/mine/mineOrder/orderInfo/orderInfo",
+    "pages/mine/agency/agency",
+    "pages/mine/aboutUS/aboutUS"
   ],
   "window": {
     "backgroundTextStyle": "light",

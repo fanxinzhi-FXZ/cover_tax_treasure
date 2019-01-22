@@ -1,0 +1,265 @@
+page{
+  background: #f9f9f9;
+}
+/* 支付状态 */
+.orderInfo-status{
+  height:190rpx;
+  background: #fff;
+  text-align:center;
+  padding:64rpx 0 0 0;
+}
+.orderInfo-status .status-memo{
+  height: 31rpx;
+	font-family: PingFang-SC-Bold;
+	font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #fe8e4a;
+  margin:0 0 22rpx 0;
+}
+.orderInfo-status .status-time{
+	height: 25rpx;
+	font-family: PingFang-SC-Medium;
+	font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #fe8e4a;
+}
+.orderInfo-statusSuc{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height:190rpx;
+  background: #fff;
+  text-align:center;
+}
+.orderInfo-statusSuc .status-img{
+  width:33rpx;
+  height:33rpx;
+}
+
+.orderInfo-statusSuc .status-pay{
+  font-family: PingFang-SC-Bold;
+	font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #52c68b;
+  margin:0 0 0 21rpx;
+}
+/* 购买人信息 */
+.orderInfo-buyInfo{
+  background: #fff;
+  padding:0 29rpx;
+  margin:20rpx 0 0 0;
+}
+.orderInfo-buyInfo .buyInfo-title{
+  height:80rpx;
+  line-height:80rpx;
+}
+.orderInfo-buyInfo .buyInfo-title .title-img{
+  float:left;
+  width: 5rpx;
+	height: 21rpx;
+	background-color: rgba(46, 89, 212, 0.67);
+	border-radius: 2.5rpx;
+	opacity: 0.67;
+  margin:31rpx 0 0 0;
+}
+.orderInfo-buyInfo .buyInfo-title .title-text{
+  float:left;
+  font-family: PingFang-SC-Medium;
+	font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #a8a8a8;
+  text-indent:10rpx;
+}
+
+.orderInfo-buyInfo .buyInfo-item{
+  padding:0 0 18rpx 0;
+  border-top:1rpx solid #ebebeb;
+}
+.orderInfo-buyInfo .buyInfo-item .item-name{
+  height: 29rpx;
+	font-family: PingFang-SC-Medium;
+	font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #333333;
+  margin:25rpx 0;
+}
+
+.orderInfo-buyInfo .buyInfo-item .item-info{
+	font-family: PingFang-SC-Regular;
+	font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #666666;
+  width:100%;
+  float:left;
+  margin:0 0 25rpx 0;
+}
+
+.orderInfo-buyInfo .buyInfo-item .item-info .info-left{
+  width:180rpx;
+  float:left;
+}
+
+.orderInfo-buyInfo .buyInfo-item .item-info .info-right{
+  float:left;
+}
+
+/* 订单详情 */
+.orderInfo-pirce{
+  background: #fff;
+  margin:24rpx 0 0 0;
+  padding:0 29rpx;
+}
+.orderInfo-pirce .pirce-title{
+  height:80rpx;
+  line-height:80rpx;
+  border-bottom:1rpx solid #ebebeb;
+}
+.orderInfo-pirce .pirce-title .title-img{
+  float:left;
+  width: 5rpx;
+	height: 21rpx;
+	background-color: rgba(46, 89, 212, 0.67);
+	border-radius: 2.5rpx;
+	opacity: 0.67;
+  margin:31rpx 0 0 0;
+}
+.orderInfo-pirce .pirce-title .title-text{
+  float:left;
+  font-family: PingFang-SC-Medium;
+	font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #a8a8a8;
+  text-indent:10rpx;
+}
+
+.orderInfo-pirce .pirce-item{
+  height:40rpx;
+  padding:0 29rpx;
+  margin:35rpx 0;
+}
+.orderInfo-pirce .pirce-item .item-left{
+  float:left;
+  height:40rpx;
+  line-height:40rpx;
+  font-family: PingFang-SC-Medium;
+	font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #333333;
+}
+.orderInfo-pirce .pirce-item .item-lef .left-text{
+  color:#333333;
+}
+.orderInfo-pirce .pirce-item .item-right{
+  float:right;
+  text-align:right;
+}
+.orderInfo-pirce .pirce-item .item-right .right-top{
+  height:20rpx;
+  line-height:20rpx;
+  font-family: PingFang-SC-Regular;
+	font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #333333;
+}
+.orderInfo-pirce .pirce-item .item-right .right-bottom{
+  height:20rpx;
+  line-height:20rpx;
+  font-family: PingFang-SC-Regular;
+	font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #808080;
+}
+
+.orderInfo-pirce .pirce-amt{
+  height:81rpx;
+  line-height:81rpx;
+  padding:0 29rpx;
+  border-top:1rpx solid #ebebeb;
+}
+
+.orderInfo-pirce .pirce-amt .amt-left{
+	font-family: PingFang-SC-Medium;
+	font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #333333;
+  float:left;
+}
+
+.orderInfo-pirce .pirce-amt .amt-right{
+  font-family: PingFang-SC-Medium;
+	font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #333333;
+  float:right;
+}
+
+.pirce-memo{
+  height:107rpx;
+  background:#fff;
+  margin:20rpx 0 0 0;
+  padding:26rpx 29rpx 0;
+}
+.pirce-memo .memo-orderno{
+  height: 19rpx;
+	font-family: PingFang-SC-Regular;
+	font-size: 20rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #989898;
+  margin:0 0 19rpx 0;
+}
+
+.pirce-memo .memo-time{
+  height: 19rpx;
+	font-family: PingFang-SC-Regular;
+	font-size: 20rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #989898;
+}
+
+.orderInfo-btn{
+  height: 96rpx;
+  line-height:96rpx;
+	background-color: #4d6ce3;
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  text-align:center;
+}
+.orderInfo-btn .btn{
+  font-family: PingFang-SC-Bold;
+	font-size: 34rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0.9rpx;
+	color: #ffffff;
+}
