@@ -221,7 +221,7 @@ page{
 .pirce-memo{
   height:107rpx;
   background:#fff;
-  margin:20rpx 0 0 0;
+  margin:20rpx 0 96rpx 0;
   padding:26rpx 29rpx 0;
 }
 .pirce-memo .memo-orderno{
