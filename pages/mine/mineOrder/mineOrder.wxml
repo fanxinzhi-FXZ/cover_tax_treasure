@@ -13,7 +13,7 @@
     </view>
   </view>
   <view class="mineOrder-list" wx:if="{{hasData}}">
-    <view class="list-item"  wx:for="{{2}}" wx:key="{{index}}">
+    <view class="list-item" wx:for="{{2}}" wx:key="{{index}}">
       <view class="item-top">
         <view class="top-left">
           <view class="left-orderno">
@@ -60,7 +60,7 @@
         </view>
       </view>
       <view class="item-btn">
-        <view class="btn">查看详情</view>
+        <view class="btn"  bindtap="seeOrder">查看详情</view>
         <view class="btn">删除订单</view>
       </view>
     </view>

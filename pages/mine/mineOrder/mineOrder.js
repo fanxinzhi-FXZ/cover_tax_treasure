@@ -3,7 +3,7 @@ const Img_URL = 'https://www.beishuibao.com/web_pic/program/';
 Page({
   data: {
     _num:1,
-    hasData:false,
+    hasData:true,
     noData: Img_URL + 'img_empty.png'
   },
   // 切换tanb
@@ -18,4 +18,9 @@ Page({
       url: "/pages/mine/mineOrder/findOrder/findOrder"
     })
   },
+  seeOrder(){
+    wx.navigateTo({
+      url: "/pages/mine/mineOrder/orderInfo/orderInfo"
+    })
+  }
 })
