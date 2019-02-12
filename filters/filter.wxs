@@ -1,0 +1,107 @@
+//  filters/filter.wxs
+
+/*
+  说明：时间戳转日期时间值
+*/
+var getDateTime = function (timestamp) {
+  
+  return getDate(parseInt(timestamp.toString().replace('/Date(', '').replace(')/', ''), 10));
+}
+
+/*
+  说明：日期时间转 JSON 结构
+*/
+var getDateTimeJSON = function (dateTime) {
+  
+  return {
+    year: dateTime.getFullYear(),
+    month: getFullNumber(dateTime.getMonth() + 1),
+    day: getFullNumber(dateTime.getDate()),
+    hour: getFullNumber(dateTime.getHours()),
+    minute: getFullNumber(dateTime.getMinutes()),
+    second: getFullNumber(dateTime.getSeconds())
+  };
+}
+
+/*
+  说明：JSON 结构转日期时间字符串
+*/
+var getDateTimeString = function (dateTimeJSON) {
+
+  return dateTimeJSON.year + '-' +
+    (dateTimeJSON.month > 9 ? dateTimeJSON.month : '0' + dateTimeJSON.month) + '-' +
+    (dateTimeJSON.day > 9 ? dateTimeJSON.day : '0' + dateTimeJSON.day) + ' ' +
+    (dateTimeJSON.hour > 9 ? dateTimeJSON.hour : '0' + dateTimeJSON.hour) + ':' +
+    (dateTimeJSON.minute > 9 ? dateTimeJSON.minute : '0' + dateTimeJSON.minute) + ':' +
+    (dateTimeJSON.second > 9 ? dateTimeJSON.second : '0' + dateTimeJSON.second);
+}
+
+/**
+ * 说明： 距离今天多少天
+ */
+var countDownTime = function (timestamp){
+
+  if (!timestamp || timestamp == "undefined") return "";
+  return parseInt((timestamp - Date.now()) / 86400000)
+}
+
+/**
+ * 说明： 距离今天多少小时，分钟
+ */
+var hoursTime = function (timestamp) {
+
+	if (!timestamp || timestamp == "undefined") return "";
+	var totalSecs = timestamp - Date.now()
+	var hours = Math.floor(totalSecs / (3600 * 1000));
+	var leave2 = totalSecs % (3600 * 1000)    //计算小时数后剩余的毫秒数
+	var minutes = Math.floor(leave2 / (60 * 1000))  
+	if (hours != 0){
+		return hours + "小时"
+	}else{
+		return minutes + "分钟"
+	}
+}
+
+/*
+  说明：获取补 0 后的数值
+*/
+var getFullNumber = function(value){
+
+  return parseInt(value, 10) < 10 ? '0' + value : value;
+}
+
+module.exports = {
+
+  //  获取日期时间字符串
+  getTimeStamp: function (timestamp, formatType) {
+    
+    if (!timestamp || timestamp == "undefined") return "";
+    
+    var todayDate = getDate(Date.now());
+    var todayJSON = getDateTimeJSON(todayDate); 
+    var stampDate = getDateTime(timestamp);
+    var stampJSON = getDateTimeJSON(stampDate);
+    var reciprocalJSON = countDownTime(stampDate);
+		var hoursTimeJSON = hoursTime(stampDate);
+    var ticksDays = (todayDate.getTime() - stampDate.getTime()) / 1000 / 60 / 60 / 24;
+
+    switch (formatType){
+      //  转年月日
+      case 101:
+        return stampJSON.year + '/' + stampJSON.month + '/' + stampJSON.day;
+      //  转年月日
+      case 201:
+        return stampJSON.year + '-' + stampJSON.month + '-' + stampJSON.day;
+      //  转年月日时分
+      case 301:
+        return stampJSON.year + '-' + stampJSON.month + '-' + stampJSON.day + "  " + stampJSON.hour + ":" + stampJSON.minute;
+      //  天数倒计时
+      case 401:
+        return reciprocalJSON;	
+			case 501:
+				return hoursTimeJSON;
+      default:
+        return getDateTimeString(stampJSON);
+    }
+  }
+};

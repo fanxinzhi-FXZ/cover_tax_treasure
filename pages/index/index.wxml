@@ -41,15 +41,15 @@
           <view class="seed">
             <span class="head">
               <image class="icon" src='{{item.icon}}'></image>
-              <var class="name">{{item.title}}</var>
+              <var class="name">{{item.name}}</var>
             </span>
             <span class="sige">
               <var class="sigeleft">保障项目</var>
               <var class="sigeright">保障金额</var>
             </span>
-            <span class="son"  wx:for="{{item.data}}" wx:key="seed" wx:for-item="seed">
+            <span class="son"  wx:for="{{item.values}}" wx:key="seed" wx:for-item="seed">
               <var class="sonleft">{{seed.title}}</var>
-              <var class="sonright">{{seed.text}}</var>
+              <var class="sonright">{{seed.value}}</var>
             </span>
           </view>
         </swiper-item>
