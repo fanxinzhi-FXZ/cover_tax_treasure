@@ -1,10 +1,10 @@
 <!--index.wxml-->
 <view class="index">
   <!-- 轮播图 -->
-  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{swiperautoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-active-color="{{indicatorActiveColor}}" style="height:{{swiperHeight}}px;">
+  <swiper class='banner' indicator-dots="{{indicatorDots}}" autoplay="{{swiperautoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-active-color="{{indicatorActiveColor}}">
     <block wx:for="{{bannerImgItems}}" wx:key="item">
       <swiper-item>
-        <image src="{{item.bannerImg}}" style="height:{{swiperHeight}}px;width:{{swiperWidth}}px"/>
+        <image class='banner-img' src="{{item.bannerImg}}"/>
       </swiper-item>
     </block>
   </swiper>
@@ -35,7 +35,7 @@
       <var class="right" bindtap="goDetail">详情了解</var>
     </span>
     <view class="content">
-      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{productCircular}}" indicator-active-color="{{productActiveColor}}" style='height: 342px'>
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{productCircular}}" indicator-active-color="{{productActiveColor}}" style='height: 750rpx'>
       <block wx:for="{{productItems}}" wx:key="item">
         <swiper-item>
           <view class="seed">
@@ -48,8 +48,8 @@
               <var class="sigeright">保障金额</var>
             </span>
             <span class="son"  wx:for="{{item.values}}" wx:key="seed" wx:for-item="seed">
-              <var class="sonleft">{{seed.title}}</var>
               <var class="sonright">{{seed.value}}</var>
+              <var class="sonleft">{{seed.title}}</var>
             </span>
           </view>
         </swiper-item>

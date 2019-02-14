@@ -1,5 +1,6 @@
 // pages/order/ordre.js
 const store = require("../../../data/store.js");
+const index = require('../../../server/index.js');
 
 Page({
 
@@ -36,24 +37,7 @@ Page({
     productCircular: false,
     indicatorActiveColor: "#4d6ce3",
 
-    contentItems: [
-      {
-        "title": "理赔额度",
-        "number": "￥500"
-      },
-      {
-        "title": "理赔额度",
-        "number": "￥500"
-      },
-      {
-        "title": "理赔额度",
-        "number": "￥500"
-      },
-      {
-        "title": "理赔额度",
-        "number": "￥500"
-      }
-    ],
+    productItems: [],
     buyNoticeItem: store.cart.buyNoticeItem
 
   },
@@ -62,8 +46,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var vm = this;
 
+    var vm = this;
+    vm.setData({ swiperCurrent: options.id - 1 });
+    index.planLoad(function (data) {
+      vm.setData({
+        productItems: data,
+        swiperCurrent: options.id - 1
+      })
+    })
   },
 
   /**
@@ -77,7 +68,6 @@ Page({
    * 轮播图滑动
    */
   swiperChange: function(e){
-    console.log(e.detail.current);
     this.setData({
       swiperCurrent: e.detail.current   //获取当前轮播图片的下标
     })

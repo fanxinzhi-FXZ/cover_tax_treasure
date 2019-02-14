@@ -1,42 +1,34 @@
 // pages/order/ordre.js
+const index = require('../../server/index.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    cartItems: [
-      {
-        "icon": "http://www.beishuibao.com/web_pic/program/list1_icon_gold.png",
-        "title": "黄金计划",
-        "price": "￥50元"
-      },
-      {
-        "icon": "http://www.beishuibao.com/web_pic/program/list1_icon_diamond.png",
-        "title": "钻石计划",
-        "price": "￥150元"
-      },
-      {
-        "icon": "http://www.beishuibao.com/web_pic/program/list1_icon_crown.png",
-        "title": "大富翁计划",
-        "price": "￥300元"
-      }
-    ]
+    productItems: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var vm = this;
+    index.planLoad(function (data) {
+      vm.setData({
+        productItems: data
+      })
+    })
   },
 
   /**
    * 查看商品详情
    */
-  goDetail : function(){
+  goDetail : function(e){
+    console.log(e.currentTarget.dataset.id)
     wx.navigateTo({
-      url: '/pages/cart/detail/detail'
+      url: '/pages/cart/detail/detail?id=' + e.currentTarget.dataset.id
     })
   },
 

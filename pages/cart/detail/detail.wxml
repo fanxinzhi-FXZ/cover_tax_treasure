@@ -1,6 +1,6 @@
 <span class="detail-title">套餐选择</span>
 <swiper class="detail-swiper" bindchange="swiperChange" indicator-dots="{{indicatorDots}}" previous-margin="100px" next-margin="100px" circular autoplay="{{false}}" indicator-active-color="{{indicatorActiveColor}}">
-  <block wx:for="{{bannerImgItems}}" wx:key="item"  wx:for-index="index">
+  <block wx:for="{{productItems}}" wx:key="item"  wx:for-index="index">
     <swiper-item class="detail-swiperitem">
       <view class="detail-itemImg {{swiperCurrent == index ? 'detail-active' : '' }}" style='background-image: {{item.background}}'>
         <text class="detail-name {{swiperCurrent == index ? 'detail-active-name' : ''}}">{{item.name}}</text>
@@ -11,9 +11,21 @@
 </swiper>
 <view class="detail">
   <view class="content">
-    <view class="seed" wx:for="{{contentItems}}" wx:key="item">
-      <text class="title">{{item.title}}</text>
-      <var class="number">{{item.number}}</var>
+    <view class="seed">
+      <text class="title">理赔额度</text>
+      <var class="number">{{productItems[swiperCurrent].values[0].value}}</var>
+    </view>
+    <view class="seed">
+      <text class="title">13种电子产品赔付</text>
+      <var class="number">{{productItems[swiperCurrent].values[1].value}}</var>
+    </view>
+    <view class="seed">
+      <text class="title">其余普通物品赔</text>
+      <var class="number">{{productItems[swiperCurrent].values[6].value}}</var>
+    </view>
+    <view class="seed">
+      <text class="title">产品费用</text>
+      <var class="number">￥{{productItems[swiperCurrent].values[7].value}}</var>
     </view>
     <view class="look">更多详情可查看阅读<var class="lookDetail">《被税宝合约详情》</var></view>
   </view>
@@ -33,7 +45,7 @@
   <!-- 底部按钮 -->
   <view class="bottom">
     <text class="buy" bindtap='goInfoFill'>立即购买</text>
-    <text class="money">￥50</text>
+    <text class="money">￥{{productItems[swiperCurrent].price}}</text>
   </view>
 
   <!-- 合约详情 -->

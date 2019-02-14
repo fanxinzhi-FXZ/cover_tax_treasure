@@ -3,6 +3,14 @@
 
 }
 
+.index .banner {
+  width: 750rpx;
+  height: 311rpx;
+}
+.index .banner-img {
+  width: 750rpx;
+  height: 311rpx;
+}
  /* 案例介绍 */
 .index .case{
    
@@ -134,36 +142,36 @@
 }
 .index .product .content .seed .sige .sigeleft{
   float: left;
-  height: 30px;
-  line-height: 30px;
-  padding-left: 4px;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left: 8rpx;
 }
 .index .product .content .seed .sige .sigeright{
   float: right;
-  height: 30px;
-  line-height: 30px;
-  padding-right: 8px; 
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-right: 16rpx; 
 }
 .index .product .content .seed .son {
   display: block;
-  height: 30px;
-  font-size: 12px;
+  overflow: hidden;
+  font-size: 24rpx;
   color: #333333;
 }
 .index .product .content .seed .son:nth-of-type(odd){
   background: #fafafa;
 }
 .index .product .content .seed .son .sonleft{
-  float: left;
-  height: 30px;
-  line-height: 30px;
-  padding-left: 4px;
+  display: block;
+  margin-right: 120rpx;
+  line-height: 60rpx;
+  padding-left: 8rpx;
 }
 .index .product .content .seed .son .sonright{
   float: right;
-  height: 30px;
-  line-height: 30px;
-  padding-right: 8px; 
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-right: 16rpx; 
 }
 
 /* 流程介绍 */

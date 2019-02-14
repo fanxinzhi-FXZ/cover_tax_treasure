@@ -3,9 +3,9 @@
   <image class="header" src="https://www.beishuibao.com/web_pic/program/banner.png"></image>
 
   <view class="content">
-    <view class="item" wx:for="{{cartItems}}" bindtap="goDetail" wx:key="item">
+    <view class="item" wx:for="{{productItems}}" bindtap="goDetail" data-id="{{item.id}}" wx:key="item">
       <image class="icon" src="{{item.icon}}"></image>
-      <span class="title">{{item.title}}</span>
+      <span class="title">{{item.name}}</span>
       <view class="rigth">
         <text class="money">{{item.price}}</text>
         <text class="more">查看详情</text>
