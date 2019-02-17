@@ -1,1 +1,144 @@
 /* pages/login/login.wxss */
+.login{
+
+}
+.login .logo{
+  display: block;
+  height: 524rpx;
+  background: url("https://www.beishuibao.com/web_pic/program/logo.png") center center no-repeat;
+  background-size: 233rpx 69rpx;
+}
+.login .phone {
+  display: block;
+  width: 546rpx;
+  height: 84rpx;
+  font-size: 30rpx;
+  border-radius: 45rpx;
+  margin: 0rpx 100rpx;
+  border: 2rpx solid #f2f2f2;
+}
+.login .phone .icon {
+  float: left;
+  height: 84rpx;
+  width: 75rpx;
+  background: url("https://www.beishuibao.com/web_pic/program/icon_name2.png") left 24rpx center no-repeat;
+  background-size: 28rpx 33rpx;
+}
+.login .phone .iconselect {
+  background: url("https://www.beishuibao.com/web_pic/program/icon_name.png") left 24rpx center no-repeat;
+  background-size: 28rpx 33rpx;
+}
+.login .phone .phoneip {
+  float: left;
+  width: 290rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+}
+.login .phone .del {
+  float: right;
+  height: 84rpx;
+  width: 52rpx;
+  background: url("https://www.beishuibao.com/web_pic/program/icon_eliminate.png") left center no-repeat;
+  background-size: 22rpx 22rpx;
+}
+
+/* 验证码 */
+.login .validate {
+  display: block;
+  width: 546rpx;
+  height: 84rpx;
+  font-size: 30rpx;
+  border-radius: 45rpx;
+  margin: 20rpx 100rpx;
+  border: 2rpx solid #f2f2f2;
+}
+.login .validate .icon {
+  float: left;
+  height: 84rpx;
+  width: 75rpx;
+  background: url("https://www.beishuibao.com/web_pic/program/icon_password2.png") left 24rpx center no-repeat;
+  background-size: 28rpx 33rpx;
+}
+.login .validate .iconselect {
+  background: url("https://www.beishuibao.com/web_pic/program/icon_password.png") left 24rpx center no-repeat;
+  background-size: 28rpx 33rpx;
+}
+.login .validate .validateip {
+  float: left;
+  width: 290rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+}
+.login .validate .code {
+  float: right;
+  width: 181rpx;
+  text-align: center;
+  height: 28rpx;
+  line-height: 28rpx;
+  margin: 28rpx 0rpx; 
+  color: #4d6ce3;
+  font-size: 26rpx;
+  border-left: 2rpx solid #6d6d6d;
+}
+
+/* 邀请人 */
+.login .invitation {
+  display: block;
+  width: 546rpx;
+  height: 84rpx;
+  font-size: 30rpx;
+  border-radius: 45rpx;
+  margin: 0rpx 100rpx;
+  border: 2rpx solid #f2f2f2;
+}
+.login .invitation .icon {
+  float: left;
+  height: 84rpx;
+  width: 75rpx;
+  background: url("https://www.beishuibao.com/web_pic/program/icon_recommend2.png") left 24rpx center no-repeat;
+  background-size: 28rpx 33rpx;
+}
+.login .invitation .iconselect {
+  background: url("https://www.beishuibao.com/web_pic/program/icon_recommend.png") left 24rpx center no-repeat;
+  background-size: 28rpx 33rpx;
+}
+.login .invitation .invitationip {
+  float: left;
+  height: 84rpx;
+  line-height: 84rpx;
+}
+
+.login .button {
+  display: block;
+  width: 546rpx;
+  height: 88rpx;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 34rpx;
+  color:#ffffff;
+  border-radius: 45rpx;
+  margin: 20rpx 100rpx 0rpx 100rpx;
+  background: #4d6ce3;
+  box-shadow: 0px 2px 18px 0px 
+		rgba(106, 132, 230, 0.61);
+	border-radius: 43.3px;
+}
+
+.login .agreement {
+  display: block;
+  height: 25rpx;
+  line-height: 25rpx;
+  font-size: 23rpx;
+  color: #a6a6a6;
+  padding-left: 31rpx;
+  margin: 40rpx 0rpx 0rpx 170rpx;
+  background: url("https://www.beishuibao.com/web_pic/program/icon_unselect2.png") left center no-repeat;
+  background-size: 20rpx 20rpx;
+}
+.login .agreementselect {
+  background: url("https://www.beishuibao.com/web_pic/program/icon_select2.png") left center no-repeat;
+  background-size: 20rpx 20rpx;
+}
+.login .agreement .text {
+  text-decoration: underline;
+}

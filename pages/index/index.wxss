@@ -107,37 +107,37 @@
 }
 
 .index .product .content {
-  margin: 0px 10px;
+  margin: 0px 20rpx;
   background: #ffffff;
-  box-shadow: 3px 0px 29px 0px 
+  box-shadow: 6rpx 0px 58rpx 0px 
 		rgba(229, 229, 229, 0.63);
-	border-radius: 6px;
+	border-radius: 12rpx;
 }
 .index .product .content .seed{
-  padding: 0px 14px;
+  padding: 0px 28rpx;
 }
 .index .product .content .seed .head{
   display: block;
-  height: 47px;
+  height: 94rpx;
 }
 .index .product .content .seed .head .icon {
   float: left;
-  width: 38px;
-  height: 38px;
-  margin: 4px 5px 0px 0px;
+  width: 72rpx;
+  height: 72rpx;
+  margin: 8rpx 10rpx 0px 0px;
 }
 .index .product .content .seed .head .name {
   float: left;
-  height: 47px;
-  line-height: 47px;
+  height: 94rpx;
+  line-height: 94rpx;
   text-align: left;
-  font-size: 14px;
+  font-size: 28rpx;
   color: #494949;
 }
 .index .product .content .seed .sige {
   display: block;
-  height: 30px;
-  font-size: 14px;
+  height: 60rpx;
+  font-size: 28rpx;
   color: #333333;
 }
 .index .product .content .seed .sige .sigeleft{

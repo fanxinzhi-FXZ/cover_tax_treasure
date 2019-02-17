@@ -35,7 +35,7 @@
       <var class="right" bindtap="goDetail">详情了解</var>
     </span>
     <view class="content">
-      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{productCircular}}" indicator-active-color="{{productActiveColor}}" style='height: 750rpx'>
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{productCircular}}" indicator-active-color="{{productActiveColor}}" style='height: 720rpx'>
       <block wx:for="{{productItems}}" wx:key="item">
         <swiper-item>
           <view class="seed">
