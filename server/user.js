@@ -7,43 +7,58 @@ const user = {
   login: function (callback) {
     wx.login({
       success: function (res) {
-         
-        ajax.post('https://www.beishuibao.com/bank/wei/author/getAuthor_infor', {
-          code: res.code
-        }, function (data) {
-          if (data.errcode == 0) {
-            wx.setStorageSync('WXTOKEN', data.data.code_token);
-            callback()
-          } else {
-            util.toast(data.errdesc, 'none', 2000);
-          }
+        user.thirdLogin(res.code, function(){
+          callback()
         })
       },
       fail: function (res) {
 
         util.toast('登录失败', 'none', 2000);
+        callback()
       }
     });
   },
 
   // 检查session_key
   checkSession: function (callback) {
-    if (wx.getStorageSync("WXTOKEN")) {
-      wx.checkSession({
-        success: function (res) {
-         
-        },
-        fail: function (res) {
-          user.login(function () {
+    wx.checkSession({
+      success: function (res) {
+        
+      },
+      fail: function (res) {
+        user.login()
+      }
+    })
+  },
+
+  // 三方登录验证
+  thirdLogin: function (code, callback){
+    ajax.post('https://www.beishuibao.com/bank/wei/author/getAuthor_infor', {
+      code: code
+    }, function (data) {
+      if (data.errcode == 0) {
+        console.log(data.data)
+        wx.setStorageSync('WXTOKEN', data.data.code_token);
+        ajax.post('https://www.beishuibao.com/bank/wei/user/third_login', {
+          token: data.data.code_token
+        }, function (data1) {
+          if (data1.errcode == 0) {
+            wx.setStorageSync('ISNEWUSER', false);
+            wx.setStorageSync('TOKEN', data1.data.token);
+            wx.setStorageSync('USERINFO', data1.data);
             callback()
-          })
-        }
-      })
-    } else {
-      user.login(function () {
+          } else {
+            wx.setStorageSync('ISNEWUSER', true);
+            util.toast(data1.errdesc, 'none', 2000);
+            callback()
+          }
+        })
+      } else {
+        util.toast(data.errdesc, 'none', 2000);
+        wx.setStorageSync('ISNEWUSER', true);
         callback()
-      })
-    }
+      }
+    })
   },
 
   // 获取验证码

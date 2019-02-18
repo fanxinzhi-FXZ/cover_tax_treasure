@@ -8,6 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    isNewUser: false,
     userPhone: '',
     validateCode: '',
     userCode: '',
@@ -21,7 +22,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var vm = this;
+    user.login(function(){
+      vm.setData({
+        isNewUser: wx.getStorageSync('ISNEWUSER')
+      })
+    })
   },
 
   /**
@@ -100,6 +106,14 @@ Page({
     this.setData({
       invitationPhone: e.detail.value
     })
+  },
+
+  /**
+   * 绑定邀请人
+   */
+  bindingInvitation: function(){
+    wx.setStorageSync('INVITATION', this.data.invitationPhone);
+    wx.switchTab({ url: '/pages/index/index' });
   },
 
   /**
