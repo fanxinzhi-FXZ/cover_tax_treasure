@@ -1,6 +1,7 @@
 // pages/cart/infoFill.js
 const store = require("../../../data/store.js");
 const utils = require("../../../utils/utils.js");
+const index = require('../../../server/index.js');
 
 Page({
 
@@ -8,22 +9,42 @@ Page({
    * 页面的初始数据
    */
   data: {
+    flightNumber: '', // 航班号
+    airportName: '',  // 到达机场
+    returnTime: '',   // 回国日期
+    fareName: '',     // 旅客姓名
+    fareNumber: '',   // 证件号码
+    farePhone: '',    // 手机号码
+    fareEmail: '',    // 邮箱地址
+
+
     startDate: '',
     endDate: '',
     arrivalDate: '',
+
+    productItems: [],
 
     contractExplainStatus: false,
     statementCheck: false,
     buyNoticeItem: store.cart.buyNoticeItem,
 
-    buyBlanId: 0
+    buyBlanId: 1
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
+    var vm = this;
+
+    index.planLoad(function (data) {
+      vm.setData({
+        productItems: data,
+        swiperCurrent: options.id - 1
+      })
+    })
+
+    vm.setData({
       startDate: utils.formatTime(new Date, 0),
       endDate: utils.formatTime(new Date, 1)
     })

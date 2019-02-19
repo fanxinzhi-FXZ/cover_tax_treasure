@@ -6,11 +6,11 @@
     <text class="title">行程信息</text>
     <span class="item">
       <var class="subtitle">回国航班号</var>
-      <span class="son"><input class="input" type="text" placeholder="请输入航班号"></input></span>
+      <span class="son"><input class="input" value="{{flightNumber}}" type="text" placeholder="请输入航班号"></input></span>
     </span>
     <span class="item">
       <var class="subtitle">国内到达机场</var>
-      <span class="son"><input class="input" type="text" placeholder="请输入机场名称"></input></span>
+      <span class="son"><input class="input" type="text" value='{{airportName}}' placeholder="请输入机场名称"></input></span>
     </span>
     <span class="item">
       <var class="subtitle">回国到达日期</var>
@@ -26,9 +26,7 @@
     <span class="plan">
       <var class="subtitle">购买计划</var>
       <span class="son">
-        <span class="seed {{buyBlanId == 0 ? 'select' : ''}}" bindtap="checkBuyBlab" data-id="0">黄金计划</span>
-        <span class="seed {{buyBlanId == 1 ? 'select' : ''}}" bindtap="checkBuyBlab" data-id="1">钻石计划</span>
-        <span class="seed {{buyBlanId == 2 ? 'select' : ''}}" bindtap="checkBuyBlab" data-id="2">大富翁计划</span>
+        <span class="seed {{buyBlanId == item.id ? 'select' : ''}}" wx:for="{{productItems}}" wx:key="item" bindtap="checkBuyBlab" data-id="{{item.id}}">{{item.name}}</span>
       </span>
     </span>
     <span class="item">

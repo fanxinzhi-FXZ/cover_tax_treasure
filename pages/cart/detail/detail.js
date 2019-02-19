@@ -48,7 +48,6 @@ Page({
   onLoad: function (options) {
 
     var vm = this;
-    vm.setData({ swiperCurrent: options.id - 1 });
     index.planLoad(function (data) {
       vm.setData({
         productItems: data,
