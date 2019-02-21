@@ -11,16 +11,14 @@ Page({
   data: {
     flightNumber: '', // 航班号
     airportName: '',  // 到达机场
-    returnTime: '',   // 回国日期
+    arrivalDate: '',   // 回国日期
     fareName: '',     // 旅客姓名
     fareNumber: '',   // 证件号码
     farePhone: '',    // 手机号码
     fareEmail: '',    // 邮箱地址
 
-
     startDate: '',
     endDate: '',
-    arrivalDate: '',
 
     productItems: [],
 
@@ -28,7 +26,7 @@ Page({
     statementCheck: false,
     buyNoticeItem: store.cart.buyNoticeItem,
 
-    buyBlanId: 1
+    buyBlanId: 1 //计划ID
   },
 
   /**
@@ -36,17 +34,36 @@ Page({
    */
   onLoad: function (options) {
     var vm = this;
-
+    console.log(options.goodsId)
     index.planLoad(function (data) {
       vm.setData({
         productItems: data,
-        swiperCurrent: options.id - 1
+        swiperCurrent: options.id - 1,
+        buyBlanId: options.goodsId
       })
     })
 
     vm.setData({
       startDate: utils.formatTime(new Date, 0),
       endDate: utils.formatTime(new Date, 1)
+    })
+  },
+  
+  /**
+   * 输入航班号
+   */
+  flightTap: function(e){
+    this.setData({
+      flightNumber: e.detail.value
+    })
+  },
+
+  /**
+   * 输入机场名
+   */
+  airportTapTap: function (e) {
+    this.setData({
+      airportName: e.detail.value
     })
   },
 
@@ -65,6 +82,42 @@ Page({
   checkBuyBlab: function(e){
     this.setData({
       buyBlanId: e.currentTarget.dataset.id
+    })
+  },
+
+  /**
+   * 旅客名称
+   */
+  nameTap: function (e) {
+    this.setData({
+      fareName: e.detail.value
+    })
+  },
+
+  /**
+   * 证件号码
+   */
+  fareNumberTap: function (e) {
+    this.setData({
+      fareNumber: e.detail.value
+    })
+  },
+
+  /**
+   * 用户邮箱
+   */
+  emailTap: function (e) {
+    this.setData({
+      fareEmail: e.detail.value
+    })
+  },
+
+  /**
+   * 手机号码
+   */
+  phoneTap: function (e) {
+    this.setData({
+      farePhone: e.detail.value
     })
   },
   

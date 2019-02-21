@@ -44,7 +44,7 @@
 
   <!-- 底部按钮 -->
   <view class="bottom">
-    <text class="buy" bindtap='goInfoFill'>立即购买</text>
+    <text class="buy" bindtap='goInfoFill' data-id="{{productItems[swiperCurrent].id}}">立即购买</text>
     <text class="money">￥{{productItems[swiperCurrent].price}}</text>
   </view>
 

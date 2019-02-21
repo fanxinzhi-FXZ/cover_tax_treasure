@@ -6,11 +6,11 @@
     <text class="title">行程信息</text>
     <span class="item">
       <var class="subtitle">回国航班号</var>
-      <span class="son"><input class="input" value="{{flightNumber}}" type="text" placeholder="请输入航班号"></input></span>
+      <span class="son"><input class="input" value="{{flightNumber}}" type="text" placeholder="请输入航班号" bindinput="flightTap"></input></span>
     </span>
     <span class="item">
       <var class="subtitle">国内到达机场</var>
-      <span class="son"><input class="input" type="text" value='{{airportName}}' placeholder="请输入机场名称"></input></span>
+      <span class="son"><input class="input" type="text" value='{{airportName}}' placeholder="请输入机场名称" bindinput="airportTap"></input></span>
     </span>
     <span class="item">
       <var class="subtitle">回国到达日期</var>
@@ -31,19 +31,19 @@
     </span>
     <span class="item">
       <var class="subtitle">添加旅客姓名</var>
-      <span class="son"><input class="input" type="text" placeholder="请输入您的真实姓名"></input></span>
+      <span class="son"><input class="input" type="text" placeholder="请输入您的真实姓名" bindinput="nameTap"></input></span>
     </span>
     <span class="item">
       <var class="subtitle">证件号码</var>
-      <span class="son"><input class="input" type="idcard" placeholder="身份证/护照号码"></input></span>
+      <span class="son"><input class="input" type="idcard" placeholder="身份证/护照号码" bindinput="fareNumberTap"></input></span>
     </span>
     <span class="item">
       <var class="subtitle">手机号码</var>
-      <span class="son"><input class="input" type="number" maxlength="11" placeholder="请输入手机号码"></input></span>
+      <span class="son"><input class="input" type="number" maxlength="11" placeholder="请输入手机号码" bindinput="phoneTap"></input></span>
     </span>
     <span class="item">
       <var class="subtitle">邮箱地址</var>
-      <span class="son"><input class="input" type="text" placeholder="请输入正确邮箱地址"></input></span>
+      <span class="son"><input class="input" type="text" placeholder="请输入正确邮箱地址" bindinput="emailTap"></input></span>
     </span>
   </view>
 

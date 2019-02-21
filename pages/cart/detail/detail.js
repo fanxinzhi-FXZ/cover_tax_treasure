@@ -76,9 +76,9 @@ Page({
    * 
    * 去信息填写页面
    */
-  goInfoFill: function(){
+  goInfoFill: function(e){
     wx.navigateTo({
-      url: '/pages/cart/infoFill/infoFill'
+      url: '/pages/cart/infoFill/infoFill?goodsId=' + e.target.dataset.id
     })
   },
 
