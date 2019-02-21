@@ -2,6 +2,7 @@
 const store = require("../../../data/store.js");
 const utils = require("../../../utils/utils.js");
 const index = require('../../../server/index.js');
+const order = require('../../../server/order.js');
 
 Page({
 
@@ -9,13 +10,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    flightNumber: '', // 航班号
-    airportName: '',  // 到达机场
+    flightNumber: '',  // 航班号
+    airportName: '',   // 到达机场
     arrivalDate: '',   // 回国日期
-    fareName: '',     // 旅客姓名
-    fareNumber: '',   // 证件号码
-    farePhone: '',    // 手机号码
-    fareEmail: '',    // 邮箱地址
+    fareName: '',      // 旅客姓名
+    fareNumber: '',    // 证件号码
+    farePhone: '',     // 手机号码
+    fareEmail: '',     // 邮箱地址
+    totalPrice: 0,     // 商品总价
 
     startDate: '',
     endDate: '',
@@ -61,7 +63,7 @@ Page({
   /**
    * 输入机场名
    */
-  airportTapTap: function (e) {
+  airportTap: function (e) {
     this.setData({
       airportName: e.detail.value
     })
@@ -144,9 +146,24 @@ Page({
    * 去信息核对页面
    */
   goInfoCkeck: function(){
-    wx.navigateTo({
-      url: '/pages/cart/infoCheck/infoCheck'
+    var vm = this;
+    var orders = [
+      {
+        'product_id': vm.data.buyBlanId, // 产品ID
+        'mobile': vm.data.farePhone,
+        'ic_name': vm.data.fareName,
+        'ic_card': vm.data.fareNumber,
+        'email': vm.data.fareEmail,
+        'price': 50
+      }
+    ];
+    order.setUpOrders(vm.data.totalPrice, vm.data.flightNumber, vm.data.arrivalDate, vm.data.airportName, JSON.stringify(orders) ,  function(data){
+      console.log(data)
+      wx.navigateTo({
+        url: '/pages/cart/infoCheck/infoCheck?orderId=' + data.order_id
+      })
     })
+    
   },
 
   /**

@@ -15,7 +15,7 @@
     <span class="item">
       <var class="subtitle">回国到达日期</var>
       <picker mode="date" value="{{arrivalDate}}" start="{{startDate}}" end="{{endDate}}" bindchange="arrivalDateChange" >
-        <span class="son"><input class="input datebg" value='{{arrivalDate}}' type="text" placeholder="请输入机场名称"></input></span>
+        <span class="son"><input class="input datebg" value='{{arrivalDate}}' type="text" placeholder="请输入到达日期"></input></span>
       </picker>
     </span>
   </view>

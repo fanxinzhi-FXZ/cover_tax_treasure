@@ -5,7 +5,7 @@
     <text class="title">行程信息</text>
     <span class="item">
       <var class="subtitle">回国航班号</var>
-      <span class="son">YUTG478796</span>
+      <span class="son">{{orderItems.prouct_name}}</span>
     </span>
     <span class="item">
       <var class="subtitle">国内到达机场</var>
@@ -22,23 +22,23 @@
     <text class="title">行程信息</text>
     <span class="item">
       <var class="subtitle">购买计划</var>
-      <span class="son">黄金计划</span>
+      <span class="son">{{orderItems.prouct_name}}</span>
     </span>
     <span class="item">
       <var class="subtitle">添加旅客姓名</var>
-      <span class="son">韩梅梅</span>
+      <span class="son">{{orderItems.ic_name}}</span>
     </span>
     <span class="item">
       <var class="subtitle">证件号码</var>
-      <span class="son">1876870009897878990</span>
+      <span class="son">{{orderItems.ic_card}}</span>
     </span>
     <span class="item">
       <var class="subtitle">手机号码</var>
-      <span class="son">18628726498</span>
+      <span class="son">{{orderItems.mobile}}</span>
     </span>
     <span class="item">
       <var class="subtitle">邮箱地址</var>
-      <span class="son">tuoj8980@123.com</span>
+      <span class="son">{{orderItems.email}}</span>
     </span>
   </view>
 
