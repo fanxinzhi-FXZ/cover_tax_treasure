@@ -5,41 +5,43 @@
     <text class="title">行程信息</text>
     <span class="item">
       <var class="subtitle">回国航班号</var>
-      <span class="son">{{orderItems.prouct_name}}</span>
+      <span class="son">{{optionsData.flightNumber}}</span>
     </span>
     <span class="item">
       <var class="subtitle">国内到达机场</var>
-      <span class="son">北京首都机场</span>
+      <span class="son">{{optionsData.airportName}}</span>
     </span>
     <span class="item">
       <var class="subtitle">回国到达日期</var>
-      <span class="son">2018-12-15</span>
+      <span class="son">{{optionsData.arrivalDate}}</span>
     </span>
   </view>
 
   <!-- 旅客信息 -->
   <view class="content">
     <text class="title">行程信息</text>
-    <span class="item">
-      <var class="subtitle">购买计划</var>
-      <span class="son">{{orderItems.prouct_name}}</span>
-    </span>
-    <span class="item">
-      <var class="subtitle">添加旅客姓名</var>
-      <span class="son">{{orderItems.ic_name}}</span>
-    </span>
-    <span class="item">
-      <var class="subtitle">证件号码</var>
-      <span class="son">{{orderItems.ic_card}}</span>
-    </span>
-    <span class="item">
-      <var class="subtitle">手机号码</var>
-      <span class="son">{{orderItems.mobile}}</span>
-    </span>
-    <span class="item">
-      <var class="subtitle">邮箱地址</var>
-      <span class="son">{{orderItems.email}}</span>
-    </span>
+    <view class="list" wx:for="{{orderItems}}" wx:key="item">
+      <span class="item">
+        <var class="subtitle">购买计划</var>
+        <span class="son">{{item.product_id==1 ? '黄金计划' : (item.product_id==2 ? '钻石计划' : '大富翁计划') }}</span>
+      </span>
+      <span class="item">
+        <var class="subtitle">添加旅客姓名</var>
+        <span class="son">{{item.ic_name}}</span>
+      </span>
+      <span class="item">
+        <var class="subtitle">证件号码</var>
+        <span class="son">{{item.ic_card}}</span>
+      </span>
+      <span class="item">
+        <var class="subtitle">手机号码</var>
+        <span class="son">{{item.mobile}}</span>
+      </span>
+      <span class="item">
+        <var class="subtitle">邮箱地址</var>
+        <span class="son">{{item.email}}</span>
+      </span>
+    </view>
   </view>
 
   <!-- 代理人手机号 -->
@@ -52,7 +54,7 @@
 
    <!-- 底部按钮及金额 -->
   <view class="bottom">
-    <span class="money">￥50</span>
+    <span class="money">￥{{optionsData.totalPrice}}</span>
     <var class="text">（1人1计划）</var>
     <span class="button" bindtap="goPayment">支付</span>
   </view>

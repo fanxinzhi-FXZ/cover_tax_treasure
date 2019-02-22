@@ -17,7 +17,7 @@ Page({
     fareNumber: '',    // 证件号码
     farePhone: '',     // 手机号码
     fareEmail: '',     // 邮箱地址
-    totalPrice: 0,     // 商品总价
+    totalPrice: 50,     // 商品总价
 
     startDate: '',
     endDate: '',
@@ -157,13 +157,9 @@ Page({
         'price': 50
       }
     ];
-    order.setUpOrders(vm.data.totalPrice, vm.data.flightNumber, vm.data.arrivalDate, vm.data.airportName, JSON.stringify(orders) ,  function(data){
-      console.log(data)
-      wx.navigateTo({
-        url: '/pages/cart/infoCheck/infoCheck?orderId=' + data.order_id
-      })
+    wx.navigateTo({
+      url: '/pages/cart/infoCheck/infoCheck?orders=' + JSON.stringify(orders) + '&totalPrice=' + vm.data.totalPrice + '&flightNumber=' + vm.data.flightNumber + '&arrivalDate=' + vm.data.arrivalDate + '&airportName=' + vm.data.airportName
     })
-    
   },
 
   /**
