@@ -16,8 +16,9 @@ Page({
    */
   onLoad: function (options) {
     console.log(options.orderId)
+    var vm = this;
     order.orderDetail(options.orderId, function(data){
-      this.setData({
+      vm.setData({
         orderId: options.orderId,
         orderItems: data
       })
