@@ -1,66 +1,56 @@
 <view>
   <view class="mineOrder-tab clearfix">
-    <view data-num="1" class="tab-item {{_num==1?'blue':'gray'}}"  bindtap="menuClick">
+    <view data-num="all" class="tab-item {{_num=='all'?'blue':'gray'}}"  bindtap="menuClick">
     全部订单
     </view>
-    <view bindtap="menuClick" class="tab-item {{_num==2?'blue':'gray'}}">
-      <view data-num="2" class="item-left"></view>
-      <view data-num="2">已完成</view>
-      <view data-num="2" class="item-right"></view>
+    <view bindtap="menuClick" class="tab-item {{_num=='completed'?'blue':'gray'}}">
+      <view data-num="completed" class="item-left"></view>
+      <view data-num="completed">已完成</view>
+      <view data-num="completed" class="item-right"></view>
     </view>
-    <view data-num="3" class="tab-item  {{_num==3?'blue':'gray'}}"  bindtap="menuClick">
+    <view data-num="paying" class="tab-item  {{_num=='paying'?'blue':'gray'}}"  bindtap="menuClick">
     未完成
     </view>
   </view>
   <view class="mineOrder-list" wx:if="{{hasData}}">
-    <view class="list-item" wx:for="{{2}}" wx:key="{{index}}">
+    <view class="list-item" wx:for="{{orderData}}" wx:for-index="idx" wx:for-item="items" wx:key="idx">
       <view class="item-top">
         <view class="top-left">
           <view class="left-orderno">
-            订单编号：1286908090877680765
+            订单编号：{{items.order_number}}
           </view>
           <view class="left-time">
-            下单时间：2018.12.25 23:34:45
+            下单时间：{{items.creat_time}}
           </view>
         </view>
-        <view class="top-right">
+        <view class="top-right paying" wx:if="{{items.status == 'paying'}}">
           待支付
+        </view>
+        <view class="top-right suc" wx:if="{{items.status == 'completed'}}">
+          已支付
         </view>
       </view>
 
       <view class="item-center clearfix">
-        <view class="center-item">
+        <view class="center-item" wx:for="{{items.product}}" wx:for-index="indx" wx:for-item="item" wx:key="indx">
           <view class="item-left">
-            黄金计划
+            {{item.name}}
           </view>
           <view class="item-right">
             <view class="right-amt">
-              ￥150
+              ￥{{item.price}}
             </view>
             <view class="right-cnt">
-              x1
-            </view>
-          </view>
-        </view>
-        <view class="center-item">
-          <view class="item-left">
-            黄金计划
-          </view>
-          <view class="item-right">
-            <view class="right-amt">
-              ￥150
-            </view>
-            <view class="right-cnt">
-              x1
+              <!-- x1 -->
             </view>
           </view>
         </view>
         <view class="center-all">
-        实付：￥450
+        实付：￥{{items.total_price}}
         </view>
       </view>
       <view class="item-btn">
-        <view class="btn"  bindtap="seeOrder">查看详情</view>
+        <view class="btn"  bindtap="seeOrder" data-id="{{items.id}}">查看详情</view>
         <view class="btn">删除订单</view>
       </view>
     </view>

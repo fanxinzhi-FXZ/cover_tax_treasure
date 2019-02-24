@@ -4,43 +4,44 @@
     <span class="modifyInfo-title-left"></span>
     <span class="modifyInfo-title-right">个人信息</span>
   </view>
-  <view class="modifyInfo-name">
-    <view class="modifyInfo-name-left">姓名</view>
-       <input type="text" placeholder-style="color:#989898;" placeholder="韩梅梅" bindinput='fullNameFunc' class="modifyInfo-name-right"  auto-focus/>
+  
+  <view class="modifyInfo-mobile clearfix">
+    <span wx:if="{{nameERR}}" class="modifyInfo-mobile-confirm">不能为空哦</span>
+    <view class="modifyInfo-mobile-left">姓名</view>
+     <input type="text" placeholder-style="color:#989898;" placeholder="姓名" bindinput='fullNameFunc' value="{{info_name}}" class="modifyInfo-mobile-right"  auto-focus/>
+      <image src="https://www.beishuibao.com/web_pic/program/icon_clocse.png"  class="modifyInfo-mobile-right-img" bindtap="delname"></image>
   </view>
+
   <view class="modifyInfo-sex">
     <view class="modifyInfo-sex-left">性别</view>
     <view class="modifyInfo-sex-right">
-       <view class="modifyInfo-sex-right-one">
-          <image src="{{select}}"  class="modifyInfo-sex-right-one-img"></image>
-          男
+       <view class="modifyInfo-sex-right-one" wx:for="{{radioValues}}" data-radio="{{index}}" wx:key="{{index}}" bindtap="changeRadio">
+          <image  src="{{item.selected ? select : unselect}}"  class="modifyInfo-sex-right-one-img"></image>
+          {{item.value}}
        </view>
-       <view class="modifyInfo-sex-right-two">
-          <image src="{{unselect}}" class="modifyInfo-sex-right-one-img"></image>
-          女
-       </view>
+       
     </view>
   </view>
   <view class="modifyInfo-mobile clearfix">
-    <span class="modifyInfo-mobile-confirm">输入错误，请重试哦</span>
+    <span wx:if="{{phoneERR}}" class="modifyInfo-mobile-confirm">输入错误，请重试哦</span>
     <view class="modifyInfo-mobile-left">手机号码</view>
-    <input type="number" placeholder-style="color:#989898;" placeholder="198798009809" bindinput='mobileFunc' class="modifyInfo-mobile-right"/>
-    <image src="https://www.beishuibao.com/web_pic/program/icon_clocse.png"  class="modifyInfo-mobile-right-img"></image>
+    <input type="number" placeholder-style="color:#989898;" value="{{info_tel}}" placeholder="手机号码" bindinput='mobileFunc' class="modifyInfo-mobile-right"/>
+    <image src="https://www.beishuibao.com/web_pic/program/icon_clocse.png"  class="modifyInfo-mobile-right-img" bindtap="delTel"></image>
   </view>
   <view class="modifyInfo-mobile clearfix">
-    <span class="modifyInfo-mobile-confirm">输入错误，请重试哦</span>
+    <span wx:if="{{idERR}}" class="modifyInfo-mobile-confirm">输入错误，请重试哦</span>
     <view class="modifyInfo-mobile-left">身份证号码</view>
-      <input type="number" placeholder-style="color:#989898;" placeholder="198798009809898" bindinput='mobileFunc' class="modifyInfo-mobile-right"/>
-      <image src="https://www.beishuibao.com/web_pic/program/icon_clocse.png"  class="modifyInfo-mobile-right-img"></image>
+      <input type="idcard" placeholder-style="color:#989898;" value="{{info_idcard}}" placeholder="身份证号码" bindinput='cardFunc' class="modifyInfo-mobile-right"/>
+      <image src="https://www.beishuibao.com/web_pic/program/icon_clocse.png"  class="modifyInfo-mobile-right-img" bindtap="delIDcard"></image>
   </view>
   <view class="modifyInfo-mobile clearfix">
-    <span class="modifyInfo-mobile-confirm">输入错误，请重试哦</span>
+    <span wx:if="{{emailERR}}" class="modifyInfo-mobile-confirm">输入错误，请重试哦</span>
     <view class="modifyInfo-mobile-left">邮箱地址</view>
-      <input type="email" placeholder-style="color:#989898;" placeholder="87988@sidh.com" bindinput='mobileFunc' class="modifyInfo-mobile-right"/>
-      <image src="https://www.beishuibao.com/web_pic/program/icon_clocse.png"  class="modifyInfo-mobile-right-img"></image>
+      <input type="email" placeholder-style="color:#989898;" value="{{info_email}}" placeholder="邮箱地址" bindinput='emailFunc' class="modifyInfo-mobile-right"/>
+      <image src="https://www.beishuibao.com/web_pic/program/icon_clocse.png"  class="modifyInfo-mobile-right-img" bindtap="delEmail"></image>
   </view>
 
   <view class="modifyInfo-sub">
-    <button  class="modifyInfo-sub-btn">确认修改</button>
+    <button bindtap="submit" class="modifyInfo-sub-btn">确认修改</button>
   </view>
 </view>
