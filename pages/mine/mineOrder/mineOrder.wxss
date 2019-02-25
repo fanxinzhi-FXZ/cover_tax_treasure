@@ -87,8 +87,13 @@ page{
 	font-weight: normal;
 	font-stretch: normal;
 	letter-spacing: 0px;
-	color: #fe8e4a;
   line-height:90rpx;
+}
+.paying{
+  	color: #fe8e4a;
+}
+.suc{
+  	color: #8BC34A;
 }
 
 
