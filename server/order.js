@@ -34,7 +34,31 @@ const order = {
         util.toast(data.errdesc, 'none', 2000);
       }
     })
-  }
+  },
+
+  //支付
+  orderPay: function (order_id, success, fail) {
+    ajax.post('https://www.beishuibao.com/bank/wei/order/pay_order', {
+      token: wx.getStorageSync('TOKEN'),
+      order_id: order_id,
+      pay_type : 'wei',  // wei: 微信  ali:支付宝  card：银行卡
+      is_pc: 'n'
+    }, function (data) {
+      if (data.errcode == 0) {
+        wx.requestPayment({
+          timeStamp: JSON.stringify(data.data.pay_url.timeStamp),
+          nonceStr: data.data.pay_url.nonceStr,
+          package: data.data.pay_url.package,
+          signType: data.data.pay_url.signType,
+          paySign: data.data.pay_url.paySign,
+          success: success,
+          fail: fail
+        })
+      } else {
+        util.toast(data.errdesc, 'none', 2000);
+      }
+    })
+  },
 
 };
 

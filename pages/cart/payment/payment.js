@@ -1,66 +1,41 @@
 // pages/cart/payment/payment.js
+const order = require('../../../server/order.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    orderItems: [],
+    orderId: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var vm = this;
+    order.orderDetail(options.orderId, function(data){
+      console.log(data)
+      vm.setData({
+        orderItems: data,
+        orderId: options.orderId
+      })
+    })
   },
 
   /**
-   * 生命周期函数--监听页面初次渲染完成
+   * 支付
    */
-  onReady: function () {
+  pay: function(){
+    var vm = this;
 
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    order.orderPay(vm.data.orderId, function(){
+      console.log("支付成功")
+    }, function(){
+      console.log("支付失败")
+    })
   }
+
 })

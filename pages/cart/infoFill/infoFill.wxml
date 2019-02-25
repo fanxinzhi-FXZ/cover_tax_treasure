@@ -15,7 +15,7 @@
     <span class="item">
       <var class="subtitle">回国到达日期</var>
       <picker mode="date" value="{{arrivalDate}}" start="{{startDate}}" end="{{endDate}}" bindchange="arrivalDateChange" >
-        <span class="son"><input class="input datebg" value='{{arrivalDate}}' type="text" placeholder="请输入到达日期"></input></span>
+        <span class="son"><input class="input datebg" disabled="true" value='{{arrivalDate}}' type="text" placeholder="请选择到达日期"></input></span>
       </picker>
     </span>
   </view>
@@ -89,7 +89,7 @@
 
   <!-- 底部按钮及金额 -->
   <view class="bottom">
-    <span class="money">￥50</span>
+    <span class="money">￥{{totalPrice}}</span>
     <var class="text">（1人1计划）</var>
     <span class="button" bindtap="goInfoCkeck">下一步</span>
   </view>

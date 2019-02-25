@@ -28,7 +28,8 @@ Page({
     statementCheck: false,
     buyNoticeItem: store.cart.buyNoticeItem,
 
-    buyBlanId: 1 //计划ID
+    buyBlanId: 1, //计划ID
+    agentPhone: '' // 代理人手机号
   },
 
   /**
@@ -40,6 +41,7 @@ Page({
     index.planLoad(function (data) {
       vm.setData({
         productItems: data,
+        totalPrice: data[options.goodsId - 1].price - data[options.goodsId - 1].reduced_price,
         swiperCurrent: options.id - 1,
         buyBlanId: options.goodsId
       })
@@ -47,7 +49,8 @@ Page({
 
     vm.setData({
       startDate: utils.formatTime(new Date, 0),
-      endDate: utils.formatTime(new Date, 1)
+      endDate: utils.formatTime(new Date, 1),
+      agentPhone: wx.getStorageSync('INVITATION')
     })
   },
   
@@ -82,6 +85,13 @@ Page({
    * 选择购买计划
    */
   checkBuyBlab: function(e){
+    for (var i = 0; i < this.data.productItems.length ; i++ ){
+      if (this.data.productItems[i].id == e.currentTarget.dataset.id){
+        this.setData({
+          totalPrice: this.data.productItems[i].price - this.data.productItems[i].reduced_price
+        })
+      }
+    }
     this.setData({
       buyBlanId: e.currentTarget.dataset.id
     })
@@ -147,23 +157,46 @@ Page({
    */
   goInfoCkeck: function(){
     var vm = this;
-    var orders = [
-      {
-        'product_id': vm.data.buyBlanId, // 产品ID
-        'mobile': vm.data.farePhone,
-        'ic_name': vm.data.fareName,
-        'ic_card': vm.data.fareNumber,
-        'email': vm.data.fareEmail,
-        'price': 50
+    // 验证行程信息是否完善
+    if (vm.data.flightNumber && vm.data.airportName && vm.data.arrivalDate){
+      // 验证姓名是否是中英文
+      if ((/^[\u4E00-\u9FA5A-Za-z]+$/.test(vm.data.fareName))){
+        // 验证手机号
+        if ((/^1[34578]\d{9}$/.test(vm.data.farePhone))){
+          // 验证邮箱
+          if ((/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/.test(vm.data.fareEmail))){
+            // 验证身份证号
+            if ((/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/.test(vm.data.fareNumber))){
+
+              var orders = [
+                {
+                  'product_id': vm.data.buyBlanId, // 产品ID
+                  'mobile': vm.data.farePhone,
+                  'ic_name': vm.data.fareName,
+                  'ic_card': vm.data.fareNumber,
+                  'email': vm.data.fareEmail,
+                  'price': vm.data.totalPrice
+                }
+              ];
+              // 进行下一步
+              wx.navigateTo({
+                url: '/pages/cart/infoCheck/infoCheck?orders=' + JSON.stringify(orders) + '&totalPrice=' + vm.data.totalPrice + '&flightNumber=' + vm.data.flightNumber + '&arrivalDate=' + vm.data.arrivalDate + '&airportName=' + vm.data.airportName
+              })
+            }else {
+              utils.toast("请输入正确的证件号码", "none", 2000)
+            }
+          }else {
+            utils.toast("请输入正确的邮箱", "none", 2000)
+          }
+        }else {
+          utils.toast("请输入正确的手机号", "none", 2000)
+        }
+      }else {
+        utils.toast("请输入您的真实姓名", "none", 2000)
       }
-    ];
-    order.setUpOrders(vm.data.totalPrice, vm.data.flightNumber, vm.data.arrivalDate, vm.data.airportName, JSON.stringify(orders) ,  function(data){
-      console.log(data)
-      wx.navigateTo({
-        url: '/pages/cart/infoCheck/infoCheck?orderId=' + data.order_id
-      })
-    })
-    
+    }else {
+      utils.toast("请完善行程信息", "none", 2000)
+    }
   },
 
   /**

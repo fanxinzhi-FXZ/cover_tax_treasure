@@ -8,27 +8,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    bannerImgItems: [
-      {
-      "name": "黄金计划",
-      "goodSId": 1,
-      "price": "50元",
-        "background": "linear-gradient(90deg, #ff971c, #fdc429 50%, #ff971c,);"
-      },
-      {
-        "name": "钻石计划",
-        "goodSId": 2,
-        "price": "150元",
-        "background": "linear-gradient(90deg, #4e82f5, #4eb0f5 50%, #4e82f5);"
-      },
-      {
-        "name": "大富翁计划",
-        "goodSId": 3,
-        "price": "300元",
-        "background": "linear-gradient(90deg, #ff6c1c, #fa7063 50%,#ff6c1c );"
-      }
-    ],
+    backgroundItems: [
+        "linear-gradient(90deg, #ff971c, #fdc429 50%, #ff971c,);",
+        "linear-gradient(90deg, #4e82f5, #4eb0f5 50%, #4e82f5);",
+        "linear-gradient(90deg, #ff6c1c, #fa7063 50%,#ff6c1c );"
+        ],
     swiperCurrent: 0,
+    itemShowId: 0,
     indicatorDots: true,
     swiperautoplay: false,
     interval: 5000,
@@ -51,7 +37,7 @@ Page({
     index.planLoad(function (data) {
       vm.setData({
         productItems: data,
-        swiperCurrent: options.id - 1
+        itemShowId: options.id - 1
       })
     })
   },
@@ -60,7 +46,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**
