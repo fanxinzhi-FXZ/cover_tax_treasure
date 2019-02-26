@@ -49,7 +49,7 @@ const order = {
           timeStamp: JSON.stringify(data.data.pay_url.timeStamp),
           nonceStr: data.data.pay_url.nonceStr,
           package: data.data.pay_url.package,
-          signType: data.data.pay_url.signType,
+          signType: 'MD5',
           paySign: data.data.pay_url.paySign,
           success: success,
           fail: fail

@@ -1,10 +1,11 @@
+
 <view>
   <view class="orderInfo-status clearfix" wx:if="{{infoData.status == 'paying'}}">
     <view class="status-memo">
       待支付
     </view>
     <view class="status-time" >
-    请在00:15:37 内完成订单支付
+    请在{{hour + '小时' + min + '分钟' + second + '秒'}}内完成订单支付
     </view>
   </view>
   <view class="orderInfo-statusSuc clearfix"  wx:if="{{infoData.status == 'completed'}}">
