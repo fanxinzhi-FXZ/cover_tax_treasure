@@ -1,6 +1,7 @@
 // pages/mine/mineOrder/mineOrder.js
 const Img_URL = 'https://www.beishuibao.com/web_pic/program/';
 const mine = require('../../../server/mine.js');
+const util = require('../../../utils/utils.js');
 Page({
   data: {
     _num:'all',
@@ -110,6 +111,21 @@ Page({
     var infoID = e.target.dataset.id;
     wx.navigateTo({
       url: "/pages/mine/mineOrder/orderInfo/orderInfo?id=" + infoID
+    })
+  },
+  // 删除订单
+  DelOrder(e){
+    var that = this;
+    var id = e.target.dataset.id;
+    var token = wx.getStorageSync('TOKEN');
+    var params = {
+      token: token,
+      order_id:id
+    }
+    mine.mineOrderdel(params, function (data) {
+      console.log(data)
+      util.toast("订单删除成功", "none", 2000);
+      that.init(that.data._num);
     })
   }
 })

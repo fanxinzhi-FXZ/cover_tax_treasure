@@ -2,9 +2,9 @@
 <view class="mine">
   <!-- 头像，用户名  需要退出登录时<view class="mine-header">加上 bindtap="link_logout"-->
   <view class="mine-header">
-   <image src="{{user_photo}}" class="mine-header-photo"></image>
+   <image src="{{wxInfo.head_pic}}" class="mine-header-photo"></image>
    <view class="mine-header-name">
-      <text>{{user_name}}</text>
+      <text>{{user_name.name ? user_name.name : wxInfo.nick_name}}</text>
    </view>
    <!-- <image src="https://www.beishuibao.com/web_pic/program/icon_down1.png" class="mine-header-down"></image> -->
   </view>

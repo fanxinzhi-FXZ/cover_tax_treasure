@@ -1,5 +1,7 @@
 // pages/mine/mine.js
 const Img_URL = 'https://www.beishuibao.com/web_pic/program/';
+const mine = require('../../server/mine.js');
+const util = require('../../utils/utils.js');
 const app = getApp();
 Page({
 
@@ -8,7 +10,22 @@ Page({
    */
   data: {
     user_photo: Img_URL + 'icon_sample.png',
-    user_name:'王小小'
+    user_name:'王小小',
+    wxInfo: wx.getStorageSync('USERINFO')
+  },
+  onLoad(e){
+    var that = this;
+    var info = wx.getStorageSync('USERINFO');
+    console.log(info)
+    var params = {
+      token: wx.getStorageSync('TOKEN')
+    }
+    mine.get_myrelate_person(params, function (data) {
+      console.log(data)
+      that.setData({
+        user_name:data[0]
+      })
+    })
   },
   // 退出登录
   link_logout: function () {

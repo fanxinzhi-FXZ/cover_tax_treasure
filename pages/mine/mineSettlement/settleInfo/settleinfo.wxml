@@ -17,10 +17,12 @@
   </view>
   
   <view class="settleInfo-banner">
-    <image src="{{bannerImg}}" class="banner-img"></image>
+    <image src="{{bannerImg0}}" class="banner-img" wx:if="{{status == 0 || status == '0'}}"></image>
+     <image src="{{bannerImg1}}" class="banner-img" wx:if="{{status == 1 || status == '1'}}"></image>
+      <image src="{{bannerImg2}}" class="banner-img" wx:if="{{status == 2 || status == '2'}}"></image>
   </view>
 
-  <view class="settleInfo-memo"wx:if="{{status == 0 || status == '0'}}">
+  <view class="settleInfo-memo" wx:if="{{status == 0 || status == '0'}}">
     <view class="memo">收到请求，</view>
     <view class=" memo memo-two">正在加急处理您的资料哦！</view>
   </view>

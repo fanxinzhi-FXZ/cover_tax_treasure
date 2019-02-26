@@ -28,6 +28,7 @@
   height:54px;
   width:54px;
   margin:0 0 14.5px 0;
+  border-radius:50%;
 }
 .mine-header-name{
   font-family: PingFang-SC-Medium;
