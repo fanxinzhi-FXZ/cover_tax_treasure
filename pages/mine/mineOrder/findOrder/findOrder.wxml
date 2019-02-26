@@ -4,18 +4,18 @@
     <input type="number" placeholder-style="color:#989898;" placeholder="请输入手机号码" bindinput='mobileFunc' class="right"  auto-focus/>
   </view>
 
-  <view class="findOrder-code">
+  <!-- <view class="findOrder-code">
     <view class="left">图形码</view>
     <input type="number" placeholder-style="color:#989898;" placeholder="请输入验证码" bindinput='mobileFunc' class="right" />
     <view class="codeBtn">
       <image src="{{codeImg}}" class="codeBtn-img"></image> 
       <view class="codeBorder"></view>
     </view>
-  </view>
+  </view> -->
   <view class="findOrder-code">
     <view class="left">验证码</view>
-    <input type="number" placeholder-style="color:#989898;" placeholder="请输入验证码" bindinput='mobileFunc' class="right" />
-    <view class="codeBtn">获取验证码 <view class="codeBorder"></view></view>
+    <input type="number" placeholder-style="color:#989898;" placeholder="请输入验证码" bindinput='codeFunc' class="right" />
+    <view class="codeBtn" bindtap="getCode">{{findVerification}} <view class="codeBorder"></view></view>
   </view>
   <view class="findOrder-sub">
     <button  class="findOrder-sub-btn" bindtap="seeOrder">查看订单</button>

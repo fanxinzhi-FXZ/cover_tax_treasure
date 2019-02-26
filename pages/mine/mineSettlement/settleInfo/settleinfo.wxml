@@ -5,22 +5,29 @@
       </view>
       <image src="{{one}}" class="header-img1"></image>
       <view class="header-line2"></view>
-      <image src="{{two}}" class="header-img2"></image>
+      <image src="{{status != 0 || status != '0' ? two_select : two}}" class="header-img2"></image>
       <view class="header-line3"></view>
     </view>
   </view>
 
   <view class="settleInfo-nav clearfix">
     <view class="nav-left">申请理赔</view>
-    <view class="nav-right">理赔成功</view>
+    <view class="nav-right {{status == 2 || status == '2'?'select':'noselect'}}" wx:if="{{status != 1 || status != '1'}}">理赔成功</view>
+    <view class="nav-right {{status == 1 || status == '1'?'select':'noselect'}}" wx:if="{{status == 1 || status == '1'}}">理赔失败</view>
   </view>
   
   <view class="settleInfo-banner">
     <image src="{{bannerImg}}" class="banner-img"></image>
   </view>
 
-  <view class="settleInfo-memo">
+  <view class="settleInfo-memo"wx:if="{{status == 0 || status == '0'}}">
     <view class="memo">收到请求，</view>
     <view class=" memo memo-two">正在加急处理您的资料哦！</view>
+  </view>
+   <view class="settleInfo-memo" wx:if="{{status == 2 || status == '2'}}">
+    <view class="memo">已完成打款喽~</view>
+  </view>
+   <view class="settleInfo-memo" wx:if="{{status == 1 || status == '1'}}">
+    <view class="memo">申请失败请联系客服</view>
   </view>
 </view>

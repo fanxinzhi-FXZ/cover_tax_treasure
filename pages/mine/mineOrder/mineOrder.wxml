@@ -41,7 +41,7 @@
               ￥{{item.price}}
             </view>
             <view class="right-cnt">
-              <!-- x1 -->
+              x1
             </view>
           </view>
         </view>
@@ -51,7 +51,7 @@
       </view>
       <view class="item-btn">
         <view class="btn"  bindtap="seeOrder" data-id="{{items.id}}">查看详情</view>
-        <view class="btn">删除订单</view>
+        <view class="btn" wx:if="{{items.status == 'completed'}}">删除订单</view>
       </view>
     </view>
   </view>
