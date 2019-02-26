@@ -5,7 +5,9 @@ Page({
     one: Img_URL +'icon_1_select.png',
     two: Img_URL + 'icon_2.png',
     two_select: Img_URL + 'icon_2_select.png',
-    bannerImg: Img_URL + 'img_dispose.png',
+    bannerImg0: Img_URL + 'img_dispose.png',
+    bannerImg1: Img_URL + 'img_service.png',
+    bannerImg2: Img_URL + 'img_wallet.png',
     settleID:'',
     status:1
   },
