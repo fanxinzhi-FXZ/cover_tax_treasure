@@ -62,7 +62,7 @@ page{
 	border-radius: 0.3px;
 }
 .findOrder-code .codeBtn{
-  text-indent:10.5px;
+  text-align:center;
   position: relative;
   float:left;
   width:105px;  

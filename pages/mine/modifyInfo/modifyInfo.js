@@ -31,11 +31,18 @@ Page({
     mine.getmodifyInfo(params, function (data) {
       console.log(data.id)
       that.setData({
-        info_radio: data.sex == 'n' ? 0 : 1,
+        info_radio: data.sex == 'n' || data.sex === 'n' ? 0 : 1,
         info_name: data.name,
         info_tel: data.mobile,
         info_idcard: data.ic_card,
-        info_email: data.email
+        info_email: data.email,
+        radioValues: data.sex == 'n' ? [
+          { 'value': '男', 'selected': true },
+          { 'value': '女', 'selected': false }
+        ] : [
+            { 'value': '男', 'selected': false },
+            { 'value': '女', 'selected': true }
+          ]
       })
     })
   },

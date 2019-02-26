@@ -1,5 +1,11 @@
 page{
-  background-color:#fff;
+  background:#f9f9f9;
+}
+.blue{
+  color:#0075eb;
+}
+.gray{
+  color:#666;
 }
 .clearfix:after {
     content: ".";
@@ -8,6 +14,42 @@ page{
     clear: both;
     visibility: hidden;
 }
+.settle-tab{
+  background: #fff;
+}
+
+.settle-tab .tab-item{
+  height:110rpx;
+  line-height:110rpx;
+  width:calc(100% / 2);
+  float:left;
+  text-align:center;
+  font-family: PingFang-SC-Bold;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+  position:relative;
+}
+.settle-tab .tab-item .item-left{
+  position:absolute;
+  background-color: #e4e4e4;
+	border-radius: 1rpx;
+  width: 2rpx;
+	height: 32rpx;
+  top: 40rpx;
+  left:0;
+}
+
+.settle-tab .tab-item .item-right{
+  background-color: #e4e4e4;
+	border-radius: 1rpx;
+  width: 2rpx;
+	height: 32rpx;
+  position:absolute;
+  top: 40rpx;
+  right:0;
+}
+
 .settleHas{
 
 }
@@ -16,7 +58,7 @@ page{
 		rgba(229, 229, 229, 0.63);
 	border-radius: 12rpx;
   background-color: #ffffff;
-  margin:75rpx 25rpx 0rpx 25rpx;
+  margin:0 25rpx 20rpx 25rpx;
 }
 .settleHas-now .nowTitle{
   height:86rpx;

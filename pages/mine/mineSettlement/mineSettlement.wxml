@@ -1,53 +1,33 @@
 <view>
+  <view class="settle-tab clearfix">
+    <view data-num="0" class="tab-item {{_num=='0'?'blue':'gray'}}"  bindtap="menuClick">
+    当前理赔
+    </view>
+    <view bindtap="menuClick" class="tab-item {{_num=='1'?'blue':'gray'}}">
+      <view data-num="1" class="item-left"></view>
+      <view data-num="1">历史记录</view>
+    </view>
+  </view>
   <block wx:if="{{has}}">
-    <view class="settleHas">
-      <view class="settleHas-now clearfix" bindtap='goHasInfo'>
+    <view class="settleHas"  wx:for="{{settleData}}" wx:for-index="idx" wx:for-item="items" wx:key="idx">
+      <view class="settleHas-now clearfix" bindtap='goHasInfo' data-id="{{items.id}}">
         <view class="nowTitle">
-          <image src="{{now}}" class="nowTitleImg"></image>
-          黄金计划
+          <image src="{{items.status == 0 ? now : end}}" class="nowTitleImg"></image>
+          {{items.goods_name}}
         </view>
         <view class="nowBorder"></view>
         <view class="nowP1 nowP">
-        订单编号：1286908090877680765
+        订单编号：{{items.order_number}}
         </view>
         <view class="nowP2 nowP">
-        下单时间：2018.12.25 23:34:45
+        下单时间：{{items.creat_time}}
         </view>
       </view>
-      <view class="settleHas-title">
+      <!-- <view class="settleHas-title">
         <view class="titleLeft"></view>
         <view class="titleCenter">历史记录</view>
         <view class="centerRight"></view>
-      </view>
-
-      <view class="settleHas-history clearfix">
-        <view class="historyTitle">
-        <image src="{{end}}" class="historyTitleImg"></image>
-          钻石计划
-        </view>
-        <view class="historyBorder"></view>
-        <view class="historyP1 historyP">
-        订单编号：1286908090877680765
-        </view>
-        <view class="historyP2 historyP">
-        下单时间：2018.12.25 23:34:45
-        </view>
-      </view>
-
-      <view class="settleHas-history clearfix">
-        <view class="historyTitle">
-        <image src="{{end}}" class="historyTitleImg"></image>
-          钻石计划
-        </view>
-        <view class="historyBorder"></view>
-        <view class="historyP1 historyP">
-        订单编号：1286908090877680765
-        </view>
-        <view class="historyP2 historyP">
-        下单时间：2018.12.25 23:34:45
-        </view>
-      </view>
-
+      </view> -->
     </view>
   </block>
 

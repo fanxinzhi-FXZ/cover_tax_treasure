@@ -4,6 +4,12 @@ page{
 .settleInfo-header{
 
 }
+.select{
+  color: #5679df;
+}
+.noselect{
+  color: #d2d2d2;
+}
 .settleInfo-header .header{
   height:62rpx;
   margin:51rpx 80rpx 0 ;
@@ -64,7 +70,6 @@ page{
 	font-weight: normal;
 	font-stretch: normal;
 	letter-spacing: 0px;
-	color: #5679df;
   margin:0 136rpx 0 0;
 }
 
