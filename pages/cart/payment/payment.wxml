@@ -30,9 +30,12 @@
   <view class="button" bindtap='pay'>确认支付</view>
 
   <!-- 支付状态浮层 -->
-  <view class="state" wx:if="{{false}}">
+  <view class="state" wx:if="{{isPay}}">
     <view class="con">
-
+      <span class="del" bindtap='clockdel'></span>
+      <span class="img {{orderState ? 'imgsuection' : 'imgfail'}}"></span>
+      <span class="state-title">支付成功</span>
+      <text class="state-text">可在我的订单中查看订单详情</text>
     </view>
   </view>
 </view>

@@ -8,7 +8,9 @@ Page({
    */
   data: {
     orderItems: [],
-    orderId: ''
+    orderId: '',
+    isPay: false,
+    orderState: true
   },
 
   /**
@@ -24,6 +26,14 @@ Page({
       })
     })
   },
+  /**
+   * 关闭支付页面
+   */
+  clockdel: function(){
+    this.setData({
+      isPay: false
+    })
+  },
 
   /**
    * 支付
@@ -32,9 +42,15 @@ Page({
     var vm = this;
 
     order.orderPay(vm.data.orderId, function(){
-      console.log("支付成功")
+      vm.setData({
+        isPay: true,
+        orderState: true
+      })
     }, function(){
-      console.log("支付失败")
+      vm.setData({
+        isPay: true,
+        orderState: false
+      })
     })
   }
 
