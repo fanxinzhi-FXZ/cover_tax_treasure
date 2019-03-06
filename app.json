@@ -1,13 +1,13 @@
 {
   "pages": [
-    "pages/cart/payment/payment",
-    "pages/mine/login/login",
     "pages/index/index",
+    "pages/mine/login/login",
+    
     "pages/cart/cart",
     "pages/cart/detail/detail",
     "pages/cart/infoFill/infoFill",
     "pages/cart/infoCheck/infoCheck",
-  
+    "pages/cart/payment/payment",
     "pages/mine/mine",
     "pages/mine/logout/logout",
     "pages/mine/modifyInfo/modifyInfo",

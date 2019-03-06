@@ -110,15 +110,15 @@
           <view class="con">
             <span class="seed">
               <image class="seedimg" src='https://www.beishuibao.com/web_pic/program/process3_img1.png'></image>
-              <var class="text">致电客服 400806306</var>
+              <var class="canceltext">致电客服 400806306</var>
             </span>
             <span class="seed">
               <image class="seedimg" src='https://www.beishuibao.com/web_pic/program/process3_img2.png'></image>
-              <var class="text">根据邮件填写信息</var>
+              <var class="canceltext">根据邮件填写信息</var>
             </span>
             <span class="seed">
               <image class="seedimg" src='https://www.beishuibao.com/web_pic/program/process3_img3.png'></image>
-              <var class="text">客服撤单</var>
+              <var class="canceltext">客服撤单</var>
             </span>
           </view>
         </view>

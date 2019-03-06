@@ -4,7 +4,8 @@
     <swiper-item class="detail-swiperitem">
       <view class="detail-itemImg {{swiperCurrent == index ? 'detail-active' : '' }}" style='background-image: {{backgroundItems[index]}}'>
         <text class="detail-name {{swiperCurrent == index ? 'detail-active-name' : ''}}">{{item.name}}</text>
-        <text class="detail-money {{swiperCurrent == index ? 'detail-active-money' : ''}}">{{item.price - item.reduced_price}}</text>
+        <text class="detail-money {{swiperCurrent == index ? 'detail-active-money' : ''}}">￥{{item.price - item.reduced_price}}</text>
+        <text class="detail-special {{swiperCurrent == index ? '.detail-active-special' : ''}}" wx:if="{{item.reduced_price != 0}}">￥{{item.reduced_price}}</text>
       </view>
     </swiper-item>
   </block>

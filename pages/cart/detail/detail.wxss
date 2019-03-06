@@ -53,11 +53,22 @@
   color: #ffffff;
   padding-top: 30rpx;
 }
+.detail-special{
+  display: block;
+  text-align: center;
+  font-size: 11rpx;
+  color: #ffffff;
+  padding-top: 5rpx;
+  text-decoration: line-through;
+}
 .detail-active-name {
   font-size: 40rpx;
 }
 .detail-active-money {
   font-size: 30rpx;
+}
+.detail-active-special {
+  font-size: 22rpx;
 }
 
 .detail .content {

@@ -39,6 +39,7 @@
   border: 1px solid #e5e5e5;
 }
 .infoFill .item .son .input{
+  width: 466rpx;
   height: 69rpx;
   line-height: 69rpx;
   margin-left: 29rpx;

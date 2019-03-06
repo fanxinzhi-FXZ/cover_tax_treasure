@@ -189,8 +189,8 @@
   background-size: 2px 11px;
 }
 .index .flow .content{
-  width: 100vw;
-  height: 56.53vw;
+  width: 750rpx;
+  height: 450rpx;
   display: block;
   white-space:nowrap;
   overflow-x: auto;
@@ -198,35 +198,27 @@
 }
 .index .flow .content .item{
   display: inline-block;
-  width: 89.06vw;
-  height: 54.2vw;
-  margin-left: 10px;
+  width: 668rpx;
+  height: 424rpx;
+  margin-left: 20rpx;
   white-space:normal;
-  box-shadow: 1.5px 0px 14.5px 0px 
+  box-shadow: 3rpx 0px 19rpx 0px 
 		rgba(229, 229, 229, 0.63);
-	border-radius: 6px;
+	border-radius: 12rpx;
   background: #ffffff;
 }
 .index .flow .content .item:last-child{
-  margin-right: 10px;
+  margin-right: 20rpx;
 }
 .index .flow .content .item .buy {
   display: block;
 }
 .index .flow .content .item .head {
   display: block;
-  height: 38px;
-  padding: 14px 0px 0px 16px;
+  height: 76rpx;
+  padding: 28rpx 0px 0px 32rpx;
 }
-.index .flow .content .item .cancelhead {
-  display: block;
-  height: 38px;
-  padding: 14px 0px 0px 16px;
-}
-.index .flow .content .item .cancelhead .headimg {
-  width: 134px;
-  height: 38px;
-}
+
 .index .flow .content .item .head .headimg {
   width: 86px;
   height: 38px; 
@@ -238,22 +230,22 @@
 .index .flow .content .item .buy .con .seed{
   display: block;
   float: left;
-  width: 17.86vw;
-  padding-right: 4.8vw;
-  padding-top: 5.66vw;
-  background: url("https://www.beishuibao.com/web_pic/program/icom_dot3.png") right 0.8vw center no-repeat;
-  background-size: 13px 9px;
+  width: 134rpx;
+  padding-right: 36rpx;
+  padding-top: 60rpx;
+  background: url("https://www.beishuibao.com/web_pic/program/icom_dot3.png") right 5rpx center no-repeat;
+  background-size: 26rpx 18rpx;
 }
 .index .flow .content .item .buy .con .seed .seedimg{
-  width: 17.86vw;
-  height:  17.86vw;
+  width: 134rpx;
+  height:  135rpx;
 }
 .index .flow .content .item .buy .con .seed .text{
   display: block;
   text-align: center;
-  font-size: 10px;
+  font-size: 20rpx;
   color: #5578de;
-  padding-top: 2.33vw;
+  padding-top: 40rpx;
 }
 .index .flow .content .item .buy .con .seed:last-child {
   padding-right: 0px;
@@ -263,32 +255,48 @@
 /* 流程介绍 -- 理赔流程 */
 .index .flow .content .item .claim .con {
   overflow: hidden;
-  padding: 0px 7vw;
+  padding: 0px 66rpx;
 }
 .index .flow .content .item .claim .con .seed{
   display: block;
   float: left;
-  width: 17.86vw;
-  padding-right: 10.6vw;
-  padding-top: 5.66vw;
-  background: url("https://www.beishuibao.com/web_pic/program/icom_dot3.png") right 4vw center no-repeat;
-  background-size: 13px 9px;
+  width: 134rpx;
+  padding-right: 66rpx;
+  padding-top: 60rpx;
+  background: url("https://www.beishuibao.com/web_pic/program/icom_dot3.png") right 20rpx center no-repeat;
+  background-size: 26rpx 18rpx;
 }
 .index .flow .content .item .claim .con .seed .seedimg{
-  width: 17.86vw;
-  height:  17.86vw;
+  width: 134rpx;
+  height: 135rpx;
 }
 .index .flow .content .item .claim .con .seed .text{
   display: block;
   text-align: center;
-  font-size: 10px;
+  font-size: 20rpx;
   color: #5578de;
-  padding-top: 2.33vw;
+  padding-top: 40rpx;
 }
 .index .flow .content .item .claim .con .seed:last-child {
   padding-right: 0px;
   background: #ffffff;
 
+}
+.index .flow .content .item .cancelhead {
+  display: block;
+  height: 76rpx;
+  padding: 28rpx 0px 0px 32rpx;
+}
+.index .flow .content .item .cancelhead .headimg {
+  width: 268rpx;
+  height: 76rpx;
+}
+.index .flow .content .item .canceltext {
+  display: block;
+  text-align: center;
+  font-size: 20rpx;
+  color: #5578de;
+  padding-top: 10rpx;
 }
 
 /* 常见问题 */
