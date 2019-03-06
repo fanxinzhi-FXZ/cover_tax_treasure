@@ -3,6 +3,7 @@ const mine = require('../../../../server/mine.js');
 Page({
   data: {
     sucImg: Img_URL + 'icon_clocse4.png',
+    failimg: Img_URL + 'icon_eliminate.png',
     order_status:1,
     orderID:"",
     infoData:{},
