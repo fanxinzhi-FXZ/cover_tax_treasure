@@ -1,5 +1,7 @@
 const Img_URL = 'https://www.beishuibao.com/web_pic/program/';
 const mine = require('../../../../server/mine.js');
+const order = require('../../../../server/order.js');;
+
 Page({
   data: {
     sucImg: Img_URL + 'icon_clocse4.png',
@@ -78,5 +80,18 @@ Page({
     nowTime();
     var timer = setInterval(nowTime, 1000);
 
+  },
+
+  /**
+   * 支付
+   */
+  pay: function () {
+    var vm = this;
+
+    order.orderPay(vm.data.orderID, function () {
+      vm.init(vm.data.orderID)
+    }, function () {
+      vm.init(vm.data.orderID)
+    })
   }
 })

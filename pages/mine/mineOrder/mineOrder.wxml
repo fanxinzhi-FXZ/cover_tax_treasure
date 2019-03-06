@@ -29,6 +29,9 @@
         <view class="top-right suc" wx:if="{{items.status == 'completed'  && items.is_cancle == 0}}">
           已完成
         </view>
+        <view class="top-right error" wx:if="{{items.status == 'payed' && items.is_cancle == 0}}">
+          已支付
+        </view>
         <view class="top-right error" wx:if="{{items.status == 'completed' && items.is_cancle == 1}}">
           已失效
         </view>

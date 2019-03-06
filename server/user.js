@@ -37,7 +37,6 @@ const user = {
       code: code
     }, function (data) {
       if (data.errcode == 0) {
-        console.log(data.data)
         wx.setStorageSync('WXTOKEN', data.data.code_token);
         ajax.post('https://www.beishuibao.com/bank/wei/user/third_login', {
           token: data.data.code_token

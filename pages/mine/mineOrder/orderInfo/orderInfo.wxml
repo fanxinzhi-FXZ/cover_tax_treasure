@@ -8,7 +8,7 @@
     请在{{hour + '小时' + min + '分钟' + second + '秒'}}内完成订单支付
     </view>
   </view>
-  <view class="orderInfo-statusSuc clearfix"  wx:if="{{infoData.status == 'completed' && infoData.is_cancle == 0}}">
+  <view class="orderInfo-statusSuc clearfix"  wx:if="{{infoData.status == 'payed' && infoData.is_cancle == 0}}">
     <image src="{{sucImg}}" class="status-img"></image>
     <text class="status-pay">已支付</text>
   </view>
@@ -80,7 +80,7 @@
     </view>
   </view>
 
-  <view class="orderInfo-btn" wx:if="{{infoData.is_cancle != 1}}">
+  <view class="orderInfo-btn" wx:if="{{infoData.status == 'paying' && infoData.is_cancle != 1}}" bindtap="pay">
     <view class="btn">立即支付</view>
   </view>
 </view>
