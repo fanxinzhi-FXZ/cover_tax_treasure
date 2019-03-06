@@ -8,6 +8,9 @@ page{
 .gray{
   color:#666;
 }
+.error{
+  color:#999999;
+}
 .mineOrder-tab{
   background: #fff;
 }

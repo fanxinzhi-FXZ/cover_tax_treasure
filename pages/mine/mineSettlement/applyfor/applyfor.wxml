@@ -21,7 +21,7 @@
     </view>
 
      <view class="nav-item navMargin">
-      <image src="{{tel}}" class="nav-image"></image>
+      <image src="{{email}}" class="nav-image"></image>
       <view class="nav-right">
         <view class="right-top">
           邮件理赔申请

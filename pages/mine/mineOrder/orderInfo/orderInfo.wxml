@@ -8,10 +8,19 @@
     请在{{hour + '小时' + min + '分钟' + second + '秒'}}内完成订单支付
     </view>
   </view>
-  <view class="orderInfo-statusSuc clearfix"  wx:if="{{infoData.status == 'completed'}}">
+  <view class="orderInfo-statusSuc clearfix"  wx:if="{{infoData.status == 'completed' && infoData.is_cancle == 0}}">
     <image src="{{sucImg}}" class="status-img"></image>
     <text class="status-pay">已支付</text>
   </view>
+
+    <view class="orderInfo-status clearfix"   wx:if="{{infoData.status == 'completed' && infoData.is_cancle == 1}}">
+      <view class="status-die">
+        已失效
+      </view>
+      <view class="status-diememo" >
+      未在时间内完成支付订单已失效
+      </view>
+    </view>
 
   <view class="orderInfo-buyInfo">
     <view class="buyInfo-title">
@@ -71,7 +80,7 @@
     </view>
   </view>
 
-  <view class="orderInfo-btn">
+  <view class="orderInfo-btn" wx:if="{{infoData.is_cancle != 1}}">
     <view class="btn">立即支付</view>
   </view>
 </view>

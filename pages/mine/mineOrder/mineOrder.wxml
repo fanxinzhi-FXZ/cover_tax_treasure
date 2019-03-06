@@ -26,8 +26,11 @@
         <view class="top-right paying" wx:if="{{items.status == 'paying'}}">
           待支付
         </view>
-        <view class="top-right suc" wx:if="{{items.status == 'completed'}}">
-          已支付
+        <view class="top-right suc" wx:if="{{items.status == 'completed'  && items.is_cancle == 0}}">
+          已完成
+        </view>
+        <view class="top-right error" wx:if="{{items.status == 'completed' && items.is_cancle == 1}}">
+          已失效
         </view>
       </view>
 
