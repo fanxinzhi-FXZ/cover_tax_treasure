@@ -62,11 +62,11 @@
     </view>
   </view>
 
-  <view class="mineOrder-find clearfix" wx:if="{{hasData}}" bindtap="findOrder">找回订单</view>
+  <!-- <view class="mineOrder-find clearfix" wx:if="{{hasData}}" bindtap="findOrder">找回订单</view> -->
 
   <view wx:if="{{!hasData}}" class="mineOrder-noData">
     <image src="{{noData}}" class="noData-img"></image>
     <view class="noData-memo">当前暂无订单哦</view>
-    <view class="noData-find" bindtap="findOrder">找回订单></view>
+    <!-- <view class="noData-find" bindtap="findOrder">找回订单></view> -->
   </view>
 </view>
