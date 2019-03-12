@@ -1,0 +1,7 @@
+/* pages/mine/fail/fail.wxss */
+.fail {
+  background: #ffffff;
+}
+.fail .item {
+  
+}

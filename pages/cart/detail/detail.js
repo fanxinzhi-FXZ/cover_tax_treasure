@@ -37,7 +37,7 @@ Page({
     index.planLoad(function (data) {
       vm.setData({
         productItems: data,
-        itemShowId: options.id - 1
+        swiperCurrent: options.id - 1
       })
     })
   },

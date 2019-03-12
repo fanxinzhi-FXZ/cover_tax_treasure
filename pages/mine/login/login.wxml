@@ -17,6 +17,6 @@
   </span>
   <button class="button" wx:if="{{isNewUser}}" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">确认登录</button>
   <button class="button" wx:if="{{!isNewUser}}" bindtap='bindingInvitation'>绑定邀请人</button>
-
+  <span class="skip" wx:if="{{!isNewUser}}" bindtap='bindingInvitation'>跳过</span>
   <span class="agreement {{agreementSelect ? 'agreementselect' : ''}}" wx:if="{{isNewUser}}" bindtap="agreementCheck">我已阅读并同意<var class="text">《被税宝用户协议》</var></span>
 </view>

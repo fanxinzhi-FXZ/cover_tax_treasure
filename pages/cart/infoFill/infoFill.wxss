@@ -56,6 +56,39 @@
   padding-bottom: 24rpx;
   background: #ffffff;
 }
+.infoFill .traveller .header {
+  display: block;
+  height:98rpx;
+}
+.infoFill .traveller .header .title{
+  float: left;
+  height:98rpx;
+  line-height:98rpx;
+  text-align:left;
+  font-size:30rpx;
+  color:#333333;
+  padding-left:54rpx;
+  background:url("https://www.beishuibao.com/web_pic/program/icon_line.png") left 40rpx center no-repeat;
+  background-size:5rpx 22rpx;
+}
+.infoFill .traveller .header .add {
+  float: right;
+  height:98rpx;
+  line-height:98rpx;
+  color: #4d6ce3;
+  font-size: 24rpx;
+  padding: 0rpx 34rpx 0rpx 43rpx;
+  background:url("https://www.beishuibao.com/web_pic/program/icon_add.png") left center no-repeat;
+  background-size: 28rpx 28rpx;
+}
+.infoFill .traveller .header .delete {
+  float: right;
+  width: 98rpx;
+  height:98rpx;
+  margin-right:34rpx;
+  background:url("https://www.beishuibao.com/web_pic/program/icon_clocse.png") right center no-repeat;
+  background-size: 28rpx 28rpx;
+}
 .infoFill .traveller .plan {
   display: block;
   height: 71rpx;

@@ -142,3 +142,10 @@
 .login .agreement .text {
   text-decoration: underline;
 }
+.login .skip {
+  display: block;
+  text-align: center;
+  font-size: 28rpx;
+  color: #4d6ce3;
+  margin-top: 36rpx;
+}

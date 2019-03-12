@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/cart/cart",
     "pages/mine/login/login",
     "pages/index/index",
-    "pages/cart/cart",
+    
     "pages/cart/detail/detail",
     "pages/cart/infoFill/infoFill",
     "pages/cart/infoCheck/infoCheck",
@@ -18,7 +19,8 @@
     "pages/mine/mineOrder/findOrder/findOrder",
     "pages/mine/mineOrder/orderInfo/orderInfo",
     "pages/mine/agency/agency",
-    "pages/mine/aboutUS/aboutUS"
+    "pages/mine/aboutUS/aboutUS",
+    "pages/mine/fail/fail"
   ],
   "window": {
     "backgroundTextStyle": "light",

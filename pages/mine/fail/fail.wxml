@@ -1,0 +1,4 @@
+<!--pages/mine/fail/fail.wxml-->
+<view class="fail">
+  <view class="item">1231231</view>
+</view>

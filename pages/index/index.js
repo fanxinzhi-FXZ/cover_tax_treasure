@@ -17,8 +17,6 @@ Page({
     swiperHeight: 0,
     swiperWidth: 0,
 
-    commonItems: store.index.commonItems,
-
     productItems:[]
   },
 

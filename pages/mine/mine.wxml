@@ -48,6 +48,12 @@
       <image src="https://www.beishuibao.com/web_pic/program/icon_down1.png" class="mine-footer-item-down"></image>
     </view>
 
+    <view class="mine-footer-item" bindtap="readFile">
+      <image src="https://www.beishuibao.com/web_pic/program/me_icon_we.png" class="mine-footer-item-photo"></image>
+      <view class="mine-footer-item-text">文件查询及下载</view>
+      <image src="https://www.beishuibao.com/web_pic/program/icon_down1.png" class="mine-footer-item-down"></image>
+    </view>
+
     <view class="mine-footer-item" bindtap="aboutUS">
       <image src="https://www.beishuibao.com/web_pic/program/me_icon_we.png" class="mine-footer-item-photo"></image>
       <view class="mine-footer-item-text">关于我们</view>

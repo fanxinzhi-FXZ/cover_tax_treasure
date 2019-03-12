@@ -136,6 +136,7 @@
 }
 .detail .notice .box .item .text{
   display: block;
+  line-height: 40rpx;
 }
 
 /* 底部按钮  立即购买 */

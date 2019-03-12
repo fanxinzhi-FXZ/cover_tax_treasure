@@ -10,7 +10,7 @@
     </span>
     <span class="item">
       <var class="subtitle">国内到达机场</var>
-      <span class="son"><input class="input" type="text" value='{{airportName}}' placeholder="请输入机场名称" bindinput="airportTap"></input></span>
+      <span class="son"><input class="input" type="text" value='{{airportName}}' placeholder="请输入机场名称  如：上海浦东机场" bindinput="airportTap"></input></span>
     </span>
     <span class="item">
       <var class="subtitle">回国到达日期</var>
@@ -21,29 +21,33 @@
   </view>
 
   <!-- 旅客信息 -->
-  <view class="traveller">
-    <text class="title">旅客信息</text>
+  <view class="traveller" wx:for="{{travellerItems}}" wx:key="item" wx:for-index="idx">
+    <span class="header">
+      <text class="title">旅客信息</text>
+      <em class="add" bindtap="addInfo" wx:if="{{idx == 0}}">添加旅客</em>
+      <em class="delete" bindtap="deleteInfo" data-index="{{idx}}" wx:if="{{idx != 0}}"></em>
+    </span>
     <span class="plan">
       <var class="subtitle">购买计划</var>
       <span class="son">
-        <span class="seed {{buyBlanId == item.id ? 'select' : ''}}" wx:for="{{productItems}}" wx:key="item" bindtap="checkBuyBlab" data-id="{{item.id}}">{{item.name}}</span>
+        <span class="seed {{item.product_id == seed.id ? 'select' : ''}}" wx:for="{{productItems}}" wx:for-item="seed" wx:key="seed" bindtap="checkBuyBlab" data-id="{{seed.id}}" data-index="{{idx}}" data-price="{{seed.price}}" data-money="{{seed.reduced_price}}">{{seed.name}}</span>
       </span>
     </span>
     <span class="item">
       <var class="subtitle">添加旅客姓名</var>
-      <span class="son"><input class="input" type="text" placeholder="请输入您的真实姓名" bindinput="nameTap"></input></span>
+      <span class="son" bindtap="indexTap" data-index="{{idx}}"><input class="input" type="text" value="{{item.ic_name}}" placeholder="请输入您的真实姓名" bindinput="nameInput" ></input></span>
     </span>
     <span class="item">
       <var class="subtitle">证件号码</var>
-      <span class="son"><input class="input" type="idcard" placeholder="身份证/护照号码" bindinput="fareNumberTap"></input></span>
+      <span class="son" bindtap="indexTap" data-index="{{idx}}"><input class="input" type="idcard" value="{{item.ic_card}}" placeholder="请输入证件号码/护照号码" bindinput="fareNumberTap"></input></span>
     </span>
     <span class="item">
       <var class="subtitle">手机号码</var>
-      <span class="son"><input class="input" type="number" maxlength="11" placeholder="请输入手机号码" bindinput="phoneTap"></input></span>
+      <span class="son" bindtap="indexTap" data-index="{{idx}}"><input class="input" type="number" value="{{item.mobile}}" maxlength="11" placeholder="请输入手机号码" bindinput="phoneTap"></input></span>
     </span>
     <span class="item">
       <var class="subtitle">邮箱地址</var>
-      <span class="son"><input class="input" type="text" placeholder="请输入正确邮箱地址" bindinput="emailTap"></input></span>
+      <span class="son" bindtap="indexTap" data-index="{{idx}}"><input class="input" type="text" value="{{item.email}}" placeholder="请输入正确邮箱地址" bindinput="emailTap"></input></span>
     </span>
   </view>
 
@@ -58,10 +62,10 @@
   <view class="statement">
     <text class="title">合约声明</text>
     <span class="list">
-      <span class="seed">查看投保声明详情</span>
+      <!-- <span class="seed">查看投保声明详情</span>
       <span class="seed">免责说明</span>
-      <span class="seed">退单说明</span>
-      <span class="seed" bindtap="contractExplainShow">合约说明</span>
+      <span class="seed">退单说明</span> -->
+      <span class="seed" bindtap="contractExplainShow">合约声明</span>
     </span>
     <span class="illustrate"> 以上未尽事宜以您收到的合约及条款为准 </span>
     <span class="uncheck {{statementCheck ? 'check' : ''}}" bindtap="statementCheck">我已认真阅读以上内容并同意</span>
@@ -88,9 +92,9 @@
   </view>
 
   <!-- 底部按钮及金额 -->
-  <view class="bottom">
+  <view class="bottom"> 
     <span class="money">￥{{totalPrice}}</span>
-    <var class="text">（1人1计划）</var>
+    <!-- <var class="text">（1人1计划）</var> -->
     <span class="button" bindtap="goInfoCkeck">下一步</span>
   </view>
 

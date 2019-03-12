@@ -63,6 +63,12 @@ Page({
       url: "/pages/mine/agency/agency"
     })
   },
+  // 文件查询及下载
+  readFile(){
+    wx.navigateTo({
+      url: "/pages/mine/fail/fail"
+    })
+  },
   // 关于我们
   aboutUS(){
     wx.navigateTo({
