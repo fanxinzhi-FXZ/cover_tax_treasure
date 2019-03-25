@@ -39,7 +39,7 @@
     </span>
     <span class="item">
       <var class="subtitle">证件号码</var>
-      <span class="son" bindtap="indexTap" data-index="{{idx}}"><input class="input" type="idcard" value="{{item.ic_card}}" placeholder="请输入证件号码/护照号码" bindinput="fareNumberTap"></input></span>
+      <span class="son" bindtap="indexTap" data-index="{{idx}}"><input class="input" type="text" value="{{item.ic_card}}" placeholder="请输入护照号码" bindinput="fareNumberTap"></input></span>
     </span>
     <span class="item">
       <var class="subtitle">手机号码</var>
@@ -49,6 +49,11 @@
       <var class="subtitle">邮箱地址</var>
       <span class="son" bindtap="indexTap" data-index="{{idx}}"><input class="input" type="text" value="{{item.email}}" placeholder="请输入正确邮箱地址" bindinput="emailTap"></input></span>
     </span>
+  </view>
+
+  <view class="money-explain">
+    <view class="ls">1、若计算时超过理赔额度，则以此最高理赔额度进行理赔。例如：张先生选择了“大富豪计划”，他在旅游时购买了一块价值2万元的手表，一部8000的手机，那么可以得到的理赔计算为：20000*50%*50%+8000*15%*80%=5960元，则可拿到的金额为5000元。</view>
+    <view class="ls">2、所有产品必须最晚在回程航班（包括境外转机）起飞前30min购买完成。</view>
   </view>
 
   <!-- 电子合约 -->
@@ -65,7 +70,7 @@
       <!-- <span class="seed">查看投保声明详情</span>
       <span class="seed">免责说明</span>
       <span class="seed">退单说明</span> -->
-      <span class="seed" bindtap="contractExplainShow">合约声明</span>
+      <span class="seed" bindtap="goFailUrl">合约声明</span>
     </span>
     <span class="illustrate"> 以上未尽事宜以您收到的合约及条款为准 </span>
     <span class="uncheck {{statementCheck ? 'check' : ''}}" bindtap="statementCheck">我已认真阅读以上内容并同意</span>

@@ -98,6 +98,15 @@ Page({
   },
 
   /**
+   * 查看电子合约
+   */
+  goFailUrl: function () {
+    wx.navigateTo({
+      url: "/pages/mine/fail/failurl/failurl?pageurl=" + "https://www.beishuibao.com/media/pdf/contract.pdf"
+    })
+  },
+
+  /**
    * 删除旅客信息
    */
   deleteInfo: function(e){
@@ -257,7 +266,7 @@ Page({
               // 验证邮箱
               if ((/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/.test(item[i].email))) {
                 // 验证身份证号
-                if ((/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/.test(item[i].ic_card))) {
+                if (item[i].ic_card) {
                   test = true
                 } else {
                   utils.toast("请输入正确的证件号码", "none", 2000);

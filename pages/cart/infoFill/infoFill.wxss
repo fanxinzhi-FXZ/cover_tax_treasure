@@ -126,6 +126,21 @@
   border: 1px solid #4d6ce3;
 }
 
+.money-explain {
+  display: block;
+  margin-top: 20rpx;
+  padding-top: 20rpx;
+  padding-bottom: 24rpx;
+  background: #ffffff;
+}
+.money-explain .ls{
+  display: block;
+	font-size: 20rpx;
+	line-height: 40rpx;
+	color: #808080;
+  margin: 0px 40rpx;
+}
+
 /* 电子合约 */
 .infoFill .contract {
   margin-top: 20rpx;

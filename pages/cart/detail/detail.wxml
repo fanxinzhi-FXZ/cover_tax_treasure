@@ -20,13 +20,14 @@
       <text class="title">13种电子产品赔付</text>
       <var class="number">{{productItems[swiperCurrent].values[1].value}}</var>
     </view>
+    
     <view class="seed">
-      <text class="title">其余普通物品赔</text>
-      <var class="number">{{productItems[swiperCurrent].values[6].value}}</var>
+      <text class="title">{{detailSeeds[swiperCurrent]}}</text>
+      <!-- <var class="number">￥{{productItems[swiperCurrent].price - productItems[swiperCurrent].reduced_price}}</var> -->
     </view>
     <view class="seed">
-      <text class="title">产品费用</text>
-      <var class="number">￥{{productItems[swiperCurrent].price - productItems[swiperCurrent].reduced_price}}</var>
+      <text class="title">{{detailItems[swiperCurrent]}}</text>
+      <!-- <var class="number">{{detailItems[swiperCurrent]}}</var> -->
     </view>
     <view class="look">更多详情可查看阅读<var class="lookDetail">《被税宝合约详情》</var></view>
   </view>

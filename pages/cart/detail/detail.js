@@ -13,6 +13,8 @@ Page({
         "linear-gradient(90deg, #4e82f5, #4eb0f5 50%, #4e82f5);",
         "linear-gradient(90deg, #ff6c1c, #fa7063 50%,#ff6c1c );"
         ],
+    detailItems: ['经济实用', '销量冠军', '土豪专属'],
+    detailSeeds: ['普通物品赔付比：100% ', '适用绝大部分奢侈品', '适用绝大部分奢侈品，赔付比更高'],
     swiperCurrent: 0,
     itemShowId: 0,
     indicatorDots: true,

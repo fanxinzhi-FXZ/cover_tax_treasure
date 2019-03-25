@@ -33,6 +33,18 @@ Page({
     this.setData({
       isPay: false
     })
+    wx.navigateTo({
+      url: '/pages/mine/mineOrder/mineOrder'
+    })
+  },
+
+  /**
+   * 跳转到订单
+   */
+  goOrderList: function(){
+    wx.navigateTo({
+      url: '/pages/mine/mineOrder/mineOrder'
+    })
   },
 
   /**

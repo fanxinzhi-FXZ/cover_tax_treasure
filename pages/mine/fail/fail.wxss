@@ -1,7 +1,21 @@
 /* pages/mine/fail/fail.wxss */
 .fail {
-  background: #ffffff;
+  /* background: #ffffff; */
 }
 .fail .item {
-  
+  display: block;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #4d6ce3;
+  padding-left: 30rpx;
+  text-decoration: underline;
+}
+.fail .seed {
+  display: block;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  color: #575757;
 }

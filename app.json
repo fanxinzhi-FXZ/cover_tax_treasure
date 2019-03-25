@@ -1,14 +1,15 @@
 {
   "pages": [
-    "pages/cart/cart",
+    
     "pages/mine/login/login",
     "pages/index/index",
-    
+    "pages/cart/cart",
     "pages/cart/detail/detail",
     "pages/cart/infoFill/infoFill",
     "pages/cart/infoCheck/infoCheck",
     "pages/cart/payment/payment",
     "pages/mine/mine",
+    "pages/mine/fail/fail",
     "pages/mine/logout/logout",
     "pages/mine/modifyInfo/modifyInfo",
     "pages/mine/changePassword/changePassword",
@@ -20,7 +21,7 @@
     "pages/mine/mineOrder/orderInfo/orderInfo",
     "pages/mine/agency/agency",
     "pages/mine/aboutUS/aboutUS",
-    "pages/mine/fail/fail"
+    "pages/mine/fail/failurl/failurl"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -15,6 +15,12 @@ Page({
 
   },
 
+  goFailUrl: function(e){
+    wx.navigateTo({
+      url: "/pages/mine/fail/failurl/failurl?pageurl=" + e.currentTarget.dataset.url
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

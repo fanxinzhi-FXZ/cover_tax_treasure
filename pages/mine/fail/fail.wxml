@@ -1,4 +1,9 @@
 <!--pages/mine/fail/fail.wxml-->
 <view class="fail">
-  <view class="item">1231231</view>
+  <view class="item" bindtap='goFailUrl' data-url="https://www.beishuibao.com/media/pdf/contract.pdf">合约声明</view>
+  <view class="item" bindtap='goFailUrl' data-url="https://www.beishuibao.com/media/pdf/claimant_statement.pdf">理赔申请表</view>
+  <view class="item" bindtap='goFailUrl' data-url="https://www.beishuibao.com/media/pdf/statement_of_law.pdf">法律声明</view>
+  <view class="item" bindtap='goFailUrl' data-url="https://www.beishuibao.com/media/pdf/companion.pdf">索赔指南</view>
+  <view class="item" bindtap='goFailUrl' data-url="https://www.beishuibao.com/media/pdf/secret_protection.pdf">隐私保护</view>
+  <view class='seed'>若不能下载，下单后会发至您的邮箱，请注意查收</view>
 </view>

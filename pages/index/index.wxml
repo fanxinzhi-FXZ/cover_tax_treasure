@@ -139,11 +139,11 @@
       </span>
       <span class="item">
         <span class="subtitle"><var class="num">Q2:</var>所有在境外购买的东西都可以赔付吗？</span>
-        <span class="text">只接受归国行李中购买的商品，直邮、邮寄等方式的商品不在理赔范围内。如汽车、大型家具、大型乐器、直邮商品等不在理赔范围内。具体理赔范围请参照<var class="store">《被税宝理赔范围表》</var>。</span>
+        <span class="text">只接受归国行李中购买的商品，直邮、邮寄等方式的商品不在理赔范围内。如汽车、大型家具、大型乐器、直邮商品等不在理赔范围内。具体理赔范围请参照<var class="store" bindtap='goFailUrl' data-url="https://www.beishuibao.com/media/pdf/classify.pdf">《被税宝理赔范围表》</var>。</span>
       </span>
       <span class="item">
         <span class="subtitle"><var class="num">Q3:</var>入境时，海关是如何核算商品金额以及税额的？</span>
-        <span class="text">请参考中华人民共和国海关总署文件<var class="store">《中华人民共和国进境物品归类表》</var>、<var class="store">《完税价格表》</var></span>
+        <span class="text">请参考中华人民共和国海关总署文件<var class="store" bindtap='goFailUrl' data-url="https://www.beishuibao.com/media/pdf/classify.pdf">《中华人民共和国进境物品归类表》</var>、<var class="store" bindtap='goFailUrl' data-url="https://www.beishuibao.com/media/pdf/price_list.pdf">《完税价格表》</var></span>
       </span>
       <span class="item">
         <span class="subtitle"><var class="num">Q4:</var>一份合约订单可以对应多张被缴税单吗？</span>

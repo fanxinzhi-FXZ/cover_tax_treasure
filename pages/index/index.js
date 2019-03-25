@@ -41,5 +41,12 @@ Page({
     wx.navigateTo({
       url: '/pages/cart/detail/detail'
     })
-  }
+  },
+
+  // 查看相关pdf
+  goFailUrl: function (e) {
+    wx.navigateTo({
+      url: "/pages/mine/fail/failurl/failurl?pageurl=" + e.currentTarget.dataset.url
+    })
+  },
 })
